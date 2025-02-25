@@ -195,14 +195,14 @@ VGA vga_inst(
 .i_Switch_2(PIN8),
 .i_Switch_3(PIN9),
 .i_Switch_4(PIN10),
-.o_VGA_HSync(PIN20),
-.o_VGA_VSync(PIN19),
-.o_VGA_Red_0(PIN11),	//Red1	//PIN11
-.o_VGA_Red_1(PIN18),	//Red2
-.o_VGA_Grn_0(PIN12),	//Grn1	//PIN12
+.o_VGA_HSync(PIN11),
+.o_VGA_VSync(PIN12),
+.o_VGA_Red_0(PIN20),	//Red1	//PIN11
+.o_VGA_Red_1(PIN19),	//Red2
+.o_VGA_Grn_0(PIN18),	//Grn1	//PIN12
 .o_VGA_Grn_1(PIN17),	//Grn2
-.o_VGA_Blu_0(PIN13),	//Blu1	//PIN13
-.o_VGA_Blu_1(PIN14),	//Blu2
+.o_VGA_Blu_0(PIN14),	//Blu1	//PIN13
+.o_VGA_Blu_1(PIN13),	//Blu2
 .LED_1(LEDn)
 );
 
