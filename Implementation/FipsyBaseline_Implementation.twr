@@ -1,0 +1,2518 @@
+
+Loading design for application trce from file fipsybaseline_implementation.ncd.
+Design name: Fipsy_Top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-1200HC
+Package:     QFN32
+Performance: 4
+Loading device for application trce from file 'xo2c1200.nph' in environment: C:/Program Files/Lattice/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2
+Tue Feb 25 16:24:28 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 4 -sphld m -o FipsyBaseline_Implementation.twr -gui -msgset C:/Users/enact/OneDrive/Documents/VGA_Pong_FipsyV2_campaign_20250215/ColorPong/promote.xml FipsyBaseline_Implementation.ncd FipsyBaseline_Implementation.prf 
+Design file:     fipsybaseline_implementation.ncd
+Preference file: fipsybaseline_implementation.prf
+Device,speed:    LCMXO2-1200HC,4
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+Voltage:    3.300 V
+
+VCCIO Voltage:
+                   3.300 V (Bank 0, defined by PAR)
+                   3.300 V (Bank 1, defined by PAR)
+                   3.300 V (Bank 2, defined by PAR)
+                   3.300 V (Bank 3, defined by PAR)
+
+
+
+================================================================================
+Preference: FREQUENCY NET "INTERNAL_OSC" 38.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: FREQUENCY NET "clk" 25.333333 MHz ;
+            375 items scored, 53 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 10.042ns (weighted slack = -300.757ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/left_digit_278__i0  (from vga_inst/led_count_6 -)
+   Destination:    SP8KC      Port           vga_inst/digits_text_inst/addr_reg_7__I_0(ASIC)  (to clk +)
+
+   Delay:               3.091ns  (30.6% logic, 69.4% route), 2 logic levels.
+
+ Constraint Details:
+
+      3.091ns physical path delay vga_inst/SLICE_158 to vga_inst/digits_text_inst/addr_reg_7__I_0 exceeds
+      (delay constraint based on source clock period of 50.000ns and destination clock period of 39.474ns)
+      1.318ns delay constraint less
+      8.295ns skew and
+      0.000ns feedback compensation and
+     -0.026ns ADDR_SET requirement (totaling -6.951ns) by 10.042ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_158 to vga_inst/digits_text_inst/addr_reg_7__I_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452      R4C7C.CLK to       R4C7C.Q0 vga_inst/SLICE_158 (from vga_inst/led_count_6)
+ROUTE         6     0.983       R4C7C.Q0 to       R4C8D.A0 vga_inst/left_digit_0
+CTOF_DEL    ---     0.495       R4C8D.A0 to       R4C8D.F0 vga_inst/SLICE_236
+ROUTE         1     1.161       R4C8D.F0 to   EBR_R6C7.AD7 vga_inst/rom_addr_4 (to clk)
+                  --------
+                    3.091   (30.6% logic, 69.4% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCH_inst to vga_inst/SLICE_158:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI INTERNAL_OSC
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.652     LPLL.CLKOP to      R7C3B.CLK clk
+REG_DEL     ---     0.452      R7C3B.CLK to       R7C3B.Q0 vga_inst/SLICE_133
+ROUTE        35     3.373       R7C3B.Q0 to     R2C13D.CLK vga_inst/line_cycle
+REG_DEL     ---     0.452     R2C13D.CLK to      R2C13D.Q1 vga_inst/SLICE_112
+ROUTE        32     4.191      R2C13D.Q1 to      R4C7C.CLK vga_inst/led_count_6
+                  --------
+                   10.120   (8.9% logic, 91.1% route), 3 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.825     LPLL.CLKOP to     LPLL.CLKFB clk
+                  --------
+                    1.825   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path OSCH_inst to vga_inst/digits_text_inst/addr_reg_7__I_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI INTERNAL_OSC
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.825     LPLL.CLKOP to   EBR_R6C7.CLK clk
+                  --------
+                    1.825   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.825     LPLL.CLKOP to     LPLL.CLKFB clk
+                  --------
+                    1.825   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 10.030ns (weighted slack = -300.398ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/right_digit_279__i3  (from vga_inst/led_count_6 -)
+   Destination:    SP8KC      Port           vga_inst/digits_text_inst/addr_reg_7__I_0(ASIC)  (to clk +)
+
+   Delay:               3.079ns  (30.8% logic, 69.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      3.079ns physical path delay vga_inst/SLICE_161 to vga_inst/digits_text_inst/addr_reg_7__I_0 exceeds
+      (delay constraint based on source clock period of 50.000ns and destination clock period of 39.474ns)
+      1.318ns delay constraint less
+      8.295ns skew and
+      0.000ns feedback compensation and
+     -0.026ns ADDR_SET requirement (totaling -6.951ns) by 10.030ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_161 to vga_inst/digits_text_inst/addr_reg_7__I_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452      R4C8C.CLK to       R4C8C.Q1 vga_inst/SLICE_161 (from vga_inst/led_count_6)
+ROUTE         3     0.971       R4C8C.Q1 to       R4C7B.A1 vga_inst/right_digit_3
+CTOF_DEL    ---     0.495       R4C7B.A1 to       R4C7B.F1 vga_inst/SLICE_237
+ROUTE         1     1.161       R4C7B.F1 to  EBR_R6C7.AD10 vga_inst/rom_addr_7 (to clk)
+                  --------
+                    3.079   (30.8% logic, 69.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCH_inst to vga_inst/SLICE_161:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI INTERNAL_OSC
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.652     LPLL.CLKOP to      R7C3B.CLK clk
+REG_DEL     ---     0.452      R7C3B.CLK to       R7C3B.Q0 vga_inst/SLICE_133
+ROUTE        35     3.373       R7C3B.Q0 to     R2C13D.CLK vga_inst/line_cycle
+REG_DEL     ---     0.452     R2C13D.CLK to      R2C13D.Q1 vga_inst/SLICE_112
+ROUTE        32     4.191      R2C13D.Q1 to      R4C8C.CLK vga_inst/led_count_6
+                  --------
+                   10.120   (8.9% logic, 91.1% route), 3 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.825     LPLL.CLKOP to     LPLL.CLKFB clk
+                  --------
+                    1.825   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path OSCH_inst to vga_inst/digits_text_inst/addr_reg_7__I_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI INTERNAL_OSC
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.825     LPLL.CLKOP to   EBR_R6C7.CLK clk
+                  --------
+                    1.825   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.825     LPLL.CLKOP to     LPLL.CLKFB clk
+                  --------
+                    1.825   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 9.842ns (weighted slack = -294.767ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/left_digit_278__i2  (from vga_inst/led_count_6 -)
+   Destination:    SP8KC      Port           vga_inst/digits_text_inst/addr_reg_7__I_0(ASIC)  (to clk +)
+
+   Delay:               2.891ns  (32.8% logic, 67.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      2.891ns physical path delay vga_inst/SLICE_159 to vga_inst/digits_text_inst/addr_reg_7__I_0 exceeds
+      (delay constraint based on source clock period of 50.000ns and destination clock period of 39.474ns)
+      1.318ns delay constraint less
+      8.295ns skew and
+      0.000ns feedback compensation and
+     -0.026ns ADDR_SET requirement (totaling -6.951ns) by 9.842ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_159 to vga_inst/digits_text_inst/addr_reg_7__I_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452      R4C7A.CLK to       R4C7A.Q0 vga_inst/SLICE_159 (from vga_inst/led_count_6)
+ROUTE         4     0.783       R4C7A.Q0 to       R4C7D.C1 vga_inst/left_digit_2
+CTOF_DEL    ---     0.495       R4C7D.C1 to       R4C7D.F1 vga_inst/SLICE_239
+ROUTE         1     1.161       R4C7D.F1 to   EBR_R6C7.AD9 vga_inst/rom_addr_6 (to clk)
+                  --------
+                    2.891   (32.8% logic, 67.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCH_inst to vga_inst/SLICE_159:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI INTERNAL_OSC
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.652     LPLL.CLKOP to      R7C3B.CLK clk
+REG_DEL     ---     0.452      R7C3B.CLK to       R7C3B.Q0 vga_inst/SLICE_133
+ROUTE        35     3.373       R7C3B.Q0 to     R2C13D.CLK vga_inst/line_cycle
+REG_DEL     ---     0.452     R2C13D.CLK to      R2C13D.Q1 vga_inst/SLICE_112
+ROUTE        32     4.191      R2C13D.Q1 to      R4C7A.CLK vga_inst/led_count_6
+                  --------
+                   10.120   (8.9% logic, 91.1% route), 3 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.825     LPLL.CLKOP to     LPLL.CLKFB clk
+                  --------
+                    1.825   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path OSCH_inst to vga_inst/digits_text_inst/addr_reg_7__I_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI INTERNAL_OSC
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.825     LPLL.CLKOP to   EBR_R6C7.CLK clk
+                  --------
+                    1.825   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.825     LPLL.CLKOP to     LPLL.CLKFB clk
+                  --------
+                    1.825   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 9.774ns (weighted slack = -292.731ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/right_digit_279__i1  (from vga_inst/led_count_6 -)
+   Destination:    SP8KC      Port           vga_inst/digits_text_inst/addr_reg_7__I_0(ASIC)  (to clk +)
+
+   Delay:               2.823ns  (33.5% logic, 66.5% route), 2 logic levels.
+
+ Constraint Details:
+
+      2.823ns physical path delay vga_inst/SLICE_160 to vga_inst/digits_text_inst/addr_reg_7__I_0 exceeds
+      (delay constraint based on source clock period of 50.000ns and destination clock period of 39.474ns)
+      1.318ns delay constraint less
+      8.295ns skew and
+      0.000ns feedback compensation and
+     -0.026ns ADDR_SET requirement (totaling -6.951ns) by 9.774ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_160 to vga_inst/digits_text_inst/addr_reg_7__I_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452      R4C8A.CLK to       R4C8A.Q1 vga_inst/SLICE_160 (from vga_inst/led_count_6)
+ROUTE         5     0.779       R4C8A.Q1 to       R4C7D.C0 vga_inst/right_digit_1
+CTOF_DEL    ---     0.495       R4C7D.C0 to       R4C7D.F0 vga_inst/SLICE_239
+ROUTE         1     1.097       R4C7D.F0 to   EBR_R6C7.AD8 vga_inst/rom_addr_5 (to clk)
+                  --------
+                    2.823   (33.5% logic, 66.5% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCH_inst to vga_inst/SLICE_160:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI INTERNAL_OSC
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.652     LPLL.CLKOP to      R7C3B.CLK clk
+REG_DEL     ---     0.452      R7C3B.CLK to       R7C3B.Q0 vga_inst/SLICE_133
+ROUTE        35     3.373       R7C3B.Q0 to     R2C13D.CLK vga_inst/line_cycle
+REG_DEL     ---     0.452     R2C13D.CLK to      R2C13D.Q1 vga_inst/SLICE_112
+ROUTE        32     4.191      R2C13D.Q1 to      R4C8A.CLK vga_inst/led_count_6
+                  --------
+                   10.120   (8.9% logic, 91.1% route), 3 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.825     LPLL.CLKOP to     LPLL.CLKFB clk
+                  --------
+                    1.825   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path OSCH_inst to vga_inst/digits_text_inst/addr_reg_7__I_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI INTERNAL_OSC
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.825     LPLL.CLKOP to   EBR_R6C7.CLK clk
+                  --------
+                    1.825   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.825     LPLL.CLKOP to     LPLL.CLKFB clk
+                  --------
+                    1.825   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 9.749ns (weighted slack = -291.982ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/right_digit_279__i0  (from vga_inst/led_count_6 -)
+   Destination:    SP8KC      Port           vga_inst/digits_text_inst/addr_reg_7__I_0(ASIC)  (to clk +)
+
+   Delay:               2.798ns  (33.8% logic, 66.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      2.798ns physical path delay vga_inst/SLICE_160 to vga_inst/digits_text_inst/addr_reg_7__I_0 exceeds
+      (delay constraint based on source clock period of 50.000ns and destination clock period of 39.474ns)
+      1.318ns delay constraint less
+      8.295ns skew and
+      0.000ns feedback compensation and
+     -0.026ns ADDR_SET requirement (totaling -6.951ns) by 9.749ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_160 to vga_inst/digits_text_inst/addr_reg_7__I_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452      R4C8A.CLK to       R4C8A.Q0 vga_inst/SLICE_160 (from vga_inst/led_count_6)
+ROUTE         6     0.690       R4C8A.Q0 to       R4C8D.D0 vga_inst/right_digit_0
+CTOF_DEL    ---     0.495       R4C8D.D0 to       R4C8D.F0 vga_inst/SLICE_236
+ROUTE         1     1.161       R4C8D.F0 to   EBR_R6C7.AD7 vga_inst/rom_addr_4 (to clk)
+                  --------
+                    2.798   (33.8% logic, 66.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCH_inst to vga_inst/SLICE_160:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI INTERNAL_OSC
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.652     LPLL.CLKOP to      R7C3B.CLK clk
+REG_DEL     ---     0.452      R7C3B.CLK to       R7C3B.Q0 vga_inst/SLICE_133
+ROUTE        35     3.373       R7C3B.Q0 to     R2C13D.CLK vga_inst/line_cycle
+REG_DEL     ---     0.452     R2C13D.CLK to      R2C13D.Q1 vga_inst/SLICE_112
+ROUTE        32     4.191      R2C13D.Q1 to      R4C8A.CLK vga_inst/led_count_6
+                  --------
+                   10.120   (8.9% logic, 91.1% route), 3 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.825     LPLL.CLKOP to     LPLL.CLKFB clk
+                  --------
+                    1.825   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path OSCH_inst to vga_inst/digits_text_inst/addr_reg_7__I_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI INTERNAL_OSC
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.825     LPLL.CLKOP to   EBR_R6C7.CLK clk
+                  --------
+                    1.825   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.825     LPLL.CLKOP to     LPLL.CLKFB clk
+                  --------
+                    1.825   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 9.698ns (weighted slack = -290.454ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/left_digit_278__i3  (from vga_inst/led_count_6 -)
+   Destination:    SP8KC      Port           vga_inst/digits_text_inst/addr_reg_7__I_0(ASIC)  (to clk +)
+
+   Delay:               2.747ns  (34.5% logic, 65.5% route), 2 logic levels.
+
+ Constraint Details:
+
+      2.747ns physical path delay vga_inst/SLICE_159 to vga_inst/digits_text_inst/addr_reg_7__I_0 exceeds
+      (delay constraint based on source clock period of 50.000ns and destination clock period of 39.474ns)
+      1.318ns delay constraint less
+      8.295ns skew and
+      0.000ns feedback compensation and
+     -0.026ns ADDR_SET requirement (totaling -6.951ns) by 9.698ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_159 to vga_inst/digits_text_inst/addr_reg_7__I_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452      R4C7A.CLK to       R4C7A.Q1 vga_inst/SLICE_159 (from vga_inst/led_count_6)
+ROUTE         3     0.639       R4C7A.Q1 to       R4C7B.D1 vga_inst/left_digit_3
+CTOF_DEL    ---     0.495       R4C7B.D1 to       R4C7B.F1 vga_inst/SLICE_237
+ROUTE         1     1.161       R4C7B.F1 to  EBR_R6C7.AD10 vga_inst/rom_addr_7 (to clk)
+                  --------
+                    2.747   (34.5% logic, 65.5% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCH_inst to vga_inst/SLICE_159:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI INTERNAL_OSC
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.652     LPLL.CLKOP to      R7C3B.CLK clk
+REG_DEL     ---     0.452      R7C3B.CLK to       R7C3B.Q0 vga_inst/SLICE_133
+ROUTE        35     3.373       R7C3B.Q0 to     R2C13D.CLK vga_inst/line_cycle
+REG_DEL     ---     0.452     R2C13D.CLK to      R2C13D.Q1 vga_inst/SLICE_112
+ROUTE        32     4.191      R2C13D.Q1 to      R4C7A.CLK vga_inst/led_count_6
+                  --------
+                   10.120   (8.9% logic, 91.1% route), 3 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.825     LPLL.CLKOP to     LPLL.CLKFB clk
+                  --------
+                    1.825   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path OSCH_inst to vga_inst/digits_text_inst/addr_reg_7__I_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI INTERNAL_OSC
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.825     LPLL.CLKOP to   EBR_R6C7.CLK clk
+                  --------
+                    1.825   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.825     LPLL.CLKOP to     LPLL.CLKFB clk
+                  --------
+                    1.825   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 9.695ns (weighted slack = -290.365ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/right_digit_279__i2  (from vga_inst/led_count_6 -)
+   Destination:    SP8KC      Port           vga_inst/digits_text_inst/addr_reg_7__I_0(ASIC)  (to clk +)
+
+   Delay:               2.744ns  (34.5% logic, 65.5% route), 2 logic levels.
+
+ Constraint Details:
+
+      2.744ns physical path delay vga_inst/SLICE_161 to vga_inst/digits_text_inst/addr_reg_7__I_0 exceeds
+      (delay constraint based on source clock period of 50.000ns and destination clock period of 39.474ns)
+      1.318ns delay constraint less
+      8.295ns skew and
+      0.000ns feedback compensation and
+     -0.026ns ADDR_SET requirement (totaling -6.951ns) by 9.695ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_161 to vga_inst/digits_text_inst/addr_reg_7__I_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452      R4C8C.CLK to       R4C8C.Q0 vga_inst/SLICE_161 (from vga_inst/led_count_6)
+ROUTE         4     0.636       R4C8C.Q0 to       R4C7D.D1 vga_inst/right_digit_2
+CTOF_DEL    ---     0.495       R4C7D.D1 to       R4C7D.F1 vga_inst/SLICE_239
+ROUTE         1     1.161       R4C7D.F1 to   EBR_R6C7.AD9 vga_inst/rom_addr_6 (to clk)
+                  --------
+                    2.744   (34.5% logic, 65.5% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCH_inst to vga_inst/SLICE_161:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI INTERNAL_OSC
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.652     LPLL.CLKOP to      R7C3B.CLK clk
+REG_DEL     ---     0.452      R7C3B.CLK to       R7C3B.Q0 vga_inst/SLICE_133
+ROUTE        35     3.373       R7C3B.Q0 to     R2C13D.CLK vga_inst/line_cycle
+REG_DEL     ---     0.452     R2C13D.CLK to      R2C13D.Q1 vga_inst/SLICE_112
+ROUTE        32     4.191      R2C13D.Q1 to      R4C8C.CLK vga_inst/led_count_6
+                  --------
+                   10.120   (8.9% logic, 91.1% route), 3 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.825     LPLL.CLKOP to     LPLL.CLKFB clk
+                  --------
+                    1.825   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path OSCH_inst to vga_inst/digits_text_inst/addr_reg_7__I_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI INTERNAL_OSC
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.825     LPLL.CLKOP to   EBR_R6C7.CLK clk
+                  --------
+                    1.825   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.825     LPLL.CLKOP to     LPLL.CLKFB clk
+                  --------
+                    1.825   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 9.671ns (weighted slack = -289.646ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/left_digit_278__i1  (from vga_inst/led_count_6 -)
+   Destination:    SP8KC      Port           vga_inst/digits_text_inst/addr_reg_7__I_0(ASIC)  (to clk +)
+
+   Delay:               2.720ns  (34.8% logic, 65.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      2.720ns physical path delay vga_inst/SLICE_158 to vga_inst/digits_text_inst/addr_reg_7__I_0 exceeds
+      (delay constraint based on source clock period of 50.000ns and destination clock period of 39.474ns)
+      1.318ns delay constraint less
+      8.295ns skew and
+      0.000ns feedback compensation and
+     -0.026ns ADDR_SET requirement (totaling -6.951ns) by 9.671ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_158 to vga_inst/digits_text_inst/addr_reg_7__I_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452      R4C7C.CLK to       R4C7C.Q1 vga_inst/SLICE_158 (from vga_inst/led_count_6)
+ROUTE         5     0.676       R4C7C.Q1 to       R4C7D.D0 vga_inst/left_digit_1
+CTOF_DEL    ---     0.495       R4C7D.D0 to       R4C7D.F0 vga_inst/SLICE_239
+ROUTE         1     1.097       R4C7D.F0 to   EBR_R6C7.AD8 vga_inst/rom_addr_5 (to clk)
+                  --------
+                    2.720   (34.8% logic, 65.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCH_inst to vga_inst/SLICE_158:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI INTERNAL_OSC
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.652     LPLL.CLKOP to      R7C3B.CLK clk
+REG_DEL     ---     0.452      R7C3B.CLK to       R7C3B.Q0 vga_inst/SLICE_133
+ROUTE        35     3.373       R7C3B.Q0 to     R2C13D.CLK vga_inst/line_cycle
+REG_DEL     ---     0.452     R2C13D.CLK to      R2C13D.Q1 vga_inst/SLICE_112
+ROUTE        32     4.191      R2C13D.Q1 to      R4C7C.CLK vga_inst/led_count_6
+                  --------
+                   10.120   (8.9% logic, 91.1% route), 3 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.825     LPLL.CLKOP to     LPLL.CLKFB clk
+                  --------
+                    1.825   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path OSCH_inst to vga_inst/digits_text_inst/addr_reg_7__I_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI INTERNAL_OSC
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.825     LPLL.CLKOP to   EBR_R6C7.CLK clk
+                  --------
+                    1.825   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.825     LPLL.CLKOP to     LPLL.CLKFB clk
+                  --------
+                    1.825   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 6.129ns (weighted slack = -183.563ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/fipsy_offset_277_294__i1  (from vga_inst/line_cycle -)
+   Destination:    FF         Data in        vga_inst/fipsy_tot_ofs_i8  (to clk +)
+
+   Delay:               3.456ns  (70.7% logic, 29.3% route), 5 logic levels.
+
+ Constraint Details:
+
+      3.456ns physical path delay vga_inst/SLICE_107 to vga_inst/SLICE_9 exceeds
+      (delay constraint based on source clock period of 50.000ns and destination clock period of 39.474ns)
+      1.318ns delay constraint less
+      3.825ns skew and
+      0.000ns feedback compensation and
+      0.166ns DIN_SET requirement (totaling -2.673ns) by 6.129ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_107 to vga_inst/SLICE_9:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452      R8C6A.CLK to       R8C6A.Q1 vga_inst/SLICE_107 (from vga_inst/line_cycle)
+ROUTE         3     1.014       R8C6A.Q1 to       R8C5A.B0 vga_inst/fipsy_offset_0
+C0TOFCO_DE  ---     1.023       R8C5A.B0 to      R8C5A.FCO vga_inst/SLICE_31
+ROUTE         1     0.000      R8C5A.FCO to      R8C5B.FCI vga_inst/n2768
+FCITOFCO_D  ---     0.162      R8C5B.FCI to      R8C5B.FCO vga_inst/SLICE_29
+ROUTE         1     0.000      R8C5B.FCO to      R8C5C.FCI vga_inst/n2769
+FCITOFCO_D  ---     0.162      R8C5C.FCI to      R8C5C.FCO vga_inst/SLICE_12
+ROUTE         1     0.000      R8C5C.FCO to      R8C5D.FCI vga_inst/n2770
+FCITOF1_DE  ---     0.643      R8C5D.FCI to       R8C5D.F1 vga_inst/SLICE_9
+ROUTE         1     0.000       R8C5D.F1 to      R8C5D.DI1 vga_inst/fipsy_rom_addr_3_N_176_7 (to clk)
+                  --------
+                    3.456   (70.7% logic, 29.3% route), 5 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCH_inst to vga_inst/SLICE_107:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI INTERNAL_OSC
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.652     LPLL.CLKOP to      R7C3B.CLK clk
+REG_DEL     ---     0.452      R7C3B.CLK to       R7C3B.Q0 vga_inst/SLICE_133
+ROUTE        35     3.373       R7C3B.Q0 to      R8C6A.CLK vga_inst/line_cycle
+                  --------
+                    5.477   (8.3% logic, 91.7% route), 2 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.825     LPLL.CLKOP to     LPLL.CLKFB clk
+                  --------
+                    1.825   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path OSCH_inst to vga_inst/SLICE_9:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI INTERNAL_OSC
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.652     LPLL.CLKOP to      R8C5D.CLK clk
+                  --------
+                    1.652   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.825     LPLL.CLKOP to     LPLL.CLKFB clk
+                  --------
+                    1.825   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 6.084ns (weighted slack = -182.215ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/fipsy_offset_277_294__i6  (from vga_inst/line_cycle -)
+   Destination:    FF         Data in        vga_inst/fipsy_tot_ofs_i8  (to clk +)
+
+   Delay:               3.411ns  (58.2% logic, 41.8% route), 3 logic levels.
+
+ Constraint Details:
+
+      3.411ns physical path delay vga_inst/SLICE_104 to vga_inst/SLICE_9 exceeds
+      (delay constraint based on source clock period of 50.000ns and destination clock period of 39.474ns)
+      1.318ns delay constraint less
+      3.825ns skew and
+      0.000ns feedback compensation and
+      0.166ns DIN_SET requirement (totaling -2.673ns) by 6.084ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_104 to vga_inst/SLICE_9:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452      R8C6D.CLK to       R8C6D.Q0 vga_inst/SLICE_104 (from vga_inst/line_cycle)
+ROUTE         2     1.427       R8C6D.Q0 to       R8C5C.B1 vga_inst/fipsy_offset_5
+C1TOFCO_DE  ---     0.889       R8C5C.B1 to      R8C5C.FCO vga_inst/SLICE_12
+ROUTE         1     0.000      R8C5C.FCO to      R8C5D.FCI vga_inst/n2770
+FCITOF1_DE  ---     0.643      R8C5D.FCI to       R8C5D.F1 vga_inst/SLICE_9
+ROUTE         1     0.000       R8C5D.F1 to      R8C5D.DI1 vga_inst/fipsy_rom_addr_3_N_176_7 (to clk)
+                  --------
+                    3.411   (58.2% logic, 41.8% route), 3 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCH_inst to vga_inst/SLICE_104:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI INTERNAL_OSC
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.652     LPLL.CLKOP to      R7C3B.CLK clk
+REG_DEL     ---     0.452      R7C3B.CLK to       R7C3B.Q0 vga_inst/SLICE_133
+ROUTE        35     3.373       R7C3B.Q0 to      R8C6D.CLK vga_inst/line_cycle
+                  --------
+                    5.477   (8.3% logic, 91.7% route), 2 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.825     LPLL.CLKOP to     LPLL.CLKFB clk
+                  --------
+                    1.825   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path OSCH_inst to vga_inst/SLICE_9:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI INTERNAL_OSC
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.652     LPLL.CLKOP to      R8C5D.CLK clk
+                  --------
+                    1.652   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP Clk_25MHz_inst/PLLInst_0
+ROUTE        21     1.825     LPLL.CLKOP to     LPLL.CLKFB clk
+                  --------
+                    1.825   (0.0% logic, 100.0% route), 1 logic levels.
+
+Warning:   2.939MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY 20.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 33.237ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/ball_y_i1  (from vga_inst/led_count_6 -)
+   Destination:    FF         Data in        vga_inst/game_state__i1  (to vga_inst/led_count_6 -)
+
+   Delay:              16.456ns  (39.5% logic, 60.5% route), 11 logic levels.
+
+ Constraint Details:
+
+     16.456ns physical path delay vga_inst/SLICE_145 to vga_inst/SLICE_157 meets
+     50.000ns delay constraint less
+      0.000ns skew and
+      0.307ns CE_SET requirement (totaling 49.693ns) by 33.237ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_145 to vga_inst/SLICE_157:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R7C16D.CLK to      R7C16D.Q0 vga_inst/SLICE_145 (from vga_inst/led_count_6)
+ROUTE         6     1.836      R7C16D.Q0 to      R8C14B.A0 vga_inst/ball_y_1
+C0TOFCO_DE  ---     1.023      R8C14B.A0 to     R8C14B.FCO vga_inst/SLICE_57
+ROUTE         1     0.000     R8C14B.FCO to     R8C14C.FCI vga_inst/n2874
+FCITOF0_DE  ---     0.585     R8C14C.FCI to      R8C14C.F0 vga_inst/SLICE_56
+ROUTE         2     1.429      R8C14C.F0 to      R9C14B.B1 vga_inst/n727
+C1TOFCO_DE  ---     0.889      R9C14B.B1 to     R9C14B.FCO vga_inst/SLICE_34
+ROUTE         1     0.000     R9C14B.FCO to     R9C14C.FCI vga_inst/n2884
+FCITOF0_DE  ---     0.585     R9C14C.FCI to      R9C14C.F0 vga_inst/SLICE_24
+ROUTE         1     0.744      R9C14C.F0 to      R9C15C.C1 vga_inst/n294
+CTOF_DEL    ---     0.495      R9C15C.C1 to      R9C15C.F1 vga_inst/SLICE_223
+ROUTE         1     0.436      R9C15C.F1 to      R9C15C.C0 vga_inst/n6_adj_466
+CTOF_DEL    ---     0.495      R9C15C.C0 to      R9C15C.F0 vga_inst/SLICE_223
+ROUTE         1     0.315      R9C15C.F0 to      R9C15B.D0 vga_inst/n7_adj_464
+CTOF_DEL    ---     0.495      R9C15B.D0 to      R9C15B.F0 vga_inst/SLICE_221
+ROUTE         1     2.034      R9C15B.F0 to      R8C11D.B1 vga_inst/n2959
+CTOF_DEL    ---     0.495      R8C11D.B1 to      R8C11D.F1 vga_inst/SLICE_179
+ROUTE         6     1.761      R8C11D.F1 to       R8C7C.A0 vga_inst/n2464
+CTOF_DEL    ---     0.495       R8C7C.A0 to       R8C7C.F0 vga_inst/SLICE_214
+ROUTE         1     0.744       R8C7C.F0 to       R8C8C.C0 vga_inst/n3590
+CTOF_DEL    ---     0.495       R8C8C.C0 to       R8C8C.F0 vga_inst/SLICE_213
+ROUTE         1     0.653       R8C8C.F0 to       R8C8D.CE vga_inst/led_count_6__N_32_enable_5 (to vga_inst/led_count_6)
+                  --------
+                   16.456   (39.5% logic, 60.5% route), 11 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path vga_inst/SLICE_112 to vga_inst/SLICE_145:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        32     4.191      R2C13D.Q1 to     R7C16D.CLK vga_inst/led_count_6
+                  --------
+                    4.191   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path vga_inst/SLICE_112 to vga_inst/SLICE_157:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        32     4.191      R2C13D.Q1 to      R8C8D.CLK vga_inst/led_count_6
+                  --------
+                    4.191   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 33.306ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/ball_y_i0  (from vga_inst/led_count_6 -)
+   Destination:    FF         Data in        vga_inst/game_state__i1  (to vga_inst/led_count_6 -)
+
+   Delay:              16.387ns  (39.9% logic, 60.1% route), 12 logic levels.
+
+ Constraint Details:
+
+     16.387ns physical path delay vga_inst/SLICE_8 to vga_inst/SLICE_157 meets
+     50.000ns delay constraint less
+      0.000ns skew and
+      0.307ns CE_SET requirement (totaling 49.693ns) by 33.306ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_8 to vga_inst/SLICE_157:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R8C16A.CLK to      R8C16A.Q1 vga_inst/SLICE_8 (from vga_inst/led_count_6)
+ROUTE         6     1.453      R8C16A.Q1 to      R5C16A.B1 vga_inst/ball_y_0
+C1TOFCO_DE  ---     0.889      R5C16A.B1 to     R5C16A.FCO vga_inst/SLICE_67
+ROUTE         1     0.000     R5C16A.FCO to     R5C16B.FCI vga_inst/n2868
+FCITOFCO_D  ---     0.162     R5C16B.FCI to     R5C16B.FCO vga_inst/SLICE_66
+ROUTE         1     0.000     R5C16B.FCO to     R5C16C.FCI vga_inst/n2869
+FCITOF0_DE  ---     0.585     R5C16C.FCI to      R5C16C.F0 vga_inst/SLICE_63
+ROUTE         2     1.429      R5C16C.F0 to      R4C16B.B1 vga_inst/n612
+C1TOFCO_DE  ---     0.889      R4C16B.B1 to     R4C16B.FCO vga_inst/SLICE_21
+ROUTE         1     0.000     R4C16B.FCO to     R4C16C.FCI vga_inst/n2806
+FCITOF0_DE  ---     0.585     R4C16C.FCI to      R4C16C.F0 vga_inst/SLICE_19
+ROUTE         1     0.744      R4C16C.F0 to      R4C17C.C1 vga_inst/n283
+CTOF_DEL    ---     0.495      R4C17C.C1 to      R4C17C.F1 vga_inst/SLICE_204
+ROUTE         1     0.436      R4C17C.F1 to      R4C17C.C0 vga_inst/n5
+CTOF_DEL    ---     0.495      R4C17C.C0 to      R4C17C.F0 vga_inst/SLICE_204
+ROUTE         1     0.315      R4C17C.F0 to      R4C17B.D0 vga_inst/n7
+CTOF_DEL    ---     0.495      R4C17B.D0 to      R4C17B.F0 vga_inst/SLICE_198
+ROUTE         1     1.535      R4C17B.F0 to      R5C11C.B1 vga_inst/n2930
+CTOF_DEL    ---     0.495      R5C11C.B1 to      R5C11C.F1 vga_inst/SLICE_194
+ROUTE        12     2.323      R5C11C.F1 to       R8C8C.C1 vga_inst/n2462
+CTOF_DEL    ---     0.495       R8C8C.C1 to       R8C8C.F1 vga_inst/SLICE_213
+ROUTE         1     0.967       R8C8C.F1 to       R8C8C.A0 vga_inst/n3592
+CTOF_DEL    ---     0.495       R8C8C.A0 to       R8C8C.F0 vga_inst/SLICE_213
+ROUTE         1     0.653       R8C8C.F0 to       R8C8D.CE vga_inst/led_count_6__N_32_enable_5 (to vga_inst/led_count_6)
+                  --------
+                   16.387   (39.9% logic, 60.1% route), 12 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path vga_inst/SLICE_112 to vga_inst/SLICE_8:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        32     4.191      R2C13D.Q1 to     R8C16A.CLK vga_inst/led_count_6
+                  --------
+                    4.191   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path vga_inst/SLICE_112 to vga_inst/SLICE_157:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        32     4.191      R2C13D.Q1 to      R8C8D.CLK vga_inst/led_count_6
+                  --------
+                    4.191   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 33.334ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/ball_y_i2  (from vga_inst/led_count_6 -)
+   Destination:    FF         Data in        vga_inst/game_state__i1  (to vga_inst/led_count_6 -)
+
+   Delay:              16.359ns  (38.9% logic, 61.1% route), 11 logic levels.
+
+ Constraint Details:
+
+     16.359ns physical path delay vga_inst/SLICE_145 to vga_inst/SLICE_157 meets
+     50.000ns delay constraint less
+      0.000ns skew and
+      0.307ns CE_SET requirement (totaling 49.693ns) by 33.334ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_145 to vga_inst/SLICE_157:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R7C16D.CLK to      R7C16D.Q1 vga_inst/SLICE_145 (from vga_inst/led_count_6)
+ROUTE         6     1.873      R7C16D.Q1 to      R8C14B.B1 vga_inst/ball_y_2
+C1TOFCO_DE  ---     0.889      R8C14B.B1 to     R8C14B.FCO vga_inst/SLICE_57
+ROUTE         1     0.000     R8C14B.FCO to     R8C14C.FCI vga_inst/n2874
+FCITOF0_DE  ---     0.585     R8C14C.FCI to      R8C14C.F0 vga_inst/SLICE_56
+ROUTE         2     1.429      R8C14C.F0 to      R9C14B.B1 vga_inst/n727
+C1TOFCO_DE  ---     0.889      R9C14B.B1 to     R9C14B.FCO vga_inst/SLICE_34
+ROUTE         1     0.000     R9C14B.FCO to     R9C14C.FCI vga_inst/n2884
+FCITOF0_DE  ---     0.585     R9C14C.FCI to      R9C14C.F0 vga_inst/SLICE_24
+ROUTE         1     0.744      R9C14C.F0 to      R9C15C.C1 vga_inst/n294
+CTOF_DEL    ---     0.495      R9C15C.C1 to      R9C15C.F1 vga_inst/SLICE_223
+ROUTE         1     0.436      R9C15C.F1 to      R9C15C.C0 vga_inst/n6_adj_466
+CTOF_DEL    ---     0.495      R9C15C.C0 to      R9C15C.F0 vga_inst/SLICE_223
+ROUTE         1     0.315      R9C15C.F0 to      R9C15B.D0 vga_inst/n7_adj_464
+CTOF_DEL    ---     0.495      R9C15B.D0 to      R9C15B.F0 vga_inst/SLICE_221
+ROUTE         1     2.034      R9C15B.F0 to      R8C11D.B1 vga_inst/n2959
+CTOF_DEL    ---     0.495      R8C11D.B1 to      R8C11D.F1 vga_inst/SLICE_179
+ROUTE         6     1.761      R8C11D.F1 to       R8C7C.A0 vga_inst/n2464
+CTOF_DEL    ---     0.495       R8C7C.A0 to       R8C7C.F0 vga_inst/SLICE_214
+ROUTE         1     0.744       R8C7C.F0 to       R8C8C.C0 vga_inst/n3590
+CTOF_DEL    ---     0.495       R8C8C.C0 to       R8C8C.F0 vga_inst/SLICE_213
+ROUTE         1     0.653       R8C8C.F0 to       R8C8D.CE vga_inst/led_count_6__N_32_enable_5 (to vga_inst/led_count_6)
+                  --------
+                   16.359   (38.9% logic, 61.1% route), 11 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path vga_inst/SLICE_112 to vga_inst/SLICE_145:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        32     4.191      R2C13D.Q1 to     R7C16D.CLK vga_inst/led_count_6
+                  --------
+                    4.191   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path vga_inst/SLICE_112 to vga_inst/SLICE_157:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        32     4.191      R2C13D.Q1 to      R8C8D.CLK vga_inst/led_count_6
+                  --------
+                    4.191   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 33.368ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/ball_y_i1  (from vga_inst/led_count_6 -)
+   Destination:    FF         Data in        vga_inst/right_digit_279__i1  (to vga_inst/led_count_6 -)
+                   FF                        vga_inst/right_digit_279__i0
+
+   Delay:              16.347ns  (36.8% logic, 63.2% route), 10 logic levels.
+
+ Constraint Details:
+
+     16.347ns physical path delay vga_inst/SLICE_145 to vga_inst/SLICE_160 meets
+     50.000ns delay constraint less
+      0.000ns skew and
+      0.285ns LSR_SET requirement (totaling 49.715ns) by 33.368ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_145 to vga_inst/SLICE_160:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R7C16D.CLK to      R7C16D.Q0 vga_inst/SLICE_145 (from vga_inst/led_count_6)
+ROUTE         6     1.836      R7C16D.Q0 to      R8C14B.A0 vga_inst/ball_y_1
+C0TOFCO_DE  ---     1.023      R8C14B.A0 to     R8C14B.FCO vga_inst/SLICE_57
+ROUTE         1     0.000     R8C14B.FCO to     R8C14C.FCI vga_inst/n2874
+FCITOF0_DE  ---     0.585     R8C14C.FCI to      R8C14C.F0 vga_inst/SLICE_56
+ROUTE         2     1.429      R8C14C.F0 to      R9C14B.B1 vga_inst/n727
+C1TOFCO_DE  ---     0.889      R9C14B.B1 to     R9C14B.FCO vga_inst/SLICE_34
+ROUTE         1     0.000     R9C14B.FCO to     R9C14C.FCI vga_inst/n2884
+FCITOF0_DE  ---     0.585     R9C14C.FCI to      R9C14C.F0 vga_inst/SLICE_24
+ROUTE         1     0.744      R9C14C.F0 to      R9C15C.C1 vga_inst/n294
+CTOF_DEL    ---     0.495      R9C15C.C1 to      R9C15C.F1 vga_inst/SLICE_223
+ROUTE         1     0.436      R9C15C.F1 to      R9C15C.C0 vga_inst/n6_adj_466
+CTOF_DEL    ---     0.495      R9C15C.C0 to      R9C15C.F0 vga_inst/SLICE_223
+ROUTE         1     0.315      R9C15C.F0 to      R9C15B.D0 vga_inst/n7_adj_464
+CTOF_DEL    ---     0.495      R9C15B.D0 to      R9C15B.F0 vga_inst/SLICE_221
+ROUTE         1     2.034      R9C15B.F0 to      R8C11D.B1 vga_inst/n2959
+CTOF_DEL    ---     0.495      R8C11D.B1 to      R8C11D.F1 vga_inst/SLICE_179
+ROUTE         6     2.337      R8C11D.F1 to       R7C7D.B0 vga_inst/n2464
+CTOF_DEL    ---     0.495       R7C7D.B0 to       R7C7D.F0 vga_inst/SLICE_177
+ROUTE         2     1.207       R7C7D.F0 to      R4C8A.LSR vga_inst/n1342 (to vga_inst/led_count_6)
+                  --------
+                   16.347   (36.8% logic, 63.2% route), 10 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path vga_inst/SLICE_112 to vga_inst/SLICE_145:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        32     4.191      R2C13D.Q1 to     R7C16D.CLK vga_inst/led_count_6
+                  --------
+                    4.191   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path vga_inst/SLICE_112 to vga_inst/SLICE_160:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        32     4.191      R2C13D.Q1 to      R4C8A.CLK vga_inst/led_count_6
+                  --------
+                    4.191   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 33.368ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/ball_y_i1  (from vga_inst/led_count_6 -)
+   Destination:    FF         Data in        vga_inst/right_digit_279__i3  (to vga_inst/led_count_6 -)
+                   FF                        vga_inst/right_digit_279__i2
+
+   Delay:              16.347ns  (36.8% logic, 63.2% route), 10 logic levels.
+
+ Constraint Details:
+
+     16.347ns physical path delay vga_inst/SLICE_145 to vga_inst/SLICE_161 meets
+     50.000ns delay constraint less
+      0.000ns skew and
+      0.285ns LSR_SET requirement (totaling 49.715ns) by 33.368ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_145 to vga_inst/SLICE_161:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R7C16D.CLK to      R7C16D.Q0 vga_inst/SLICE_145 (from vga_inst/led_count_6)
+ROUTE         6     1.836      R7C16D.Q0 to      R8C14B.A0 vga_inst/ball_y_1
+C0TOFCO_DE  ---     1.023      R8C14B.A0 to     R8C14B.FCO vga_inst/SLICE_57
+ROUTE         1     0.000     R8C14B.FCO to     R8C14C.FCI vga_inst/n2874
+FCITOF0_DE  ---     0.585     R8C14C.FCI to      R8C14C.F0 vga_inst/SLICE_56
+ROUTE         2     1.429      R8C14C.F0 to      R9C14B.B1 vga_inst/n727
+C1TOFCO_DE  ---     0.889      R9C14B.B1 to     R9C14B.FCO vga_inst/SLICE_34
+ROUTE         1     0.000     R9C14B.FCO to     R9C14C.FCI vga_inst/n2884
+FCITOF0_DE  ---     0.585     R9C14C.FCI to      R9C14C.F0 vga_inst/SLICE_24
+ROUTE         1     0.744      R9C14C.F0 to      R9C15C.C1 vga_inst/n294
+CTOF_DEL    ---     0.495      R9C15C.C1 to      R9C15C.F1 vga_inst/SLICE_223
+ROUTE         1     0.436      R9C15C.F1 to      R9C15C.C0 vga_inst/n6_adj_466
+CTOF_DEL    ---     0.495      R9C15C.C0 to      R9C15C.F0 vga_inst/SLICE_223
+ROUTE         1     0.315      R9C15C.F0 to      R9C15B.D0 vga_inst/n7_adj_464
+CTOF_DEL    ---     0.495      R9C15B.D0 to      R9C15B.F0 vga_inst/SLICE_221
+ROUTE         1     2.034      R9C15B.F0 to      R8C11D.B1 vga_inst/n2959
+CTOF_DEL    ---     0.495      R8C11D.B1 to      R8C11D.F1 vga_inst/SLICE_179
+ROUTE         6     2.337      R8C11D.F1 to       R7C7D.B0 vga_inst/n2464
+CTOF_DEL    ---     0.495       R7C7D.B0 to       R7C7D.F0 vga_inst/SLICE_177
+ROUTE         2     1.207       R7C7D.F0 to      R4C8C.LSR vga_inst/n1342 (to vga_inst/led_count_6)
+                  --------
+                   16.347   (36.8% logic, 63.2% route), 10 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path vga_inst/SLICE_112 to vga_inst/SLICE_145:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        32     4.191      R2C13D.Q1 to     R7C16D.CLK vga_inst/led_count_6
+                  --------
+                    4.191   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path vga_inst/SLICE_112 to vga_inst/SLICE_161:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        32     4.191      R2C13D.Q1 to      R4C8C.CLK vga_inst/led_count_6
+                  --------
+                    4.191   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 33.465ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/ball_y_i2  (from vga_inst/led_count_6 -)
+   Destination:    FF         Data in        vga_inst/right_digit_279__i1  (to vga_inst/led_count_6 -)
+                   FF                        vga_inst/right_digit_279__i0
+
+   Delay:              16.250ns  (36.2% logic, 63.8% route), 10 logic levels.
+
+ Constraint Details:
+
+     16.250ns physical path delay vga_inst/SLICE_145 to vga_inst/SLICE_160 meets
+     50.000ns delay constraint less
+      0.000ns skew and
+      0.285ns LSR_SET requirement (totaling 49.715ns) by 33.465ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_145 to vga_inst/SLICE_160:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R7C16D.CLK to      R7C16D.Q1 vga_inst/SLICE_145 (from vga_inst/led_count_6)
+ROUTE         6     1.873      R7C16D.Q1 to      R8C14B.B1 vga_inst/ball_y_2
+C1TOFCO_DE  ---     0.889      R8C14B.B1 to     R8C14B.FCO vga_inst/SLICE_57
+ROUTE         1     0.000     R8C14B.FCO to     R8C14C.FCI vga_inst/n2874
+FCITOF0_DE  ---     0.585     R8C14C.FCI to      R8C14C.F0 vga_inst/SLICE_56
+ROUTE         2     1.429      R8C14C.F0 to      R9C14B.B1 vga_inst/n727
+C1TOFCO_DE  ---     0.889      R9C14B.B1 to     R9C14B.FCO vga_inst/SLICE_34
+ROUTE         1     0.000     R9C14B.FCO to     R9C14C.FCI vga_inst/n2884
+FCITOF0_DE  ---     0.585     R9C14C.FCI to      R9C14C.F0 vga_inst/SLICE_24
+ROUTE         1     0.744      R9C14C.F0 to      R9C15C.C1 vga_inst/n294
+CTOF_DEL    ---     0.495      R9C15C.C1 to      R9C15C.F1 vga_inst/SLICE_223
+ROUTE         1     0.436      R9C15C.F1 to      R9C15C.C0 vga_inst/n6_adj_466
+CTOF_DEL    ---     0.495      R9C15C.C0 to      R9C15C.F0 vga_inst/SLICE_223
+ROUTE         1     0.315      R9C15C.F0 to      R9C15B.D0 vga_inst/n7_adj_464
+CTOF_DEL    ---     0.495      R9C15B.D0 to      R9C15B.F0 vga_inst/SLICE_221
+ROUTE         1     2.034      R9C15B.F0 to      R8C11D.B1 vga_inst/n2959
+CTOF_DEL    ---     0.495      R8C11D.B1 to      R8C11D.F1 vga_inst/SLICE_179
+ROUTE         6     2.337      R8C11D.F1 to       R7C7D.B0 vga_inst/n2464
+CTOF_DEL    ---     0.495       R7C7D.B0 to       R7C7D.F0 vga_inst/SLICE_177
+ROUTE         2     1.207       R7C7D.F0 to      R4C8A.LSR vga_inst/n1342 (to vga_inst/led_count_6)
+                  --------
+                   16.250   (36.2% logic, 63.8% route), 10 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path vga_inst/SLICE_112 to vga_inst/SLICE_145:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        32     4.191      R2C13D.Q1 to     R7C16D.CLK vga_inst/led_count_6
+                  --------
+                    4.191   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path vga_inst/SLICE_112 to vga_inst/SLICE_160:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        32     4.191      R2C13D.Q1 to      R4C8A.CLK vga_inst/led_count_6
+                  --------
+                    4.191   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 33.465ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/ball_y_i2  (from vga_inst/led_count_6 -)
+   Destination:    FF         Data in        vga_inst/right_digit_279__i3  (to vga_inst/led_count_6 -)
+                   FF                        vga_inst/right_digit_279__i2
+
+   Delay:              16.250ns  (36.2% logic, 63.8% route), 10 logic levels.
+
+ Constraint Details:
+
+     16.250ns physical path delay vga_inst/SLICE_145 to vga_inst/SLICE_161 meets
+     50.000ns delay constraint less
+      0.000ns skew and
+      0.285ns LSR_SET requirement (totaling 49.715ns) by 33.465ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_145 to vga_inst/SLICE_161:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R7C16D.CLK to      R7C16D.Q1 vga_inst/SLICE_145 (from vga_inst/led_count_6)
+ROUTE         6     1.873      R7C16D.Q1 to      R8C14B.B1 vga_inst/ball_y_2
+C1TOFCO_DE  ---     0.889      R8C14B.B1 to     R8C14B.FCO vga_inst/SLICE_57
+ROUTE         1     0.000     R8C14B.FCO to     R8C14C.FCI vga_inst/n2874
+FCITOF0_DE  ---     0.585     R8C14C.FCI to      R8C14C.F0 vga_inst/SLICE_56
+ROUTE         2     1.429      R8C14C.F0 to      R9C14B.B1 vga_inst/n727
+C1TOFCO_DE  ---     0.889      R9C14B.B1 to     R9C14B.FCO vga_inst/SLICE_34
+ROUTE         1     0.000     R9C14B.FCO to     R9C14C.FCI vga_inst/n2884
+FCITOF0_DE  ---     0.585     R9C14C.FCI to      R9C14C.F0 vga_inst/SLICE_24
+ROUTE         1     0.744      R9C14C.F0 to      R9C15C.C1 vga_inst/n294
+CTOF_DEL    ---     0.495      R9C15C.C1 to      R9C15C.F1 vga_inst/SLICE_223
+ROUTE         1     0.436      R9C15C.F1 to      R9C15C.C0 vga_inst/n6_adj_466
+CTOF_DEL    ---     0.495      R9C15C.C0 to      R9C15C.F0 vga_inst/SLICE_223
+ROUTE         1     0.315      R9C15C.F0 to      R9C15B.D0 vga_inst/n7_adj_464
+CTOF_DEL    ---     0.495      R9C15B.D0 to      R9C15B.F0 vga_inst/SLICE_221
+ROUTE         1     2.034      R9C15B.F0 to      R8C11D.B1 vga_inst/n2959
+CTOF_DEL    ---     0.495      R8C11D.B1 to      R8C11D.F1 vga_inst/SLICE_179
+ROUTE         6     2.337      R8C11D.F1 to       R7C7D.B0 vga_inst/n2464
+CTOF_DEL    ---     0.495       R7C7D.B0 to       R7C7D.F0 vga_inst/SLICE_177
+ROUTE         2     1.207       R7C7D.F0 to      R4C8C.LSR vga_inst/n1342 (to vga_inst/led_count_6)
+                  --------
+                   16.250   (36.2% logic, 63.8% route), 10 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path vga_inst/SLICE_112 to vga_inst/SLICE_145:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        32     4.191      R2C13D.Q1 to     R7C16D.CLK vga_inst/led_count_6
+                  --------
+                    4.191   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path vga_inst/SLICE_112 to vga_inst/SLICE_161:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        32     4.191      R2C13D.Q1 to      R4C8C.CLK vga_inst/led_count_6
+                  --------
+                    4.191   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 33.489ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/ball_y_i2  (from vga_inst/led_count_6 -)
+   Destination:    FF         Data in        vga_inst/game_state__i1  (to vga_inst/led_count_6 -)
+
+   Delay:              16.204ns  (39.3% logic, 60.7% route), 11 logic levels.
+
+ Constraint Details:
+
+     16.204ns physical path delay vga_inst/SLICE_145 to vga_inst/SLICE_157 meets
+     50.000ns delay constraint less
+      0.000ns skew and
+      0.307ns CE_SET requirement (totaling 49.693ns) by 33.489ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_145 to vga_inst/SLICE_157:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R7C16D.CLK to      R7C16D.Q1 vga_inst/SLICE_145 (from vga_inst/led_count_6)
+ROUTE         6     1.432      R7C16D.Q1 to      R5C16B.B1 vga_inst/ball_y_2
+C1TOFCO_DE  ---     0.889      R5C16B.B1 to     R5C16B.FCO vga_inst/SLICE_66
+ROUTE         1     0.000     R5C16B.FCO to     R5C16C.FCI vga_inst/n2869
+FCITOF0_DE  ---     0.585     R5C16C.FCI to      R5C16C.F0 vga_inst/SLICE_63
+ROUTE         2     1.429      R5C16C.F0 to      R4C16B.B1 vga_inst/n612
+C1TOFCO_DE  ---     0.889      R4C16B.B1 to     R4C16B.FCO vga_inst/SLICE_21
+ROUTE         1     0.000     R4C16B.FCO to     R4C16C.FCI vga_inst/n2806
+FCITOF0_DE  ---     0.585     R4C16C.FCI to      R4C16C.F0 vga_inst/SLICE_19
+ROUTE         1     0.744      R4C16C.F0 to      R4C17C.C1 vga_inst/n283
+CTOF_DEL    ---     0.495      R4C17C.C1 to      R4C17C.F1 vga_inst/SLICE_204
+ROUTE         1     0.436      R4C17C.F1 to      R4C17C.C0 vga_inst/n5
+CTOF_DEL    ---     0.495      R4C17C.C0 to      R4C17C.F0 vga_inst/SLICE_204
+ROUTE         1     0.315      R4C17C.F0 to      R4C17B.D0 vga_inst/n7
+CTOF_DEL    ---     0.495      R4C17B.D0 to      R4C17B.F0 vga_inst/SLICE_198
+ROUTE         1     1.535      R4C17B.F0 to      R5C11C.B1 vga_inst/n2930
+CTOF_DEL    ---     0.495      R5C11C.B1 to      R5C11C.F1 vga_inst/SLICE_194
+ROUTE        12     2.323      R5C11C.F1 to       R8C8C.C1 vga_inst/n2462
+CTOF_DEL    ---     0.495       R8C8C.C1 to       R8C8C.F1 vga_inst/SLICE_213
+ROUTE         1     0.967       R8C8C.F1 to       R8C8C.A0 vga_inst/n3592
+CTOF_DEL    ---     0.495       R8C8C.A0 to       R8C8C.F0 vga_inst/SLICE_213
+ROUTE         1     0.653       R8C8C.F0 to       R8C8D.CE vga_inst/led_count_6__N_32_enable_5 (to vga_inst/led_count_6)
+                  --------
+                   16.204   (39.3% logic, 60.7% route), 11 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path vga_inst/SLICE_112 to vga_inst/SLICE_145:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        32     4.191      R2C13D.Q1 to     R7C16D.CLK vga_inst/led_count_6
+                  --------
+                    4.191   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path vga_inst/SLICE_112 to vga_inst/SLICE_157:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        32     4.191      R2C13D.Q1 to      R8C8D.CLK vga_inst/led_count_6
+                  --------
+                    4.191   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 33.529ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/ball_y_i1  (from vga_inst/led_count_6 -)
+   Destination:    FF         Data in        vga_inst/game_state__i1  (to vga_inst/led_count_6 -)
+
+   Delay:              16.164ns  (38.5% logic, 61.5% route), 11 logic levels.
+
+ Constraint Details:
+
+     16.164ns physical path delay vga_inst/SLICE_145 to vga_inst/SLICE_157 meets
+     50.000ns delay constraint less
+      0.000ns skew and
+      0.307ns CE_SET requirement (totaling 49.693ns) by 33.529ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_145 to vga_inst/SLICE_157:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R7C16D.CLK to      R7C16D.Q0 vga_inst/SLICE_145 (from vga_inst/led_count_6)
+ROUTE         6     1.836      R7C16D.Q0 to      R8C14B.A0 vga_inst/ball_y_1
+C0TOFCO_DE  ---     1.023      R8C14B.A0 to     R8C14B.FCO vga_inst/SLICE_57
+ROUTE         1     0.000     R8C14B.FCO to     R8C14C.FCI vga_inst/n2874
+FCITOFCO_D  ---     0.162     R8C14C.FCI to     R8C14C.FCO vga_inst/SLICE_56
+ROUTE         1     0.000     R8C14C.FCO to     R8C14D.FCI vga_inst/n2875
+FCITOF0_DE  ---     0.585     R8C14D.FCI to      R8C14D.F0 vga_inst/SLICE_52
+ROUTE         2     1.815      R8C14D.F0 to      R9C14C.A1 vga_inst/n725
+C1TOFCO_DE  ---     0.889      R9C14C.A1 to     R9C14C.FCO vga_inst/SLICE_24
+ROUTE         1     0.000     R9C14C.FCO to     R9C14D.FCI vga_inst/n2885
+FCITOF1_DE  ---     0.643     R9C14D.FCI to      R9C14D.F1 vga_inst/SLICE_23
+ROUTE         1     0.656      R9C14D.F1 to      R9C15B.A1 vga_inst/n15_adj_420
+CTOF_DEL    ---     0.495      R9C15B.A1 to      R9C15B.F1 vga_inst/SLICE_221
+ROUTE         1     0.436      R9C15B.F1 to      R9C15B.C0 vga_inst/n8_adj_465
+CTOF_DEL    ---     0.495      R9C15B.C0 to      R9C15B.F0 vga_inst/SLICE_221
+ROUTE         1     2.034      R9C15B.F0 to      R8C11D.B1 vga_inst/n2959
+CTOF_DEL    ---     0.495      R8C11D.B1 to      R8C11D.F1 vga_inst/SLICE_179
+ROUTE         6     1.761      R8C11D.F1 to       R8C7C.A0 vga_inst/n2464
+CTOF_DEL    ---     0.495       R8C7C.A0 to       R8C7C.F0 vga_inst/SLICE_214
+ROUTE         1     0.744       R8C7C.F0 to       R8C8C.C0 vga_inst/n3590
+CTOF_DEL    ---     0.495       R8C8C.C0 to       R8C8C.F0 vga_inst/SLICE_213
+ROUTE         1     0.653       R8C8C.F0 to       R8C8D.CE vga_inst/led_count_6__N_32_enable_5 (to vga_inst/led_count_6)
+                  --------
+                   16.164   (38.5% logic, 61.5% route), 11 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path vga_inst/SLICE_112 to vga_inst/SLICE_145:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        32     4.191      R2C13D.Q1 to     R7C16D.CLK vga_inst/led_count_6
+                  --------
+                    4.191   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path vga_inst/SLICE_112 to vga_inst/SLICE_157:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        32     4.191      R2C13D.Q1 to      R8C8D.CLK vga_inst/led_count_6
+                  --------
+                    4.191   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 33.546ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/ball_y_i1  (from vga_inst/led_count_6 -)
+   Destination:    FF         Data in        vga_inst/game_state__i1  (to vga_inst/led_count_6 -)
+
+   Delay:              16.147ns  (39.2% logic, 60.8% route), 12 logic levels.
+
+ Constraint Details:
+
+     16.147ns physical path delay vga_inst/SLICE_145 to vga_inst/SLICE_157 meets
+     50.000ns delay constraint less
+      0.000ns skew and
+      0.307ns CE_SET requirement (totaling 49.693ns) by 33.546ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_145 to vga_inst/SLICE_157:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R7C16D.CLK to      R7C16D.Q0 vga_inst/SLICE_145 (from vga_inst/led_count_6)
+ROUTE         6     1.836      R7C16D.Q0 to      R8C14B.A0 vga_inst/ball_y_1
+C0TOFCO_DE  ---     1.023      R8C14B.A0 to     R8C14B.FCO vga_inst/SLICE_57
+ROUTE         1     0.000     R8C14B.FCO to     R8C14C.FCI vga_inst/n2874
+FCITOFCO_D  ---     0.162     R8C14C.FCI to     R8C14C.FCO vga_inst/SLICE_56
+ROUTE         1     0.000     R8C14C.FCO to     R8C14D.FCI vga_inst/n2875
+FCITOF0_DE  ---     0.585     R8C14D.FCI to      R8C14D.F0 vga_inst/SLICE_52
+ROUTE         2     1.815      R8C14D.F0 to      R9C14C.A1 vga_inst/n725
+C1TOFCO_DE  ---     0.889      R9C14C.A1 to     R9C14C.FCO vga_inst/SLICE_24
+ROUTE         1     0.000     R9C14C.FCO to     R9C14D.FCI vga_inst/n2885
+FCITOFCO_D  ---     0.162     R9C14D.FCI to     R9C14D.FCO vga_inst/SLICE_23
+ROUTE         1     0.000     R9C14D.FCO to     R9C15A.FCI vga_inst/n2886
+FCITOF0_DE  ---     0.585     R9C15A.FCI to      R9C15A.F0 vga_inst/SLICE_22
+ROUTE         1     0.656      R9C15A.F0 to      R9C15C.A0 vga_inst/n17_adj_417
+CTOF_DEL    ---     0.495      R9C15C.A0 to      R9C15C.F0 vga_inst/SLICE_223
+ROUTE         1     0.315      R9C15C.F0 to      R9C15B.D0 vga_inst/n7_adj_464
+CTOF_DEL    ---     0.495      R9C15B.D0 to      R9C15B.F0 vga_inst/SLICE_221
+ROUTE         1     2.034      R9C15B.F0 to      R8C11D.B1 vga_inst/n2959
+CTOF_DEL    ---     0.495      R8C11D.B1 to      R8C11D.F1 vga_inst/SLICE_179
+ROUTE         6     1.761      R8C11D.F1 to       R8C7C.A0 vga_inst/n2464
+CTOF_DEL    ---     0.495       R8C7C.A0 to       R8C7C.F0 vga_inst/SLICE_214
+ROUTE         1     0.744       R8C7C.F0 to       R8C8C.C0 vga_inst/n3590
+CTOF_DEL    ---     0.495       R8C8C.C0 to       R8C8C.F0 vga_inst/SLICE_213
+ROUTE         1     0.653       R8C8C.F0 to       R8C8D.CE vga_inst/led_count_6__N_32_enable_5 (to vga_inst/led_count_6)
+                  --------
+                   16.147   (39.2% logic, 60.8% route), 12 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path vga_inst/SLICE_112 to vga_inst/SLICE_145:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        32     4.191      R2C13D.Q1 to     R7C16D.CLK vga_inst/led_count_6
+                  --------
+                    4.191   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path vga_inst/SLICE_112 to vga_inst/SLICE_157:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        32     4.191      R2C13D.Q1 to      R8C8D.CLK vga_inst/led_count_6
+                  --------
+                    4.191   (0.0% logic, 100.0% route), 0 logic levels.
+
+Report:   59.655MHz is the maximum frequency for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "INTERNAL_OSC" 38.000000  |             |             |
+MHz ;                                   |            -|            -|   0  
+                                        |             |             |
+FREQUENCY NET "clk" 25.333333 MHz ;     |   25.333 MHz|    2.939 MHz|   2 *
+                                        |             |             |
+FREQUENCY 20.000000 MHz ;               |   20.000 MHz|   59.655 MHz|  11  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+1 preference(marked by "*" above) not met.
+
+----------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+----------------------------------------------------------------------------
+vga_inst/n2769                          |       1|      16|     30.19%
+                                        |        |        |
+vga_inst/n2768                          |       1|      12|     22.64%
+                                        |        |        |
+vga_inst/n2770                          |       1|      12|     22.64%
+                                        |        |        |
+vga_inst/fipsy_offset_0                 |       3|       8|     15.09%
+                                        |        |        |
+vga_inst/fipsy_rom_addr_3_N_176_7       |       1|       8|     15.09%
+                                        |        |        |
+vga_inst/fipsy_offset_1                 |       2|       7|     13.21%
+                                        |        |        |
+vga_inst/fipsy_rom_addr_3_N_176_6       |       1|       7|     13.21%
+                                        |        |        |
+vga_inst/fipsy_offset_2                 |       2|       6|     11.32%
+                                        |        |        |
+vga_inst/fipsy_rom_addr_3_N_176_5       |       1|       6|     11.32%
+                                        |        |        |
+----------------------------------------------------------------------------
+
+
+Clock Domains Analysis
+------------------------
+
+Found 5 clocks:
+
+Clock Domain: vga_inst/line_cycle   Source: vga_inst/SLICE_133.Q0   Loads: 35
+   Covered under: FREQUENCY 20.000000 MHz ;
+
+Clock Domain: vga_inst/led_count_6   Source: vga_inst/SLICE_112.Q1   Loads: 32
+   Covered under: FREQUENCY 20.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: vga_inst/led_count_5   Source: vga_inst/SLICE_112.Q0
+      Covered under: FREQUENCY 20.000000 MHz ;   Transfers: 20
+
+Clock Domain: vga_inst/led_count_5   Source: vga_inst/SLICE_112.Q0   Loads: 12
+   Covered under: FREQUENCY 20.000000 MHz ;
+
+Clock Domain: clk   Source: Clk_25MHz_inst/PLLInst_0.CLKOP   Loads: 21
+   Covered under: FREQUENCY NET "clk" 25.333333 MHz ;
+
+   Data transfers from:
+   Clock Domain: vga_inst/line_cycle   Source: vga_inst/SLICE_133.Q0
+      Covered under: FREQUENCY NET "clk" 25.333333 MHz ;   Transfers: 17
+
+   Clock Domain: vga_inst/led_count_6   Source: vga_inst/SLICE_112.Q1
+      Covered under: FREQUENCY NET "clk" 25.333333 MHz ;   Transfers: 8
+
+Clock Domain: INTERNAL_OSC   Source: OSCH_inst.OSC   Loads: 1
+   No transfer within this clock domain is found
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 53  Score: 9067689
+Cumulative negative slack: 9067689
+
+Constraints cover 24683 paths, 5 nets, and 1012 connections (64.91% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.13.0.56.2
+Tue Feb 25 16:24:28 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 4 -sphld m -o FipsyBaseline_Implementation.twr -gui -msgset C:/Users/enact/OneDrive/Documents/VGA_Pong_FipsyV2_campaign_20250215/ColorPong/promote.xml FipsyBaseline_Implementation.ncd FipsyBaseline_Implementation.prf 
+Design file:     fipsybaseline_implementation.ncd
+Preference file: fipsybaseline_implementation.prf
+Device,speed:    LCMXO2-1200HC,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+Voltage:    3.300 V
+
+VCCIO Voltage:
+                   3.300 V (Bank 0, defined by PAR)
+                   3.300 V (Bank 1, defined by PAR)
+                   3.300 V (Bank 2, defined by PAR)
+                   3.300 V (Bank 3, defined by PAR)
+
+
+
+================================================================================
+Preference: FREQUENCY NET "INTERNAL_OSC" 38.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: FREQUENCY NET "clk" 25.333333 MHz ;
+            375 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.379ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/column_273__i7  (from clk +)
+   Destination:    FF         Data in        vga_inst/column_273__i7  (to clk +)
+
+   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.366ns physical path delay vga_inst/SLICE_134 to vga_inst/SLICE_134 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_134 to vga_inst/SLICE_134:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R7C3A.CLK to       R7C3A.Q0 vga_inst/SLICE_134 (from clk)
+ROUTE        11     0.132       R7C3A.Q0 to       R7C3A.A0 vga_inst/column_7
+CTOF_DEL    ---     0.101       R7C3A.A0 to       R7C3A.F0 vga_inst/SLICE_134
+ROUTE         1     0.000       R7C3A.F0 to      R7C3A.DI0 vga_inst/n48_adj_423 (to clk)
+                  --------
+                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path Clk_25MHz_inst/PLLInst_0 to vga_inst/SLICE_134:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     0.595     LPLL.CLKOP to      R7C3A.CLK clk
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path Clk_25MHz_inst/PLLInst_0 to vga_inst/SLICE_134:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     0.595     LPLL.CLKOP to      R7C3A.CLK clk
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.379ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/column_273__i6  (from clk +)
+   Destination:    FF         Data in        vga_inst/column_273__i6  (to clk +)
+
+   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.366ns physical path delay vga_inst/SLICE_137 to vga_inst/SLICE_137 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_137 to vga_inst/SLICE_137:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R7C2D.CLK to       R7C2D.Q1 vga_inst/SLICE_137 (from clk)
+ROUTE        13     0.132       R7C2D.Q1 to       R7C2D.A1 vga_inst/column_6
+CTOF_DEL    ---     0.101       R7C2D.A1 to       R7C2D.F1 vga_inst/SLICE_137
+ROUTE         1     0.000       R7C2D.F1 to      R7C2D.DI1 vga_inst/n49_adj_424 (to clk)
+                  --------
+                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path Clk_25MHz_inst/PLLInst_0 to vga_inst/SLICE_137:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     0.595     LPLL.CLKOP to      R7C2D.CLK clk
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path Clk_25MHz_inst/PLLInst_0 to vga_inst/SLICE_137:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     0.595     LPLL.CLKOP to      R7C2D.CLK clk
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.379ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/column_273__i4  (from clk +)
+   Destination:    FF         Data in        vga_inst/column_273__i4  (to clk +)
+
+   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.366ns physical path delay vga_inst/SLICE_140 to vga_inst/SLICE_140 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_140 to vga_inst/SLICE_140:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R7C2C.CLK to       R7C2C.Q1 vga_inst/SLICE_140 (from clk)
+ROUTE        12     0.132       R7C2C.Q1 to       R7C2C.A1 vga_inst/column_4
+CTOF_DEL    ---     0.101       R7C2C.A1 to       R7C2C.F1 vga_inst/SLICE_140
+ROUTE         1     0.000       R7C2C.F1 to      R7C2C.DI1 vga_inst/n51_adj_426 (to clk)
+                  --------
+                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path Clk_25MHz_inst/PLLInst_0 to vga_inst/SLICE_140:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     0.595     LPLL.CLKOP to      R7C2C.CLK clk
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path Clk_25MHz_inst/PLLInst_0 to vga_inst/SLICE_140:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     0.595     LPLL.CLKOP to      R7C2C.CLK clk
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.379ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/column_273__i8  (from clk +)
+   Destination:    FF         Data in        vga_inst/column_273__i8  (to clk +)
+
+   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.366ns physical path delay vga_inst/SLICE_134 to vga_inst/SLICE_134 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_134 to vga_inst/SLICE_134:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R7C3A.CLK to       R7C3A.Q1 vga_inst/SLICE_134 (from clk)
+ROUTE        10     0.132       R7C3A.Q1 to       R7C3A.A1 vga_inst/column_8
+CTOF_DEL    ---     0.101       R7C3A.A1 to       R7C3A.F1 vga_inst/SLICE_134
+ROUTE         1     0.000       R7C3A.F1 to      R7C3A.DI1 vga_inst/n47_adj_421 (to clk)
+                  --------
+                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path Clk_25MHz_inst/PLLInst_0 to vga_inst/SLICE_134:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     0.595     LPLL.CLKOP to      R7C3A.CLK clk
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path Clk_25MHz_inst/PLLInst_0 to vga_inst/SLICE_134:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     0.595     LPLL.CLKOP to      R7C3A.CLK clk
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.380ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/column_273__i9  (from clk +)
+   Destination:    FF         Data in        vga_inst/column_273__i9  (to clk +)
+
+   Delay:               0.367ns  (63.8% logic, 36.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.367ns physical path delay vga_inst/SLICE_133 to vga_inst/SLICE_133 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.380ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_133 to vga_inst/SLICE_133:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R7C3B.CLK to       R7C3B.Q0 vga_inst/SLICE_133 (from clk)
+ROUTE        35     0.133       R7C3B.Q0 to       R7C3B.A0 vga_inst/line_cycle
+CTOF_DEL    ---     0.101       R7C3B.A0 to       R7C3B.F0 vga_inst/SLICE_133
+ROUTE         1     0.000       R7C3B.F0 to      R7C3B.DI0 vga_inst/n46 (to clk)
+                  --------
+                    0.367   (63.8% logic, 36.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path Clk_25MHz_inst/PLLInst_0 to vga_inst/SLICE_133:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     0.595     LPLL.CLKOP to      R7C3B.CLK clk
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path Clk_25MHz_inst/PLLInst_0 to vga_inst/SLICE_133:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     0.595     LPLL.CLKOP to      R7C3B.CLK clk
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.380ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/column_273__i2  (from clk +)
+   Destination:    FF         Data in        vga_inst/column_273__i2  (to clk +)
+
+   Delay:               0.367ns  (63.8% logic, 36.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.367ns physical path delay vga_inst/SLICE_0 to vga_inst/SLICE_0 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.380ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_0 to vga_inst/SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R7C2B.CLK to       R7C2B.Q1 vga_inst/SLICE_0 (from clk)
+ROUTE        11     0.133       R7C2B.Q1 to       R7C2B.A1 vga_inst/column_2
+CTOF_DEL    ---     0.101       R7C2B.A1 to       R7C2B.F1 vga_inst/SLICE_0
+ROUTE         1     0.000       R7C2B.F1 to      R7C2B.DI1 vga_inst/n53 (to clk)
+                  --------
+                    0.367   (63.8% logic, 36.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path Clk_25MHz_inst/PLLInst_0 to vga_inst/SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     0.595     LPLL.CLKOP to      R7C2B.CLK clk
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path Clk_25MHz_inst/PLLInst_0 to vga_inst/SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     0.595     LPLL.CLKOP to      R7C2B.CLK clk
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.381ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/column_273__i0  (from clk +)
+   Destination:    FF         Data in        vga_inst/column_273__i0  (to clk +)
+
+   Delay:               0.368ns  (63.6% logic, 36.4% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.368ns physical path delay vga_inst/SLICE_3 to vga_inst/SLICE_3 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.381ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_3 to vga_inst/SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R7C2A.CLK to       R7C2A.Q1 vga_inst/SLICE_3 (from clk)
+ROUTE        13     0.134       R7C2A.Q1 to       R7C2A.A1 vga_inst/column_0
+CTOF_DEL    ---     0.101       R7C2A.A1 to       R7C2A.F1 vga_inst/SLICE_3
+ROUTE         1     0.000       R7C2A.F1 to      R7C2A.DI1 vga_inst/n55 (to clk)
+                  --------
+                    0.368   (63.6% logic, 36.4% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path Clk_25MHz_inst/PLLInst_0 to vga_inst/SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     0.595     LPLL.CLKOP to      R7C2A.CLK clk
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path Clk_25MHz_inst/PLLInst_0 to vga_inst/SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     0.595     LPLL.CLKOP to      R7C2A.CLK clk
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.381ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/column_273__i1  (from clk +)
+   Destination:    FF         Data in        vga_inst/column_273__i1  (to clk +)
+
+   Delay:               0.368ns  (63.6% logic, 36.4% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.368ns physical path delay vga_inst/SLICE_0 to vga_inst/SLICE_0 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.381ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_0 to vga_inst/SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R7C2B.CLK to       R7C2B.Q0 vga_inst/SLICE_0 (from clk)
+ROUTE        10     0.134       R7C2B.Q0 to       R7C2B.A0 vga_inst/column_1
+CTOF_DEL    ---     0.101       R7C2B.A0 to       R7C2B.F0 vga_inst/SLICE_0
+ROUTE         1     0.000       R7C2B.F0 to      R7C2B.DI0 vga_inst/n54 (to clk)
+                  --------
+                    0.368   (63.6% logic, 36.4% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path Clk_25MHz_inst/PLLInst_0 to vga_inst/SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     0.595     LPLL.CLKOP to      R7C2B.CLK clk
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path Clk_25MHz_inst/PLLInst_0 to vga_inst/SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     0.595     LPLL.CLKOP to      R7C2B.CLK clk
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.381ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/column_273__i5  (from clk +)
+   Destination:    FF         Data in        vga_inst/column_273__i5  (to clk +)
+
+   Delay:               0.368ns  (63.6% logic, 36.4% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.368ns physical path delay vga_inst/SLICE_137 to vga_inst/SLICE_137 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.381ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_137 to vga_inst/SLICE_137:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R7C2D.CLK to       R7C2D.Q0 vga_inst/SLICE_137 (from clk)
+ROUTE        12     0.134       R7C2D.Q0 to       R7C2D.A0 vga_inst/column_5
+CTOF_DEL    ---     0.101       R7C2D.A0 to       R7C2D.F0 vga_inst/SLICE_137
+ROUTE         1     0.000       R7C2D.F0 to      R7C2D.DI0 vga_inst/n50_adj_425 (to clk)
+                  --------
+                    0.368   (63.6% logic, 36.4% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path Clk_25MHz_inst/PLLInst_0 to vga_inst/SLICE_137:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     0.595     LPLL.CLKOP to      R7C2D.CLK clk
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path Clk_25MHz_inst/PLLInst_0 to vga_inst/SLICE_137:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     0.595     LPLL.CLKOP to      R7C2D.CLK clk
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.381ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/column_273__i3  (from clk +)
+   Destination:    FF         Data in        vga_inst/column_273__i3  (to clk +)
+
+   Delay:               0.368ns  (63.6% logic, 36.4% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.368ns physical path delay vga_inst/SLICE_140 to vga_inst/SLICE_140 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.381ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_140 to vga_inst/SLICE_140:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R7C2C.CLK to       R7C2C.Q0 vga_inst/SLICE_140 (from clk)
+ROUTE        11     0.134       R7C2C.Q0 to       R7C2C.A0 vga_inst/column_3
+CTOF_DEL    ---     0.101       R7C2C.A0 to       R7C2C.F0 vga_inst/SLICE_140
+ROUTE         1     0.000       R7C2C.F0 to      R7C2C.DI0 vga_inst/n52_adj_427 (to clk)
+                  --------
+                    0.368   (63.6% logic, 36.4% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path Clk_25MHz_inst/PLLInst_0 to vga_inst/SLICE_140:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     0.595     LPLL.CLKOP to      R7C2C.CLK clk
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path Clk_25MHz_inst/PLLInst_0 to vga_inst/SLICE_140:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     0.595     LPLL.CLKOP to      R7C2C.CLK clk
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY 20.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.312ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/row_275__i1  (from vga_inst/line_cycle -)
+   Destination:    FF         Data in        vga_inst/fipsy_row_i1  (to vga_inst/line_cycle -)
+
+   Delay:               0.293ns  (45.4% logic, 54.6% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.293ns physical path delay vga_inst/SLICE_120 to vga_inst/SLICE_151 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.312ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_120 to vga_inst/SLICE_151:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R5C10B.CLK to      R5C10B.Q0 vga_inst/SLICE_120 (from vga_inst/line_cycle)
+ROUTE         8     0.160      R5C10B.Q0 to       R5C9B.M1 vga_inst/row_1 (to vga_inst/line_cycle)
+                  --------
+                    0.293   (45.4% logic, 54.6% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path vga_inst/SLICE_133 to vga_inst/SLICE_120:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        35     1.203       R7C3B.Q0 to     R5C10B.CLK vga_inst/line_cycle
+                  --------
+                    1.203   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path vga_inst/SLICE_133 to vga_inst/SLICE_151:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        35     1.203       R7C3B.Q0 to      R5C9B.CLK vga_inst/line_cycle
+                  --------
+                    1.203   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.377ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/led_count_276__i12  (from vga_inst/line_cycle -)
+   Destination:    FF         Data in        vga_inst/led_count_276__i12  (to vga_inst/line_cycle -)
+
+   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.364ns physical path delay vga_inst/SLICE_109 to vga_inst/SLICE_109 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_109 to vga_inst/SLICE_109:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R2C14C.CLK to      R2C14C.Q1 vga_inst/SLICE_109 (from vga_inst/line_cycle)
+ROUTE         1     0.130      R2C14C.Q1 to      R2C14C.A1 vga_inst/n2
+CTOF_DEL    ---     0.101      R2C14C.A1 to      R2C14C.F1 vga_inst/SLICE_109
+ROUTE         1     0.000      R2C14C.F1 to     R2C14C.DI1 vga_inst/n63 (to vga_inst/line_cycle)
+                  --------
+                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path vga_inst/SLICE_133 to vga_inst/SLICE_109:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        35     1.203       R7C3B.Q0 to     R2C14C.CLK vga_inst/line_cycle
+                  --------
+                    1.203   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path vga_inst/SLICE_133 to vga_inst/SLICE_109:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        35     1.203       R7C3B.Q0 to     R2C14C.CLK vga_inst/line_cycle
+                  --------
+                    1.203   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.377ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/led_count_276__i11  (from vga_inst/line_cycle -)
+   Destination:    FF         Data in        vga_inst/led_count_276__i11  (to vga_inst/line_cycle -)
+
+   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.364ns physical path delay vga_inst/SLICE_109 to vga_inst/SLICE_109 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_109 to vga_inst/SLICE_109:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R2C14C.CLK to      R2C14C.Q0 vga_inst/SLICE_109 (from vga_inst/line_cycle)
+ROUTE         1     0.130      R2C14C.Q0 to      R2C14C.A0 vga_inst/n3
+CTOF_DEL    ---     0.101      R2C14C.A0 to      R2C14C.F0 vga_inst/SLICE_109
+ROUTE         1     0.000      R2C14C.F0 to     R2C14C.DI0 vga_inst/n64 (to vga_inst/line_cycle)
+                  --------
+                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path vga_inst/SLICE_133 to vga_inst/SLICE_109:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        35     1.203       R7C3B.Q0 to     R2C14C.CLK vga_inst/line_cycle
+                  --------
+                    1.203   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path vga_inst/SLICE_133 to vga_inst/SLICE_109:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        35     1.203       R7C3B.Q0 to     R2C14C.CLK vga_inst/line_cycle
+                  --------
+                    1.203   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.377ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/led_count_276__i10  (from vga_inst/line_cycle -)
+   Destination:    FF         Data in        vga_inst/led_count_276__i10  (to vga_inst/line_cycle -)
+
+   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.364ns physical path delay vga_inst/SLICE_110 to vga_inst/SLICE_110 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_110 to vga_inst/SLICE_110:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R2C14B.CLK to      R2C14B.Q1 vga_inst/SLICE_110 (from vga_inst/line_cycle)
+ROUTE         1     0.130      R2C14B.Q1 to      R2C14B.A1 vga_inst/n4_adj_433
+CTOF_DEL    ---     0.101      R2C14B.A1 to      R2C14B.F1 vga_inst/SLICE_110
+ROUTE         1     0.000      R2C14B.F1 to     R2C14B.DI1 vga_inst/n65 (to vga_inst/line_cycle)
+                  --------
+                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path vga_inst/SLICE_133 to vga_inst/SLICE_110:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        35     1.203       R7C3B.Q0 to     R2C14B.CLK vga_inst/line_cycle
+                  --------
+                    1.203   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path vga_inst/SLICE_133 to vga_inst/SLICE_110:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        35     1.203       R7C3B.Q0 to     R2C14B.CLK vga_inst/line_cycle
+                  --------
+                    1.203   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.379ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/led_count_276__i7  (from vga_inst/line_cycle -)
+   Destination:    FF         Data in        vga_inst/led_count_276__i7  (to vga_inst/line_cycle -)
+
+   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.366ns physical path delay vga_inst/SLICE_111 to vga_inst/SLICE_111 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_111 to vga_inst/SLICE_111:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R2C14A.CLK to      R2C14A.Q0 vga_inst/SLICE_111 (from vga_inst/line_cycle)
+ROUTE         2     0.132      R2C14A.Q0 to      R2C14A.A0 vga_inst/led_count_7
+CTOF_DEL    ---     0.101      R2C14A.A0 to      R2C14A.F0 vga_inst/SLICE_111
+ROUTE         1     0.000      R2C14A.F0 to     R2C14A.DI0 vga_inst/n68 (to vga_inst/line_cycle)
+                  --------
+                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path vga_inst/SLICE_133 to vga_inst/SLICE_111:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        35     1.203       R7C3B.Q0 to     R2C14A.CLK vga_inst/line_cycle
+                  --------
+                    1.203   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path vga_inst/SLICE_133 to vga_inst/SLICE_111:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        35     1.203       R7C3B.Q0 to     R2C14A.CLK vga_inst/line_cycle
+                  --------
+                    1.203   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.379ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/led_count_276__i9  (from vga_inst/line_cycle -)
+   Destination:    FF         Data in        vga_inst/led_count_276__i9  (to vga_inst/line_cycle -)
+
+   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.366ns physical path delay vga_inst/SLICE_110 to vga_inst/SLICE_110 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_110 to vga_inst/SLICE_110:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R2C14B.CLK to      R2C14B.Q0 vga_inst/SLICE_110 (from vga_inst/line_cycle)
+ROUTE         2     0.132      R2C14B.Q0 to      R2C14B.A0 vga_inst/led_count_9
+CTOF_DEL    ---     0.101      R2C14B.A0 to      R2C14B.F0 vga_inst/SLICE_110
+ROUTE         1     0.000      R2C14B.F0 to     R2C14B.DI0 vga_inst/n66 (to vga_inst/line_cycle)
+                  --------
+                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path vga_inst/SLICE_133 to vga_inst/SLICE_110:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        35     1.203       R7C3B.Q0 to     R2C14B.CLK vga_inst/line_cycle
+                  --------
+                    1.203   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path vga_inst/SLICE_133 to vga_inst/SLICE_110:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        35     1.203       R7C3B.Q0 to     R2C14B.CLK vga_inst/line_cycle
+                  --------
+                    1.203   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.379ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/fipsy_offset_277_294__i2  (from vga_inst/line_cycle -)
+   Destination:    FF         Data in        vga_inst/fipsy_offset_277_294__i2  (to vga_inst/line_cycle -)
+
+   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.366ns physical path delay vga_inst/SLICE_106 to vga_inst/SLICE_106 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_106 to vga_inst/SLICE_106:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R8C6B.CLK to       R8C6B.Q0 vga_inst/SLICE_106 (from vga_inst/line_cycle)
+ROUTE         2     0.132       R8C6B.Q0 to       R8C6B.A0 vga_inst/fipsy_offset_1
+CTOF_DEL    ---     0.101       R8C6B.A0 to       R8C6B.F0 vga_inst/SLICE_106
+ROUTE         1     0.000       R8C6B.F0 to      R8C6B.DI0 vga_inst/n44 (to vga_inst/line_cycle)
+                  --------
+                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path vga_inst/SLICE_133 to vga_inst/SLICE_106:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        35     1.203       R7C3B.Q0 to      R8C6B.CLK vga_inst/line_cycle
+                  --------
+                    1.203   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path vga_inst/SLICE_133 to vga_inst/SLICE_106:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        35     1.203       R7C3B.Q0 to      R8C6B.CLK vga_inst/line_cycle
+                  --------
+                    1.203   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.379ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/fipsy_offset_277_294__i4  (from vga_inst/line_cycle -)
+   Destination:    FF         Data in        vga_inst/fipsy_offset_277_294__i4  (to vga_inst/line_cycle -)
+
+   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.366ns physical path delay vga_inst/SLICE_105 to vga_inst/SLICE_105 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_105 to vga_inst/SLICE_105:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R8C6C.CLK to       R8C6C.Q0 vga_inst/SLICE_105 (from vga_inst/line_cycle)
+ROUTE         2     0.132       R8C6C.Q0 to       R8C6C.A0 vga_inst/fipsy_offset_3
+CTOF_DEL    ---     0.101       R8C6C.A0 to       R8C6C.F0 vga_inst/SLICE_105
+ROUTE         1     0.000       R8C6C.F0 to      R8C6C.DI0 vga_inst/n42 (to vga_inst/line_cycle)
+                  --------
+                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path vga_inst/SLICE_133 to vga_inst/SLICE_105:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        35     1.203       R7C3B.Q0 to      R8C6C.CLK vga_inst/line_cycle
+                  --------
+                    1.203   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path vga_inst/SLICE_133 to vga_inst/SLICE_105:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        35     1.203       R7C3B.Q0 to      R8C6C.CLK vga_inst/line_cycle
+                  --------
+                    1.203   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.379ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/fipsy_offset_277_294__i8  (from vga_inst/line_cycle -)
+   Destination:    FF         Data in        vga_inst/fipsy_offset_277_294__i8  (to vga_inst/line_cycle -)
+
+   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.366ns physical path delay vga_inst/SLICE_103 to vga_inst/SLICE_103 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_103 to vga_inst/SLICE_103:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R8C7A.CLK to       R8C7A.Q0 vga_inst/SLICE_103 (from vga_inst/line_cycle)
+ROUTE         2     0.132       R8C7A.Q0 to       R8C7A.A0 vga_inst/fipsy_offset_7
+CTOF_DEL    ---     0.101       R8C7A.A0 to       R8C7A.F0 vga_inst/SLICE_103
+ROUTE         1     0.000       R8C7A.F0 to      R8C7A.DI0 vga_inst/n38 (to vga_inst/line_cycle)
+                  --------
+                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path vga_inst/SLICE_133 to vga_inst/SLICE_103:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        35     1.203       R7C3B.Q0 to      R8C7A.CLK vga_inst/line_cycle
+                  --------
+                    1.203   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path vga_inst/SLICE_133 to vga_inst/SLICE_103:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        35     1.203       R7C3B.Q0 to      R8C7A.CLK vga_inst/line_cycle
+                  --------
+                    1.203   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.379ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              vga_inst/fipsy_offset_277_294__i6  (from vga_inst/line_cycle -)
+   Destination:    FF         Data in        vga_inst/fipsy_offset_277_294__i6  (to vga_inst/line_cycle -)
+
+   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.366ns physical path delay vga_inst/SLICE_104 to vga_inst/SLICE_104 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+
+ Physical Path Details:
+
+      Data path vga_inst/SLICE_104 to vga_inst/SLICE_104:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R8C6D.CLK to       R8C6D.Q0 vga_inst/SLICE_104 (from vga_inst/line_cycle)
+ROUTE         2     0.132       R8C6D.Q0 to       R8C6D.A0 vga_inst/fipsy_offset_5
+CTOF_DEL    ---     0.101       R8C6D.A0 to       R8C6D.F0 vga_inst/SLICE_104
+ROUTE         1     0.000       R8C6D.F0 to      R8C6D.DI0 vga_inst/n40 (to vga_inst/line_cycle)
+                  --------
+                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path vga_inst/SLICE_133 to vga_inst/SLICE_104:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        35     1.203       R7C3B.Q0 to      R8C6D.CLK vga_inst/line_cycle
+                  --------
+                    1.203   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path vga_inst/SLICE_133 to vga_inst/SLICE_104:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        35     1.203       R7C3B.Q0 to      R8C6D.CLK vga_inst/line_cycle
+                  --------
+                    1.203   (0.0% logic, 100.0% route), 0 logic levels.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "INTERNAL_OSC" 38.000000  |             |             |
+MHz ;                                   |            -|            -|   0  
+                                        |             |             |
+FREQUENCY NET "clk" 25.333333 MHz ;     |     0.000 ns|     0.379 ns|   2  
+                                        |             |             |
+FREQUENCY 20.000000 MHz ;               |            -|            -|   1  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 5 clocks:
+
+Clock Domain: vga_inst/line_cycle   Source: vga_inst/SLICE_133.Q0   Loads: 35
+   Covered under: FREQUENCY 20.000000 MHz ;
+
+Clock Domain: vga_inst/led_count_6   Source: vga_inst/SLICE_112.Q1   Loads: 32
+   Covered under: FREQUENCY 20.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: vga_inst/led_count_5   Source: vga_inst/SLICE_112.Q0
+      Covered under: FREQUENCY 20.000000 MHz ;   Transfers: 20
+
+Clock Domain: vga_inst/led_count_5   Source: vga_inst/SLICE_112.Q0   Loads: 12
+   Covered under: FREQUENCY 20.000000 MHz ;
+
+Clock Domain: clk   Source: Clk_25MHz_inst/PLLInst_0.CLKOP   Loads: 21
+   Covered under: FREQUENCY NET "clk" 25.333333 MHz ;
+
+   Data transfers from:
+   Clock Domain: vga_inst/line_cycle   Source: vga_inst/SLICE_133.Q0
+      Covered under: FREQUENCY NET "clk" 25.333333 MHz ;   Transfers: 17
+
+   Clock Domain: vga_inst/led_count_6   Source: vga_inst/SLICE_112.Q1
+      Covered under: FREQUENCY NET "clk" 25.333333 MHz ;   Transfers: 8
+
+Clock Domain: INTERNAL_OSC   Source: OSCH_inst.OSC   Loads: 1
+   No transfer within this clock domain is found
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 24683 paths, 5 nets, and 1012 connections (64.91% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 53 (setup), 0 (hold)
+Score: 9067689 (setup), 0 (hold)
+Cumulative negative slack: 9067689 (9067689+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

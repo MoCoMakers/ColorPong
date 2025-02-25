@@ -1,0 +1,135 @@
+[ START MERGED ]
+vga_inst/line_cycle_N_16 vga_inst/line_cycle
+vga_inst/led_count_6__N_32 vga_inst/led_count_6
+vga_inst/led_count_5__N_157 vga_inst/led_count_5
+vga_inst/fipsy_logo_inst/clk_N_410 clk
+[ END MERGED ]
+[ START CLIPPED ]
+GND_net
+VCC_net
+vga_inst/fipsy_rom_data_mem_7__I_0_0/S1
+vga_inst/fipsy_rom_data_mem_7__I_0_0/S0
+vga_inst/fipsy_rom_data_mem_7__I_0_0/CI
+vga_inst/fipsy_rom_data_mem_7__I_0_7/S1
+vga_inst/fipsy_rom_data_mem_7__I_0_7/S0
+vga_inst/column_273_add_4_11/S1
+vga_inst/column_273_add_4_11/CO
+vga_inst/add_162_11/CO
+vga_inst/add_2376_1/S1
+vga_inst/add_2376_1/S0
+vga_inst/add_2376_1/CI
+vga_inst/add_2376_11/S1
+vga_inst/add_2376_11/CO
+vga_inst/row_275_add_4_1/S0
+vga_inst/row_275_add_4_1/CI
+vga_inst/row_275_add_4_11/S1
+vga_inst/row_275_add_4_11/CO
+vga_inst/led_count_276_add_4_1/S0
+vga_inst/led_count_276_add_4_1/CI
+vga_inst/led_count_276_add_4_15/S1
+vga_inst/led_count_276_add_4_15/CO
+vga_inst/fipsy_offset_277_294_add_4_1/S0
+vga_inst/fipsy_offset_277_294_add_4_1/CI
+vga_inst/fipsy_offset_277_294_add_4_9/S1
+vga_inst/fipsy_offset_277_294_add_4_9/CO
+vga_inst/ball_y_9__I_0_241_add_2_1/S0
+vga_inst/ball_y_9__I_0_241_add_2_1/CI
+vga_inst/ball_y_9__I_0_241_add_2_11/S1
+vga_inst/ball_y_9__I_0_241_add_2_11/CO
+vga_inst/ball_x_9__I_0_239_add_2_1/S0
+vga_inst/ball_x_9__I_0_239_add_2_1/CI
+vga_inst/ball_x_9__I_0_239_add_2_11/S1
+vga_inst/ball_x_9__I_0_239_add_2_11/CO
+vga_inst/sub_52_add_2_1/S0
+vga_inst/sub_52_add_2_1/CI
+vga_inst/add_174_11/S1
+vga_inst/add_174_11/CO
+vga_inst/sub_52_add_2_11/S1
+vga_inst/sub_52_add_2_11/CO
+vga_inst/sub_59_add_2_1/S0
+vga_inst/sub_59_add_2_1/CI
+vga_inst/unary_minus_148_add_3_1/S0
+vga_inst/unary_minus_148_add_3_1/CI
+vga_inst/add_145_1/S0
+vga_inst/add_145_1/CI
+vga_inst/add_174_1/S0
+vga_inst/add_174_1/CI
+vga_inst/sub_59_add_2_11/S1
+vga_inst/sub_59_add_2_11/CO
+vga_inst/sub_139_add_2_1/S0
+vga_inst/sub_139_add_2_1/CI
+vga_inst/sub_139_add_2_11/S1
+vga_inst/sub_139_add_2_11/CO
+vga_inst/sub_156_add_2_1/S0
+vga_inst/sub_156_add_2_1/CI
+vga_inst/fipsy_rom_data_mem_7__I_0_8/S0
+vga_inst/fipsy_rom_data_mem_7__I_0_8/CO
+vga_inst/add_170_11/S1
+vga_inst/add_170_11/CO
+vga_inst/add_158_11/CO
+vga_inst/sub_156_add_2_11/S1
+vga_inst/sub_156_add_2_11/CO
+vga_inst/add_2375_1/S0
+vga_inst/add_2375_1/CI
+vga_inst/add_166_1/S0
+vga_inst/add_166_1/CI
+vga_inst/add_2373_1/S0
+vga_inst/add_2373_1/CI
+vga_inst/unary_minus_147_add_3_11/S1
+vga_inst/unary_minus_147_add_3_11/CO
+vga_inst/add_2375_9/CO
+vga_inst/add_2374_1/S0
+vga_inst/add_2374_1/CI
+vga_inst/add_252_2/S0
+vga_inst/add_252_2/CI
+vga_inst/unary_minus_148_add_3_11/S1
+vga_inst/unary_minus_148_add_3_11/CO
+vga_inst/add_2377_2/S1
+vga_inst/add_2377_2/S0
+vga_inst/add_2377_2/CI
+vga_inst/add_2374_9/CO
+vga_inst/add_145_11/S1
+vga_inst/add_145_11/CO
+vga_inst/add_166_11/S1
+vga_inst/add_166_11/CO
+vga_inst/add_2373_9/CO
+vga_inst/unary_minus_147_add_3_1/S0
+vga_inst/unary_minus_147_add_3_1/CI
+vga_inst/add_162_1/S1
+vga_inst/add_162_1/S0
+vga_inst/add_162_1/CI
+vga_inst/add_252_8/CO
+vga_inst/add_170_1/S0
+vga_inst/add_170_1/CI
+vga_inst/add_2377_8/CO
+vga_inst/column_273_add_4_1/S0
+vga_inst/column_273_add_4_1/CI
+vga_inst/add_158_1/S1
+vga_inst/add_158_1/S0
+vga_inst/add_158_1/CI
+[ END CLIPPED ]
+[ START OSC ]
+INTERNAL_OSC 38.00
+[ END OSC ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.13.0.56.2 -- WARNING: Map write only section -- Tue Feb 25 16:23:53 2025
+
+SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=ENABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE BACKGROUND_RECONFIG=OFF INBUF=ON ;
+LOCATE COMP "PIN9" SITE "13" ;
+LOCATE COMP "PIN8" SITE "12" ;
+LOCATE COMP "PIN7" SITE "11" ;
+LOCATE COMP "PIN10" SITE "14" ;
+LOCATE COMP "LEDn" SITE "25" ;
+LOCATE COMP "PIN20" SITE "23" ;
+LOCATE COMP "PIN19" SITE "8" ;
+LOCATE COMP "PIN18" SITE "28" ;
+LOCATE COMP "PIN17" SITE "27" ;
+LOCATE COMP "PIN14" SITE "21" ;
+LOCATE COMP "PIN13" SITE "20" ;
+LOCATE COMP "PIN12" SITE "4" ;
+LOCATE COMP "PIN11" SITE "5" ;
+FREQUENCY NET "INTERNAL_OSC" 38.000000 MHz ;
+FREQUENCY NET "clk" 25.333333 MHz ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

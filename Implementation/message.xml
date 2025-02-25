@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="Bitgen">
+        <Message>
+            <ID>1009992</ID>
+            <Severity>Info</Severity>
+            <Dynamic> SW_XO3D_SECURITY_ENCRYPTION *NOT* controlled by xo2c00.acd ###</Dynamic>
+        </Message>
+        <Message>
+            <ID>1009992</ID>
+            <Severity>Info</Severity>
+            <Dynamic> SW_XO3D_SECURITY_ENCRYPTION license_securityIP OK</Dynamic>
+        </Message>
+    </Task>
+    <Task name="MapVerilogSimFile">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+    <Task name="MapVHDLSimFile">
+        <Message>
+            <ID>35400209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>DEFAULT</Dynamic>
+            <Dynamic>-1</Dynamic>
+            <Dynamic>Keyword</Dynamic>
+        </Message>
+        <Message>
+            <ID>35400209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>ASSERT</Dynamic>
+            <Dynamic>-1</Dynamic>
+            <Dynamic>Keyword</Dynamic>
+        </Message>
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>35002000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35001781</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/enact/onedrive/documents/vga_pong_fipsyv2_campaign_20250215/colorpong/source/fipsy_top.v(45): </Dynamic>
+            <Dynamic>Fipsy_Top</Dynamic>
+            <Navigation>c:/users/enact/onedrive/documents/vga_pong_fipsyv2_campaign_20250215/colorpong/source/fipsy_top.v</Navigation>
+            <Navigation>45</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Program Files/Lattice/diamond/3.13/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1793): </Dynamic>
+            <Dynamic>OSCH(NOM_FREQ=&quot;38&quot;)</Dynamic>
+            <Navigation>C:/Program Files/Lattice/diamond/3.13/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v</Navigation>
+            <Navigation>1793</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/enact/onedrive/documents/vga_pong_fipsyv2_campaign_20250215/colorpong/source/pllv2.v(8): </Dynamic>
+            <Dynamic>pllv2</Dynamic>
+            <Navigation>c:/users/enact/onedrive/documents/vga_pong_fipsyv2_campaign_20250215/colorpong/source/pllv2.v</Navigation>
+            <Navigation>8</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Program Files/Lattice/diamond/3.13/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1124): </Dynamic>
+            <Dynamic>VLO</Dynamic>
+            <Navigation>C:/Program Files/Lattice/diamond/3.13/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v</Navigation>
+            <Navigation>1124</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Program Files/Lattice/diamond/3.13/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1730): </Dynamic>
+            <Dynamic>EHXPLLJ(CLKI_DIV=3,CLKFB_DIV=2,CLKOP_DIV=21,CLKOS_DIV=1,CLKOS2_DIV=1,CLKOS3_DIV=1,CLKOS_ENABLE=&quot;DISABLED&quot;,CLKOS2_ENABLE=&quot;DISABLED&quot;,CLKOS3_ENABLE=&quot;DISABLED&quot;,CLKOP_CPHASE=20,CLKOS_TRIM_POL=&quot;FALLING&quot;)</Dynamic>
+            <Navigation>C:/Program Files/Lattice/diamond/3.13/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v</Navigation>
+            <Navigation>1730</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/enact/onedrive/documents/vga_pong_fipsyv2_campaign_20250215/colorpong/source/vga.v(2): </Dynamic>
+            <Dynamic>VGA</Dynamic>
+            <Navigation>c:/users/enact/onedrive/documents/vga_pong_fipsyv2_campaign_20250215/colorpong/source/vga.v</Navigation>
+            <Navigation>2</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/enact/onedrive/documents/vga_pong_fipsyv2_campaign_20250215/colorpong/source/digits_rom.v(1): </Dynamic>
+            <Dynamic>digits_rom</Dynamic>
+            <Navigation>c:/users/enact/onedrive/documents/vga_pong_fipsyv2_campaign_20250215/colorpong/source/digits_rom.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/enact/onedrive/documents/vga_pong_fipsyv2_campaign_20250215/colorpong/source/fipsy_logo_bitmap.v(1): </Dynamic>
+            <Dynamic>fipsy_rom</Dynamic>
+            <Navigation>c:/users/enact/onedrive/documents/vga_pong_fipsyv2_campaign_20250215/colorpong/source/fipsy_logo_bitmap.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>1</Dynamic>
+            <Dynamic>\vga_inst/game_state</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>\vga_inst/ball_y_i0</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>\vga_inst/ball_x_i0</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>\vga_inst/ball_x_i6</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>\vga_inst/ball_x_i8</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>\vga_inst/ball_y_i4</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>\vga_inst/ball_y_i5</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>\vga_inst/ball_y_i6</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>\vga_inst/ball_y_i7</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001611</ID>
+            <Severity>Warning</Severity>
+        </Message>
+    </Task>
+    <Task name="PAR">
+        <Message>
+            <ID>61001101</ID>
+            <Severity>Warning</Severity>
+        </Message>
+        <Message>
+            <ID>61061045</ID>
+            <Severity>Warning</Severity>
+        </Message>
+        <Message>
+            <ID>66011008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>
+   Signal=INTERNAL_OSC loads=1 clock_loads=1</Dynamic>
+        </Message>
+        <Message>
+            <ID>66011008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>
+   Signal=INTERNAL_OSC loads=1 clock_loads=1</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Jedecgen">
+        <Message>
+            <ID>1009992</ID>
+            <Severity>Info</Severity>
+            <Dynamic> SW_XO3D_SECURITY_ENCRYPTION *NOT* controlled by xo2c00.acd ###</Dynamic>
+        </Message>
+        <Message>
+            <ID>1009992</ID>
+            <Severity>Info</Severity>
+            <Dynamic> SW_XO3D_SECURITY_ENCRYPTION license_securityIP OK</Dynamic>
+        </Message>
+    </Task>
+</BaliMessageLog>
