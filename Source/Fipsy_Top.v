@@ -191,10 +191,10 @@ Clock for VGA should be 25.175 MHz standard, but we use 25MHz clock (1% error se
 
 VGA vga_inst(
 .i_Clk(clk),
-.i_Switch_1(PIN7),
-.i_Switch_2(PIN8),
-.i_Switch_3(PIN9),
-.i_Switch_4(PIN10),
+.i_Switch_1(!PIN7),
+.i_Switch_2(!PIN8),
+.i_Switch_3(!PIN9),
+.i_Switch_4(!PIN10),
 .o_VGA_HSync(PIN11),
 .o_VGA_VSync(PIN12),
 .o_VGA_Red_0(PIN20),	//Red1	//PIN11

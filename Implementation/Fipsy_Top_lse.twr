@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Tue Feb 25 16:23:52 2025
+Fri Mar 14 16:21:41 2025
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -43,22 +43,22 @@ Error:  The following path violates requirements by 5.283ns
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
 L_CO        ---     0.444             CK to Q              \vga_inst/paddle_left_y_i1 (from \vga_inst/led_count[5])
 Route         5   e 1.462                                  \vga_inst/paddle_left_y[1]
-LUT4        ---     0.493              A to Z              \vga_inst/i1_2_lut_adj_19
-Route         1   e 0.941                                  \vga_inst/n6_adj_413
+LUT4        ---     0.493              A to Z              \vga_inst/i1_2_lut
+Route         1   e 0.941                                  \vga_inst/n6
 LUT4        ---     0.493              D to Z              \vga_inst/i4_4_lut
-Route         4   e 1.340                                  \vga_inst/n2365
-LUT4        ---     0.493              D to Z              \vga_inst/i1_2_lut_rep_36_4_lut
-Route         8   e 1.540                                  \vga_inst/n3600
+Route         4   e 1.340                                  \vga_inst/n2239
+LUT4        ---     0.493              D to Z              \vga_inst/i1_2_lut_rep_32_4_lut
+Route         8   e 1.540                                  \vga_inst/n3519
 A1_TO_FCO   ---     0.827           C[2] to COUT           \vga_inst/add_158_3
-Route         1   e 0.020                                  \vga_inst/n2800
-FCI_TO_FCO  ---     0.157            CIN to COUT           \vga_inst/add_158_5
-Route         1   e 0.020                                  \vga_inst/n2801
-FCI_TO_FCO  ---     0.157            CIN to COUT           \vga_inst/add_158_7
 Route         1   e 0.020                                  \vga_inst/n2802
-FCI_TO_FCO  ---     0.157            CIN to COUT           \vga_inst/add_158_9
+FCI_TO_FCO  ---     0.157            CIN to COUT           \vga_inst/add_158_5
 Route         1   e 0.020                                  \vga_inst/n2803
+FCI_TO_FCO  ---     0.157            CIN to COUT           \vga_inst/add_158_7
+Route         1   e 0.020                                  \vga_inst/n2804
+FCI_TO_FCO  ---     0.157            CIN to COUT           \vga_inst/add_158_9
+Route         1   e 0.020                                  \vga_inst/n2805
 FCI_TO_F    ---     0.598            CIN to S[2]           \vga_inst/add_158_11
-Route         1   e 0.941                                  \vga_inst/paddle_left_y_9__N_146[8]
+Route         1   e 0.941                                  \vga_inst/paddle_left_y_9__N_154[8]
                   --------
                    10.123  (37.7% logic, 62.3% route), 9 logic levels.
 
@@ -83,22 +83,22 @@ Error:  The following path violates requirements by 5.283ns
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
 L_CO        ---     0.444             CK to Q              \vga_inst/paddle_left_y_i1 (from \vga_inst/led_count[5])
 Route         5   e 1.462                                  \vga_inst/paddle_left_y[1]
-LUT4        ---     0.493              A to Z              \vga_inst/i1_2_lut_adj_19
-Route         1   e 0.941                                  \vga_inst/n6_adj_413
+LUT4        ---     0.493              A to Z              \vga_inst/i1_2_lut
+Route         1   e 0.941                                  \vga_inst/n6
 LUT4        ---     0.493              D to Z              \vga_inst/i4_4_lut
-Route         4   e 1.340                                  \vga_inst/n2365
-LUT4        ---     0.493              D to Z              \vga_inst/i1_2_lut_rep_36_4_lut
-Route         8   e 1.540                                  \vga_inst/n3600
+Route         4   e 1.340                                  \vga_inst/n2239
+LUT4        ---     0.493              D to Z              \vga_inst/i1_2_lut_rep_32_4_lut
+Route         8   e 1.540                                  \vga_inst/n3519
 A1_TO_FCO   ---     0.827           C[2] to COUT           \vga_inst/add_158_3
-Route         1   e 0.020                                  \vga_inst/n2800
-FCI_TO_FCO  ---     0.157            CIN to COUT           \vga_inst/add_158_5
-Route         1   e 0.020                                  \vga_inst/n2801
-FCI_TO_FCO  ---     0.157            CIN to COUT           \vga_inst/add_158_7
 Route         1   e 0.020                                  \vga_inst/n2802
-FCI_TO_FCO  ---     0.157            CIN to COUT           \vga_inst/add_158_9
+FCI_TO_FCO  ---     0.157            CIN to COUT           \vga_inst/add_158_5
 Route         1   e 0.020                                  \vga_inst/n2803
+FCI_TO_FCO  ---     0.157            CIN to COUT           \vga_inst/add_158_7
+Route         1   e 0.020                                  \vga_inst/n2804
+FCI_TO_FCO  ---     0.157            CIN to COUT           \vga_inst/add_158_9
+Route         1   e 0.020                                  \vga_inst/n2805
 FCI_TO_F    ---     0.598            CIN to S[2]           \vga_inst/add_158_11
-Route         1   e 0.941                                  \vga_inst/paddle_left_y_9__N_146[9]
+Route         1   e 0.941                                  \vga_inst/paddle_left_y_9__N_154[9]
                   --------
                    10.123  (37.7% logic, 62.3% route), 9 logic levels.
 
@@ -123,22 +123,22 @@ Error:  The following path violates requirements by 5.283ns
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
 L_CO        ---     0.444             CK to Q              \vga_inst/paddle_left_y_i2 (from \vga_inst/led_count[5])
 Route         5   e 1.462                                  \vga_inst/paddle_left_y[2]
-LUT4        ---     0.493              B to Z              \vga_inst/i1_2_lut_adj_19
-Route         1   e 0.941                                  \vga_inst/n6_adj_413
+LUT4        ---     0.493              B to Z              \vga_inst/i1_2_lut
+Route         1   e 0.941                                  \vga_inst/n6
 LUT4        ---     0.493              D to Z              \vga_inst/i4_4_lut
-Route         4   e 1.340                                  \vga_inst/n2365
-LUT4        ---     0.493              D to Z              \vga_inst/i1_2_lut_rep_36_4_lut
-Route         8   e 1.540                                  \vga_inst/n3600
+Route         4   e 1.340                                  \vga_inst/n2239
+LUT4        ---     0.493              D to Z              \vga_inst/i1_2_lut_rep_32_4_lut
+Route         8   e 1.540                                  \vga_inst/n3519
 A1_TO_FCO   ---     0.827           C[2] to COUT           \vga_inst/add_158_3
-Route         1   e 0.020                                  \vga_inst/n2800
-FCI_TO_FCO  ---     0.157            CIN to COUT           \vga_inst/add_158_5
-Route         1   e 0.020                                  \vga_inst/n2801
-FCI_TO_FCO  ---     0.157            CIN to COUT           \vga_inst/add_158_7
 Route         1   e 0.020                                  \vga_inst/n2802
-FCI_TO_FCO  ---     0.157            CIN to COUT           \vga_inst/add_158_9
+FCI_TO_FCO  ---     0.157            CIN to COUT           \vga_inst/add_158_5
 Route         1   e 0.020                                  \vga_inst/n2803
+FCI_TO_FCO  ---     0.157            CIN to COUT           \vga_inst/add_158_7
+Route         1   e 0.020                                  \vga_inst/n2804
+FCI_TO_FCO  ---     0.157            CIN to COUT           \vga_inst/add_158_9
+Route         1   e 0.020                                  \vga_inst/n2805
 FCI_TO_F    ---     0.598            CIN to S[2]           \vga_inst/add_158_11
-Route         1   e 0.941                                  \vga_inst/paddle_left_y_9__N_146[8]
+Route         1   e 0.941                                  \vga_inst/paddle_left_y_9__N_154[8]
                   --------
                    10.123  (37.7% logic, 62.3% route), 9 logic levels.
 
@@ -148,117 +148,151 @@ Warning: 10.283 ns is the maximum delay for this constraint.
 
 ================================================================================
 Constraint: create_clock -period 5.000000 -name clk2 [get_nets \vga_inst/line_cycle]
-            397 items scored, 152 timing errors detected.
+            397 items scored, 150 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Error:  The following path violates requirements by 1.557ns
+Error:  The following path violates requirements by 1.385ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
    Source:         FD1S3IX    CK             \vga_inst/row_275__i4  (from \vga_inst/line_cycle +)
    Destination:    FD1S3IX    CD             \vga_inst/row_275__i8  (to \vga_inst/line_cycle -)
 
-   Delay:                   6.397ns  (22.4% logic, 77.6% route), 3 logic levels.
+   Delay:                   6.225ns  (23.0% logic, 77.0% route), 3 logic levels.
 
  Constraint Details:
 
-      6.397ns data_path \vga_inst/row_275__i4 to \vga_inst/row_275__i8 violates
+      6.225ns data_path \vga_inst/row_275__i4 to \vga_inst/row_275__i8 violates
       5.000ns delay constraint less
-      0.160ns L_S requirement (totaling 4.840ns) by 1.557ns
+      0.160ns L_S requirement (totaling 4.840ns) by 1.385ns
 
  Path Details: \vga_inst/row_275__i4 to \vga_inst/row_275__i8
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
 L_CO        ---     0.444             CK to Q              \vga_inst/row_275__i4 (from \vga_inst/line_cycle)
-Route        13   e 1.861                                  \vga_inst/row[4]
-LUT4        ---     0.493              D to Z              \vga_inst/i1_2_lut_rep_40_3_lut_4_lut
-Route         7   e 1.502                                  \vga_inst/n3604
-LUT4        ---     0.493              A to Z              \vga_inst/i2134_4_lut
-Route        10   e 1.604                                  \vga_inst/n1335
+Route        11   e 1.689                                  \vga_inst/row[4]
+LUT4        ---     0.493              C to Z              \vga_inst/i1_2_lut_rep_37_3_lut_4_lut
+Route         7   e 1.502                                  \vga_inst/n3524
+LUT4        ---     0.493              A to Z              \vga_inst/i2033_4_lut
+Route        10   e 1.604                                  \vga_inst/n1339
                   --------
-                    6.397  (22.4% logic, 77.6% route), 3 logic levels.
+                    6.225  (23.0% logic, 77.0% route), 3 logic levels.
 
 
-Error:  The following path violates requirements by 1.557ns
+Error:  The following path violates requirements by 1.385ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
    Source:         FD1S3IX    CK             \vga_inst/row_275__i4  (from \vga_inst/line_cycle +)
    Destination:    FD1S3IX    CD             \vga_inst/row_275__i7  (to \vga_inst/line_cycle -)
 
-   Delay:                   6.397ns  (22.4% logic, 77.6% route), 3 logic levels.
+   Delay:                   6.225ns  (23.0% logic, 77.0% route), 3 logic levels.
 
  Constraint Details:
 
-      6.397ns data_path \vga_inst/row_275__i4 to \vga_inst/row_275__i7 violates
+      6.225ns data_path \vga_inst/row_275__i4 to \vga_inst/row_275__i7 violates
       5.000ns delay constraint less
-      0.160ns L_S requirement (totaling 4.840ns) by 1.557ns
+      0.160ns L_S requirement (totaling 4.840ns) by 1.385ns
 
  Path Details: \vga_inst/row_275__i4 to \vga_inst/row_275__i7
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
 L_CO        ---     0.444             CK to Q              \vga_inst/row_275__i4 (from \vga_inst/line_cycle)
-Route        13   e 1.861                                  \vga_inst/row[4]
-LUT4        ---     0.493              D to Z              \vga_inst/i1_2_lut_rep_40_3_lut_4_lut
-Route         7   e 1.502                                  \vga_inst/n3604
-LUT4        ---     0.493              A to Z              \vga_inst/i2134_4_lut
-Route        10   e 1.604                                  \vga_inst/n1335
+Route        11   e 1.689                                  \vga_inst/row[4]
+LUT4        ---     0.493              C to Z              \vga_inst/i1_2_lut_rep_37_3_lut_4_lut
+Route         7   e 1.502                                  \vga_inst/n3524
+LUT4        ---     0.493              A to Z              \vga_inst/i2033_4_lut
+Route        10   e 1.604                                  \vga_inst/n1339
                   --------
-                    6.397  (22.4% logic, 77.6% route), 3 logic levels.
+                    6.225  (23.0% logic, 77.0% route), 3 logic levels.
 
 
-Error:  The following path violates requirements by 1.557ns
+Error:  The following path violates requirements by 1.385ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
    Source:         FD1S3IX    CK             \vga_inst/row_275__i4  (from \vga_inst/line_cycle +)
    Destination:    FD1S3IX    CD             \vga_inst/row_275__i6  (to \vga_inst/line_cycle -)
 
-   Delay:                   6.397ns  (22.4% logic, 77.6% route), 3 logic levels.
+   Delay:                   6.225ns  (23.0% logic, 77.0% route), 3 logic levels.
 
  Constraint Details:
 
-      6.397ns data_path \vga_inst/row_275__i4 to \vga_inst/row_275__i6 violates
+      6.225ns data_path \vga_inst/row_275__i4 to \vga_inst/row_275__i6 violates
       5.000ns delay constraint less
-      0.160ns L_S requirement (totaling 4.840ns) by 1.557ns
+      0.160ns L_S requirement (totaling 4.840ns) by 1.385ns
 
  Path Details: \vga_inst/row_275__i4 to \vga_inst/row_275__i6
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
 L_CO        ---     0.444             CK to Q              \vga_inst/row_275__i4 (from \vga_inst/line_cycle)
-Route        13   e 1.861                                  \vga_inst/row[4]
-LUT4        ---     0.493              D to Z              \vga_inst/i1_2_lut_rep_40_3_lut_4_lut
-Route         7   e 1.502                                  \vga_inst/n3604
-LUT4        ---     0.493              A to Z              \vga_inst/i2134_4_lut
-Route        10   e 1.604                                  \vga_inst/n1335
+Route        11   e 1.689                                  \vga_inst/row[4]
+LUT4        ---     0.493              C to Z              \vga_inst/i1_2_lut_rep_37_3_lut_4_lut
+Route         7   e 1.502                                  \vga_inst/n3524
+LUT4        ---     0.493              A to Z              \vga_inst/i2033_4_lut
+Route        10   e 1.604                                  \vga_inst/n1339
                   --------
-                    6.397  (22.4% logic, 77.6% route), 3 logic levels.
+                    6.225  (23.0% logic, 77.0% route), 3 logic levels.
 
-Warning: 6.557 ns is the maximum delay for this constraint.
+Warning: 6.385 ns is the maximum delay for this constraint.
 
 
 
 ================================================================================
 Constraint: create_clock -period 5.000000 -name clk1 [get_nets clk]
-            452 items scored, 288 timing errors detected.
+            452 items scored, 267 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Error:  The following path violates requirements by 6.047ns
+Error:  The following path violates requirements by 7.481ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
    Source:         SP8KC      CLK            \vga_inst/fipsy_logo_inst/addr_reg_8__I_0  (from clk +)
    Destination:    FD1P3AX    SP             \vga_inst/fipsy_rom_data_mem_i0_i7  (to clk +)
 
-   Delay:                  10.762ns  (64.9% logic, 35.1% route), 5 logic levels.
+   Delay:                  12.196ns  (61.3% logic, 38.7% route), 6 logic levels.
 
  Constraint Details:
 
-     10.762ns data_path \vga_inst/fipsy_logo_inst/addr_reg_8__I_0 to \vga_inst/fipsy_rom_data_mem_i0_i7 violates
+     12.196ns data_path \vga_inst/fipsy_logo_inst/addr_reg_8__I_0 to \vga_inst/fipsy_rom_data_mem_i0_i7 violates
       5.000ns delay constraint less
-      0.285ns LCE_S requirement (totaling 4.715ns) by 6.047ns
+      0.285ns LCE_S requirement (totaling 4.715ns) by 7.481ns
+
+ Path Details: \vga_inst/fipsy_logo_inst/addr_reg_8__I_0 to \vga_inst/fipsy_rom_data_mem_i0_i7
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+EBSR_CO     ---     4.908            CLK to DO[9]          \vga_inst/fipsy_logo_inst/addr_reg_8__I_0 (from clk)
+Route         3   e 1.258                                  \vga_inst/fipsy_rom_data[6]
+A1_TO_FCO   ---     0.827           C[2] to COUT           \vga_inst/fipsy_rom_data_mem_7__I_0_0
+Route         1   e 0.020                                  \vga_inst/n2672
+FCI_TO_FCO  ---     0.157            CIN to COUT           \vga_inst/fipsy_rom_data_mem_7__I_0_7
+Route         1   e 0.020                                  \vga_inst/n2673
+FCI_TO_F    ---     0.598            CIN to S[2]           \vga_inst/fipsy_rom_data_mem_7__I_0_8
+Route         1   e 0.941                                  \vga_inst/n447
+LUT4        ---     0.493              A to Z              \vga_inst/i2729_2_lut
+Route         1   e 0.941                                  \vga_inst/n3175
+LUT4        ---     0.493              C to Z              \vga_inst/i1_4_lut_adj_63
+Route         8   e 1.540                                  \vga_inst/fipsy_rom_data_mem_7__N_240
+                  --------
+                   12.196  (61.3% logic, 38.7% route), 6 logic levels.
+
+
+Error:  The following path violates requirements by 7.481ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         SP8KC      CLK            \vga_inst/fipsy_logo_inst/addr_reg_8__I_0  (from clk +)
+   Destination:    FD1P3AX    SP             \vga_inst/fipsy_rom_data_mem_i0_i7  (to clk +)
+
+   Delay:                  12.196ns  (61.3% logic, 38.7% route), 6 logic levels.
+
+ Constraint Details:
+
+     12.196ns data_path \vga_inst/fipsy_logo_inst/addr_reg_8__I_0 to \vga_inst/fipsy_rom_data_mem_i0_i7 violates
+      5.000ns delay constraint less
+      0.285ns LCE_S requirement (totaling 4.715ns) by 7.481ns
 
  Path Details: \vga_inst/fipsy_logo_inst/addr_reg_8__I_0 to \vga_inst/fipsy_rom_data_mem_i0_i7
 
@@ -266,63 +300,33 @@ Error:  The following path violates requirements by 6.047ns
 EBSR_CO     ---     4.908            CLK to DO[9]          \vga_inst/fipsy_logo_inst/addr_reg_8__I_0 (from clk)
 Route         3   e 1.258                                  \vga_inst/fipsy_rom_data[7]
 A1_TO_FCO   ---     0.827           A[2] to COUT           \vga_inst/fipsy_rom_data_mem_7__I_0_0
-Route         1   e 0.020                                  \vga_inst/n2682
+Route         1   e 0.020                                  \vga_inst/n2672
 FCI_TO_FCO  ---     0.157            CIN to COUT           \vga_inst/fipsy_rom_data_mem_7__I_0_7
-Route         1   e 0.020                                  \vga_inst/n2683
+Route         1   e 0.020                                  \vga_inst/n2673
 FCI_TO_F    ---     0.598            CIN to S[2]           \vga_inst/fipsy_rom_data_mem_7__I_0_8
 Route         1   e 0.941                                  \vga_inst/n447
-LUT4        ---     0.493              D to Z              \vga_inst/i1_4_lut_adj_23
-Route         8   e 1.540                                  \vga_inst/fipsy_rom_data_mem_7__N_232
+LUT4        ---     0.493              A to Z              \vga_inst/i2729_2_lut
+Route         1   e 0.941                                  \vga_inst/n3175
+LUT4        ---     0.493              C to Z              \vga_inst/i1_4_lut_adj_63
+Route         8   e 1.540                                  \vga_inst/fipsy_rom_data_mem_7__N_240
                   --------
-                   10.762  (64.9% logic, 35.1% route), 5 logic levels.
+                   12.196  (61.3% logic, 38.7% route), 6 logic levels.
 
 
-Error:  The following path violates requirements by 6.047ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         SP8KC      CLK            \vga_inst/fipsy_logo_inst/addr_reg_8__I_0  (from clk +)
-   Destination:    FD1P3AX    SP             \vga_inst/fipsy_rom_data_mem_i0_i7  (to clk +)
-
-   Delay:                  10.762ns  (64.9% logic, 35.1% route), 5 logic levels.
-
- Constraint Details:
-
-     10.762ns data_path \vga_inst/fipsy_logo_inst/addr_reg_8__I_0 to \vga_inst/fipsy_rom_data_mem_i0_i7 violates
-      5.000ns delay constraint less
-      0.285ns LCE_S requirement (totaling 4.715ns) by 6.047ns
-
- Path Details: \vga_inst/fipsy_logo_inst/addr_reg_8__I_0 to \vga_inst/fipsy_rom_data_mem_i0_i7
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-EBSR_CO     ---     4.908            CLK to DO[9]          \vga_inst/fipsy_logo_inst/addr_reg_8__I_0 (from clk)
-Route         3   e 1.258                                  \vga_inst/fipsy_rom_data[6]
-A1_TO_FCO   ---     0.827           C[2] to COUT           \vga_inst/fipsy_rom_data_mem_7__I_0_0
-Route         1   e 0.020                                  \vga_inst/n2682
-FCI_TO_FCO  ---     0.157            CIN to COUT           \vga_inst/fipsy_rom_data_mem_7__I_0_7
-Route         1   e 0.020                                  \vga_inst/n2683
-FCI_TO_F    ---     0.598            CIN to S[2]           \vga_inst/fipsy_rom_data_mem_7__I_0_8
-Route         1   e 0.941                                  \vga_inst/n447
-LUT4        ---     0.493              D to Z              \vga_inst/i1_4_lut_adj_23
-Route         8   e 1.540                                  \vga_inst/fipsy_rom_data_mem_7__N_232
-                  --------
-                   10.762  (64.9% logic, 35.1% route), 5 logic levels.
-
-
-Error:  The following path violates requirements by 6.047ns
+Error:  The following path violates requirements by 7.481ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
    Source:         SP8KC      CLK            \vga_inst/fipsy_logo_inst/addr_reg_8__I_0  (from clk +)
    Destination:    FD1P3AX    SP             \vga_inst/fipsy_rom_data_mem_i0_i6  (to clk +)
 
-   Delay:                  10.762ns  (64.9% logic, 35.1% route), 5 logic levels.
+   Delay:                  12.196ns  (61.3% logic, 38.7% route), 6 logic levels.
 
  Constraint Details:
 
-     10.762ns data_path \vga_inst/fipsy_logo_inst/addr_reg_8__I_0 to \vga_inst/fipsy_rom_data_mem_i0_i6 violates
+     12.196ns data_path \vga_inst/fipsy_logo_inst/addr_reg_8__I_0 to \vga_inst/fipsy_rom_data_mem_i0_i6 violates
       5.000ns delay constraint less
-      0.285ns LCE_S requirement (totaling 4.715ns) by 6.047ns
+      0.285ns LCE_S requirement (totaling 4.715ns) by 7.481ns
 
  Path Details: \vga_inst/fipsy_logo_inst/addr_reg_8__I_0 to \vga_inst/fipsy_rom_data_mem_i0_i6
 
@@ -330,17 +334,19 @@ Error:  The following path violates requirements by 6.047ns
 EBSR_CO     ---     4.908            CLK to DO[9]          \vga_inst/fipsy_logo_inst/addr_reg_8__I_0 (from clk)
 Route         3   e 1.258                                  \vga_inst/fipsy_rom_data[6]
 A1_TO_FCO   ---     0.827           C[2] to COUT           \vga_inst/fipsy_rom_data_mem_7__I_0_0
-Route         1   e 0.020                                  \vga_inst/n2682
+Route         1   e 0.020                                  \vga_inst/n2672
 FCI_TO_FCO  ---     0.157            CIN to COUT           \vga_inst/fipsy_rom_data_mem_7__I_0_7
-Route         1   e 0.020                                  \vga_inst/n2683
+Route         1   e 0.020                                  \vga_inst/n2673
 FCI_TO_F    ---     0.598            CIN to S[2]           \vga_inst/fipsy_rom_data_mem_7__I_0_8
 Route         1   e 0.941                                  \vga_inst/n447
-LUT4        ---     0.493              D to Z              \vga_inst/i1_4_lut_adj_23
-Route         8   e 1.540                                  \vga_inst/fipsy_rom_data_mem_7__N_232
+LUT4        ---     0.493              A to Z              \vga_inst/i2729_2_lut
+Route         1   e 0.941                                  \vga_inst/n3175
+LUT4        ---     0.493              C to Z              \vga_inst/i1_4_lut_adj_63
+Route         8   e 1.540                                  \vga_inst/fipsy_rom_data_mem_7__N_240
                   --------
-                   10.762  (64.9% logic, 35.1% route), 5 logic levels.
+                   12.196  (61.3% logic, 38.7% route), 6 logic levels.
 
-Warning: 11.047 ns is the maximum delay for this constraint.
+Warning: 12.481 ns is the maximum delay for this constraint.
 
 
 
@@ -371,27 +377,27 @@ Error:  The following path violates requirements by 12.058ns
 L_CO        ---     0.444             CK to Q              \vga_inst/ball_y_i0 (from \vga_inst/led_count[6])
 Route         6   e 1.515                                  \vga_inst/ball_y[0]
 A1_TO_FCO   ---     0.827           A[2] to COUT           \vga_inst/sub_139_add_2_1
-Route         1   e 0.020                                  \vga_inst/n2868
+Route         1   e 0.020                                  \vga_inst/n2869
 FCI_TO_F    ---     0.598            CIN to S[2]           \vga_inst/sub_139_add_2_3
 Route         2   e 1.486                                  \vga_inst/n614
-A1_TO_FCO   ---     0.827           B[2] to COUT           \vga_inst/add_2373_1
-Route         1   e 0.020                                  \vga_inst/n2805
-FCI_TO_FCO  ---     0.157            CIN to COUT           \vga_inst/add_2373_3
-Route         1   e 0.020                                  \vga_inst/n2806
-FCI_TO_F    ---     0.598            CIN to S[2]           \vga_inst/add_2373_5
+A1_TO_FCO   ---     0.827           B[2] to COUT           \vga_inst/add_2364_1
+Route         1   e 0.020                                  \vga_inst/n2879
+FCI_TO_FCO  ---     0.157            CIN to COUT           \vga_inst/add_2364_3
+Route         1   e 0.020                                  \vga_inst/n2880
+FCI_TO_F    ---     0.598            CIN to S[2]           \vga_inst/add_2364_5
 Route         1   e 0.941                                  \vga_inst/n283
-LUT4        ---     0.493              A to Z              \vga_inst/i1_2_lut_adj_51
-Route         1   e 0.941                                  \vga_inst/n5
-LUT4        ---     0.493              A to Z              \vga_inst/i1_4_lut_adj_35
-Route         1   e 0.941                                  \vga_inst/n7
-LUT4        ---     0.493              B to Z              \vga_inst/i5_4_lut
-Route         1   e 0.941                                  \vga_inst/n2930
-LUT4        ---     0.493              B to Z              \vga_inst/i2150_4_lut
-Route        12   e 1.657                                  \vga_inst/n2462
-LUT4        ---     0.493              D to Z              \vga_inst/i1_2_lut_rep_28_4_lut
-Route         1   e 0.941                                  \vga_inst/n3592
-LUT4        ---     0.493              A to Z              \vga_inst/i285_3_lut_4_lut
-Route         1   e 0.941                                  \vga_inst/led_count_6__N_32_enable_5
+LUT4        ---     0.493              B to Z              \vga_inst/i2_2_lut_adj_71
+Route         1   e 0.941                                  \vga_inst/n6_adj_478
+LUT4        ---     0.493              C to Z              \vga_inst/i1_4_lut_adj_67
+Route         1   e 0.941                                  \vga_inst/n7_adj_475
+LUT4        ---     0.493              B to Z              \vga_inst/i5_4_lut_adj_64
+Route         1   e 0.941                                  \vga_inst/n2927
+LUT4        ---     0.493              B to Z              \vga_inst/i2059_4_lut
+Route        12   e 1.657                                  \vga_inst/n2372
+LUT4        ---     0.493              D to Z              \vga_inst/i1_2_lut_rep_23_4_lut
+Route         1   e 0.941                                  n3510
+LUT4        ---     0.493              C to Z              i2775_4_lut
+Route         1   e 0.941                                  led_count_6__N_40_enable_5
                   --------
                    16.773  (38.2% logic, 61.8% route), 12 logic levels.
 
@@ -417,27 +423,27 @@ Error:  The following path violates requirements by 12.058ns
 L_CO        ---     0.444             CK to Q              \vga_inst/ball_y_i0 (from \vga_inst/led_count[6])
 Route         6   e 1.515                                  \vga_inst/ball_y[0]
 A1_TO_FCO   ---     0.827           A[2] to COUT           \vga_inst/sub_139_add_2_1
-Route         1   e 0.020                                  \vga_inst/n2868
-FCI_TO_FCO  ---     0.157            CIN to COUT           \vga_inst/sub_139_add_2_3
 Route         1   e 0.020                                  \vga_inst/n2869
+FCI_TO_FCO  ---     0.157            CIN to COUT           \vga_inst/sub_139_add_2_3
+Route         1   e 0.020                                  \vga_inst/n2870
 FCI_TO_F    ---     0.598            CIN to S[2]           \vga_inst/sub_139_add_2_5
 Route         2   e 1.486                                  \vga_inst/n612
-A1_TO_FCO   ---     0.827           A[2] to COUT           \vga_inst/add_2373_3
-Route         1   e 0.020                                  \vga_inst/n2806
-FCI_TO_F    ---     0.598            CIN to S[2]           \vga_inst/add_2373_5
+A1_TO_FCO   ---     0.827           A[2] to COUT           \vga_inst/add_2364_3
+Route         1   e 0.020                                  \vga_inst/n2880
+FCI_TO_F    ---     0.598            CIN to S[2]           \vga_inst/add_2364_5
 Route         1   e 0.941                                  \vga_inst/n283
-LUT4        ---     0.493              A to Z              \vga_inst/i1_2_lut_adj_51
-Route         1   e 0.941                                  \vga_inst/n5
-LUT4        ---     0.493              A to Z              \vga_inst/i1_4_lut_adj_35
-Route         1   e 0.941                                  \vga_inst/n7
-LUT4        ---     0.493              B to Z              \vga_inst/i5_4_lut
-Route         1   e 0.941                                  \vga_inst/n2930
-LUT4        ---     0.493              B to Z              \vga_inst/i2150_4_lut
-Route        12   e 1.657                                  \vga_inst/n2462
-LUT4        ---     0.493              D to Z              \vga_inst/i1_2_lut_rep_28_4_lut
-Route         1   e 0.941                                  \vga_inst/n3592
-LUT4        ---     0.493              A to Z              \vga_inst/i285_3_lut_4_lut
-Route         1   e 0.941                                  \vga_inst/led_count_6__N_32_enable_5
+LUT4        ---     0.493              B to Z              \vga_inst/i2_2_lut_adj_71
+Route         1   e 0.941                                  \vga_inst/n6_adj_478
+LUT4        ---     0.493              C to Z              \vga_inst/i1_4_lut_adj_67
+Route         1   e 0.941                                  \vga_inst/n7_adj_475
+LUT4        ---     0.493              B to Z              \vga_inst/i5_4_lut_adj_64
+Route         1   e 0.941                                  \vga_inst/n2927
+LUT4        ---     0.493              B to Z              \vga_inst/i2059_4_lut
+Route        12   e 1.657                                  \vga_inst/n2372
+LUT4        ---     0.493              D to Z              \vga_inst/i1_2_lut_rep_23_4_lut
+Route         1   e 0.941                                  n3510
+LUT4        ---     0.493              C to Z              i2775_4_lut
+Route         1   e 0.941                                  led_count_6__N_40_enable_5
                   --------
                    16.773  (38.2% logic, 61.8% route), 12 logic levels.
 
@@ -463,25 +469,25 @@ Error:  The following path violates requirements by 11.881ns
 L_CO        ---     0.444             CK to Q              \vga_inst/ball_y_i2 (from \vga_inst/led_count[6])
 Route         6   e 1.515                                  \vga_inst/ball_y[2]
 A1_TO_FCO   ---     0.827           A[2] to COUT           \vga_inst/sub_139_add_2_3
-Route         1   e 0.020                                  \vga_inst/n2869
+Route         1   e 0.020                                  \vga_inst/n2870
 FCI_TO_F    ---     0.598            CIN to S[2]           \vga_inst/sub_139_add_2_5
 Route         2   e 1.486                                  \vga_inst/n612
-A1_TO_FCO   ---     0.827           A[2] to COUT           \vga_inst/add_2373_3
-Route         1   e 0.020                                  \vga_inst/n2806
-FCI_TO_F    ---     0.598            CIN to S[2]           \vga_inst/add_2373_5
+A1_TO_FCO   ---     0.827           A[2] to COUT           \vga_inst/add_2364_3
+Route         1   e 0.020                                  \vga_inst/n2880
+FCI_TO_F    ---     0.598            CIN to S[2]           \vga_inst/add_2364_5
 Route         1   e 0.941                                  \vga_inst/n283
-LUT4        ---     0.493              A to Z              \vga_inst/i1_2_lut_adj_51
-Route         1   e 0.941                                  \vga_inst/n5
-LUT4        ---     0.493              A to Z              \vga_inst/i1_4_lut_adj_35
-Route         1   e 0.941                                  \vga_inst/n7
-LUT4        ---     0.493              B to Z              \vga_inst/i5_4_lut
-Route         1   e 0.941                                  \vga_inst/n2930
-LUT4        ---     0.493              B to Z              \vga_inst/i2150_4_lut
-Route        12   e 1.657                                  \vga_inst/n2462
-LUT4        ---     0.493              D to Z              \vga_inst/i1_2_lut_rep_28_4_lut
-Route         1   e 0.941                                  \vga_inst/n3592
-LUT4        ---     0.493              A to Z              \vga_inst/i285_3_lut_4_lut
-Route         1   e 0.941                                  \vga_inst/led_count_6__N_32_enable_5
+LUT4        ---     0.493              B to Z              \vga_inst/i2_2_lut_adj_71
+Route         1   e 0.941                                  \vga_inst/n6_adj_478
+LUT4        ---     0.493              C to Z              \vga_inst/i1_4_lut_adj_67
+Route         1   e 0.941                                  \vga_inst/n7_adj_475
+LUT4        ---     0.493              B to Z              \vga_inst/i5_4_lut_adj_64
+Route         1   e 0.941                                  \vga_inst/n2927
+LUT4        ---     0.493              B to Z              \vga_inst/i2059_4_lut
+Route        12   e 1.657                                  \vga_inst/n2372
+LUT4        ---     0.493              D to Z              \vga_inst/i1_2_lut_rep_23_4_lut
+Route         1   e 0.941                                  n3510
+LUT4        ---     0.493              C to Z              i2775_4_lut
+Route         1   e 0.941                                  led_count_6__N_40_enable_5
                   --------
                    16.596  (37.7% logic, 62.3% route), 11 logic levels.
 
@@ -498,10 +504,10 @@ create_clock -period 5.000000 -name     |             |             |
 clk3 [get_nets \vga_inst/led_count[5]]  |     5.000 ns|    10.283 ns|     9 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk2 [get_nets \vga_inst/line_cycle]    |     5.000 ns|     6.557 ns|     3 *
+clk2 [get_nets \vga_inst/line_cycle]    |     5.000 ns|     6.385 ns|     3 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets clk]                     |     5.000 ns|    11.047 ns|     5 *
+clk1 [get_nets clk]                     |     5.000 ns|    12.481 ns|     6 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
 clk0 [get_nets \vga_inst/led_count[6]]  |     5.000 ns|    17.058 ns|    12 *
@@ -514,59 +520,59 @@ clk0 [get_nets \vga_inst/led_count[6]]  |     5.000 ns|    17.058 ns|    12 *
 --------------------------------------------------------------------------------
 Critical Nets                           |   Loads|  Errors| % of total
 --------------------------------------------------------------------------------
-\vga_inst/led_count_6__N_32_enable_14   |      13|    2330|     39.30%
+\vga_inst/led_count_6__N_40_enable_14   |      13|    2227|     37.71%
                                         |        |        |
-\vga_inst/n2462                         |      12|    2215|     37.37%
+\vga_inst/n2372                         |      12|    2106|     35.66%
                                         |        |        |
-\vga_inst/n2930                         |       1|    2215|     37.37%
+\vga_inst/n2927                         |       1|    2106|     35.66%
                                         |        |        |
-\vga_inst/n2464                         |       6|    1881|     31.73%
+\vga_inst/n2374                         |       6|    1990|     33.70%
                                         |        |        |
-\vga_inst/n2959                         |       1|    1881|     31.73%
+\vga_inst/n2920                         |       1|    1990|     33.70%
                                         |        |        |
-\vga_inst/ball_y[0]                     |       6|    1437|     24.24%
+\vga_inst/n7_adj_475                    |       1|    1498|     25.37%
                                         |        |        |
-\vga_inst/n7_adj_464                    |       1|    1387|     23.40%
+\vga_inst/ball_y[0]                     |       6|    1471|     24.91%
                                         |        |        |
-\vga_inst/n2869                         |       1|    1287|     21.71%
+\vga_inst/n2821                         |       1|    1394|     23.61%
                                         |        |        |
-\vga_inst/n9                            |       1|    1222|     20.61%
+\vga_inst/n9                            |       1|    1316|     22.29%
                                         |        |        |
-\vga_inst/n2808                         |       1|    1104|     18.62%
+\vga_inst/n2875                         |       1|    1295|     21.93%
                                         |        |        |
-\vga_inst/n2874                         |       1|    1099|     18.54%
+\vga_inst/n2870                         |       1|    1181|     20.00%
                                         |        |        |
-\vga_inst/n7                            |       1|     993|     16.75%
+\vga_inst/n2876                         |       1|    1017|     17.22%
                                         |        |        |
-\vga_inst/n2870                         |       1|     982|     16.57%
+\vga_inst/n2881                         |       1|     903|     15.29%
                                         |        |        |
-\vga_inst/ball_y[2]                     |       6|     944|     15.92%
+\vga_inst/ball_y[1]                     |       6|     890|     15.07%
                                         |        |        |
-\vga_inst/ball_y[1]                     |       6|     939|     15.84%
+\vga_inst/ball_y[2]                     |       6|     890|     15.07%
                                         |        |        |
-\vga_inst/n2807                         |       1|     896|     15.11%
+\vga_inst/n19                           |       1|     868|     14.70%
                                         |        |        |
-\vga_inst/n2885                         |       1|     814|     13.73%
+\vga_inst/n2822                         |       1|     850|     14.39%
                                         |        |        |
-\vga_inst/n6_adj_466                    |       1|     770|     12.99%
+\vga_inst/n2820                         |       1|     848|     14.36%
                                         |        |        |
-\vga_inst/n2868                         |       1|     729|     12.30%
+\vga_inst/n6_adj_478                    |       1|     814|     13.78%
                                         |        |        |
-\vga_inst/n2873                         |       1|     705|     11.89%
+\vga_inst/n2871                         |       1|     771|     13.06%
                                         |        |        |
-\vga_inst/n2884                         |       1|     694|     11.71%
+\vga_inst/n2874                         |       1|     757|     12.82%
                                         |        |        |
-\vga_inst/n2875                         |       1|     689|     11.62%
+\vga_inst/n2869                         |       1|     712|     12.06%
                                         |        |        |
-\vga_inst/n2806                         |       1|     687|     11.59%
+\vga_inst/n2880                         |       1|     701|     11.87%
                                         |        |        |
-\vga_inst/n5                            |       1|     686|     11.57%
+\vga_inst/n17_adj_463                   |       1|     659|     11.16%
                                         |        |        |
-\vga_inst/n17                           |       1|     611|     10.31%
+\vga_inst/n8_adj_474                    |       1|     614|     10.40%
                                         |        |        |
-\vga_inst/n19                           |       1|     611|     10.31%
+\vga_inst/n8_adj_476                    |       1|     604|     10.23%
                                         |        |        |
-\vga_inst/n17_adj_417                   |       1|     602|     10.16%
+\vga_inst/n2882                         |       1|     604|     10.23%
                                         |        |        |
 --------------------------------------------------------------------------------
 
@@ -574,10 +580,10 @@ Critical Nets                           |   Loads|  Errors| % of total
 Timing summary:
 ---------------
 
-Timing errors: 5928  Score: 45365294
+Timing errors: 5905  Score: 44984145
 
-Constraints cover  23929 paths, 480 nets, and 1030 connections (61.4% coverage)
+Constraints cover  23719 paths, 482 nets, and 1033 connections (62.1% coverage)
 
 
-Peak memory: 72220672 bytes, TRCE: 5804032 bytes, DLYMAN: 4096 bytes
+Peak memory: 72863744 bytes, TRCE: 6352896 bytes, DLYMAN: 4096 bytes
 CPU_TIME_REPORT: 0 secs 

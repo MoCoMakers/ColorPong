@@ -4,7 +4,7 @@ Register bits:  138 of 1346 (10.253%)
 I/O cells:      13
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D       141          100.0
+                              CCU2D       143          100.0
                             EHXPLLJ         1          100.0
                             FD1P3AX        35          100.0
                             FD1P3AY         2          100.0
@@ -17,23 +17,23 @@ I/O cells:      13
                                  IB         4          100.0
                                 INV         3          100.0
                             L6MUX21         2          100.0
-                               LUT4       207          100.0
+                               LUT4       203          100.0
                                  OB         9          100.0
                                OSCH         1          100.0
-                              PFUMX         9          100.0
+                              PFUMX        10          100.0
                               SP8KC         2          100.0
 SUB MODULES
                                 VGA         1
                          digits_rom         1
                           fipsy_rom         1
                               pllv2         1
-                              TOTAL       522
+                              TOTAL       521
 ----------------------------------------------------------------------
 Report for cell VGA.v1
 Instance Path : vga_inst
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D       141          100.0
+                              CCU2D       143          100.0
                             FD1P3AX        35          100.0
                             FD1P3AY         2          100.0
                             FD1P3IX         8          100.0
@@ -43,13 +43,13 @@ Instance Path : vga_inst
                             FD1S3JX         2          100.0
                                 INV         3          100.0
                             L6MUX21         2          100.0
-                               LUT4       207          100.0
-                              PFUMX         9          100.0
+                               LUT4       202           99.5
+                              PFUMX        10          100.0
                               SP8KC         2          100.0
 SUB MODULES
                          digits_rom         1
                           fipsy_rom         1
-                              TOTAL       504
+                              TOTAL       502
 ----------------------------------------------------------------------
 Report for cell fipsy_rom.v1
 Instance Path : vga_inst.fipsy_logo_inst

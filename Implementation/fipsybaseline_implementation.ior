@@ -29,7 +29,7 @@ Performance Hardware Data Status:   Final          Version 34.4.
 // Package: QFN32
 // ncd File: fipsybaseline_implementation.ncd
 // Version: Diamond (64-bit) 3.13.0.56.2
-// Written on Tue Feb 25 16:24:30 2025
+// Written on Fri Mar 14 16:22:18 2025
 // M: Minimum Performance Grade
 // iotiming FipsyBaseline_Implementation.ncd FipsyBaseline_Implementation.prf -gui -msgset C:/Users/enact/OneDrive/Documents/VGA_Pong_FipsyV2_campaign_20250215/ColorPong/promote.xml
 
@@ -56,8 +56,8 @@ Port  Clock Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
 Port  Internal_Clock      
 --------------------------------------------------------
 PIN10 vga_inst/led_count_5
-PIN7  vga_inst/led_count_5
 PIN7  vga_inst/led_count_6
+PIN7  vga_inst/led_count_5
 PIN8  vga_inst/led_count_5
 PIN9  vga_inst/led_count_5
 
@@ -69,33 +69,33 @@ Port  Internal_Clock
 LEDn  vga_inst/line_cycle 
 PIN11 INTERNAL_OSC        
 PIN11 clk                 
-PIN11 vga_inst/line_cycle 
-PIN11 vga_inst/led_count_5
-PIN11 vga_inst/led_count_6
-PIN12 INTERNAL_OSC        
-PIN12 clk                 
 PIN12 vga_inst/line_cycle 
-PIN12 vga_inst/led_count_6
 PIN13 INTERNAL_OSC        
-PIN13 clk                 
 PIN13 vga_inst/line_cycle 
-PIN13 vga_inst/led_count_5
+PIN13 clk                 
 PIN13 vga_inst/led_count_6
+PIN13 vga_inst/led_count_5
 PIN14 INTERNAL_OSC        
-PIN14 clk                 
 PIN14 vga_inst/line_cycle 
-PIN14 vga_inst/led_count_5
+PIN14 clk                 
 PIN14 vga_inst/led_count_6
+PIN14 vga_inst/led_count_5
 PIN17 INTERNAL_OSC        
-PIN17 clk                 
 PIN17 vga_inst/line_cycle 
-PIN17 vga_inst/led_count_5
+PIN17 clk                 
 PIN17 vga_inst/led_count_6
+PIN17 vga_inst/led_count_5
 PIN18 INTERNAL_OSC        
-PIN18 clk                 
 PIN18 vga_inst/line_cycle 
-PIN18 vga_inst/led_count_5
+PIN18 clk                 
 PIN18 vga_inst/led_count_6
+PIN19 INTERNAL_OSC        
 PIN19 vga_inst/line_cycle 
+PIN19 clk                 
+PIN19 vga_inst/led_count_6
+PIN19 vga_inst/led_count_5
 PIN20 INTERNAL_OSC        
+PIN20 vga_inst/line_cycle 
 PIN20 clk                 
+PIN20 vga_inst/led_count_6
+PIN20 vga_inst/led_count_5

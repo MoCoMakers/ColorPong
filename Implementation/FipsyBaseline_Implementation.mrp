@@ -17,7 +17,7 @@ Target Vendor:  LATTICE
 Target Device:  LCMXO2-1200HCQFN32
 Target Performance:   4
 Mapper:  xo2c00,  version:  Diamond (64-bit) 3.13.0.56.2
-Mapped on:  02/25/25  16:23:53
+Mapped on:  03/14/25  16:21:42
 
 Design Summary
 --------------
@@ -28,11 +28,11 @@ Design Summary
    Number of SLICEs:       245 out of   640 (38%)
       SLICEs as Logic/ROM:    245 out of   640 (38%)
       SLICEs as RAM:            0 out of   480 (0%)
-      SLICEs as Carry:        141 out of   640 (22%)
+      SLICEs as Carry:        143 out of   640 (22%)
    Number of LUT4s:        488 out of  1280 (38%)
-      Number used as logic LUTs:        206
+      Number used as logic LUTs:        202
       Number used as distributed RAM:     0
-      Number used as ripple logic:      282
+      Number used as ripple logic:      286
       Number used as shift registers:     0
    Number of PIO sites used: 13 + 4(JTAG) out of 22 (77%)
    Number of block RAMs:  2 out of 7 (29%)
@@ -66,48 +66,48 @@ Design Summary
 
 
 
-Design:  Fipsy_Top                                     Date:  02/25/25  16:23:53
+Design:  Fipsy_Top                                     Date:  03/14/25  16:21:42
 
 Design Summary (cont)
 ---------------------
      Net INTERNAL_OSC: 1 loads, 1 rising, 0 falling (Driver: OSCH_inst )
-     Net clk: 21 loads, 20 rising, 1 falling (Driver: Clk_25MHz_inst/PLLInst_0 )
-     
      Net vga_inst/line_cycle: 22 loads, 0 rising, 22 falling (Driver:
      vga_inst/column_273__i9 )
-     Net vga_inst/led_count_5: 10 loads, 0 rising, 10 falling (Driver:
-     vga_inst/led_count_276__i5 )
+     Net clk: 21 loads, 20 rising, 1 falling (Driver: Clk_25MHz_inst/PLLInst_0 )
+     
      Net vga_inst/led_count_6: 30 loads, 0 rising, 30 falling (Driver:
      vga_inst/led_count_276__i6 )
+     Net vga_inst/led_count_5: 10 loads, 0 rising, 10 falling (Driver:
+     vga_inst/led_count_276__i5 )
    Number of Clock Enables:  7
-     Net vga_inst/led_count_6__N_32_enable_29: 2 loads, 2 LSLICEs
-     Net vga_inst/led_count_6__N_32_enable_14: 6 loads, 6 LSLICEs
-     Net vga_inst/led_count_6__N_32_enable_23: 6 loads, 6 LSLICEs
-     Net vga_inst/led_count_6__N_32_enable_5: 1 loads, 1 LSLICEs
-     Net vga_inst/led_count_6__N_32_enable_28: 2 loads, 2 LSLICEs
-     Net vga_inst/fipsy_rom_data_mem_7__N_232: 4 loads, 4 LSLICEs
-     Net vga_inst/line_cycle_N_16_enable_8: 5 loads, 5 LSLICEs
+     Net vga_inst/led_count_6__N_40_enable_29: 2 loads, 2 LSLICEs
+     Net vga_inst/led_count_6__N_40_enable_14: 6 loads, 6 LSLICEs
+     Net vga_inst/led_count_6__N_40_enable_23: 6 loads, 6 LSLICEs
+     Net led_count_6__N_40_enable_5: 1 loads, 1 LSLICEs
+     Net vga_inst/fipsy_rom_data_mem_7__N_240: 4 loads, 4 LSLICEs
+     Net vga_inst/line_cycle_derived_37_enable_8: 5 loads, 5 LSLICEs
+     Net vga_inst/led_count_6__N_40_enable_28: 2 loads, 2 LSLICEs
    Number of LSRs:  8
-     Net vga_inst/n1335: 6 loads, 6 LSLICEs
-     Net vga_inst/n1345: 2 loads, 2 LSLICEs
-     Net vga_inst/led_count_6__N_32_enable_14: 2 loads, 2 LSLICEs
-     Net vga_inst/n1342: 2 loads, 2 LSLICEs
-     Net vga_inst/n3591: 4 loads, 4 LSLICEs
-     Net vga_inst/n1337: 4 loads, 4 LSLICEs
-     Net vga_inst/n1336: 3 loads, 3 LSLICEs
-     Net vga_inst/n1340: 6 loads, 6 LSLICEs
+     Net vga_inst/n1339: 6 loads, 6 LSLICEs
+     Net vga_inst/n1349: 2 loads, 2 LSLICEs
+     Net vga_inst/led_count_6__N_40_enable_14: 2 loads, 2 LSLICEs
+     Net vga_inst/n1341: 4 loads, 4 LSLICEs
+     Net vga_inst/n3509: 4 loads, 4 LSLICEs
+     Net vga_inst/n1340: 3 loads, 3 LSLICEs
+     Net vga_inst/n1344: 6 loads, 6 LSLICEs
+     Net vga_inst/n1346: 2 loads, 2 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net vga_inst/game_state_0: 24 loads
+     Net game_state_0: 24 loads
      Net vga_inst/row_3: 19 loads
-     Net vga_inst/row_9: 16 loads
      Net vga_inst/paddle_left_y_9: 15 loads
      Net vga_inst/paddle_right_y_9: 15 loads
-     Net vga_inst/column_0: 13 loads
-     Net vga_inst/column_6: 13 loads
-     Net vga_inst/row_4: 13 loads
+     Net vga_inst/column_0: 12 loads
+     Net vga_inst/column_3: 12 loads
      Net vga_inst/column_4: 12 loads
-     Net vga_inst/column_5: 12 loads
+     Net vga_inst/column_6: 12 loads
+     Net vga_inst/n2372: 12 loads
+     Net PIN8_c: 11 loads
 
 
 
@@ -132,7 +132,7 @@ IO (PIO) Attributes
 
 
 
-Design:  Fipsy_Top                                     Date:  02/25/25  16:23:53
+Design:  Fipsy_Top                                     Date:  03/14/25  16:21:42
 
 IO (PIO) Attributes (cont)
 --------------------------
@@ -169,10 +169,10 @@ Removed logic
 -------------
 
 Block GSR_INST undriven or does not drive anything - clipped.
-Signal vga_inst/line_cycle_N_16 was merged into signal vga_inst/line_cycle
-Signal vga_inst/led_count_6__N_32 was merged into signal vga_inst/led_count_6
-Signal vga_inst/led_count_5__N_157 was merged into signal vga_inst/led_count_5
-Signal vga_inst/fipsy_logo_inst/clk_N_410 was merged into signal clk
+Signal vga_inst/led_count_5__N_165 was merged into signal vga_inst/led_count_5
+Signal vga_inst/line_cycle__inv was merged into signal vga_inst/line_cycle
+Signal vga_inst/led_count_6__N_40 was merged into signal vga_inst/led_count_6
+Signal vga_inst/fipsy_logo_inst/clk_N_418 was merged into signal clk
 Signal GND_net undriven or does not drive anything - clipped.
 Signal VCC_net undriven or does not drive anything - clipped.
 Signal vga_inst/fipsy_rom_data_mem_7__I_0_0/S1 undriven or does not drive
@@ -181,34 +181,35 @@ Signal vga_inst/fipsy_rom_data_mem_7__I_0_0/S0 undriven or does not drive
      anything - clipped.
 Signal vga_inst/fipsy_rom_data_mem_7__I_0_0/CI undriven or does not drive
      anything - clipped.
-Signal vga_inst/fipsy_rom_data_mem_7__I_0_7/S1 undriven or does not drive
-     anything - clipped.
-Signal vga_inst/fipsy_rom_data_mem_7__I_0_7/S0 undriven or does not drive
-     anything - clipped.
+Signal vga_inst/add_166_1/S0 undriven or does not drive anything - clipped.
+Signal vga_inst/add_166_1/CI undriven or does not drive anything - clipped.
+Signal vga_inst/unary_minus_147_add_3_11/S1 undriven or does not drive anything
+     - clipped.
+Signal vga_inst/unary_minus_147_add_3_11/CO undriven or does not drive anything
+     - clipped.
+Signal vga_inst/column_273_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal vga_inst/column_273_add_4_1/CI undriven or does not drive anything -
+     clipped.
 Signal vga_inst/column_273_add_4_11/S1 undriven or does not drive anything -
-     clipped.
-Signal vga_inst/column_273_add_4_11/CO undriven or does not drive anything -
-     clipped.
-Signal vga_inst/add_162_11/CO undriven or does not drive anything - clipped.
-Signal vga_inst/add_2376_1/S1 undriven or does not drive anything - clipped.
-Signal vga_inst/add_2376_1/S0 undriven or does not drive anything - clipped.
 
                                     Page 3
 
 
 
 
-Design:  Fipsy_Top                                     Date:  02/25/25  16:23:53
+Design:  Fipsy_Top                                     Date:  03/14/25  16:21:42
 
 Removed logic (cont)
 --------------------
-Signal vga_inst/add_2376_1/CI undriven or does not drive anything - clipped.
-Signal vga_inst/add_2376_11/S1 undriven or does not drive anything - clipped.
-Signal vga_inst/add_2376_11/CO undriven or does not drive anything - clipped.
+     clipped.
+Signal vga_inst/column_273_add_4_11/CO undriven or does not drive anything -
+     clipped.
 Signal vga_inst/row_275_add_4_1/S0 undriven or does not drive anything -
      clipped.
 Signal vga_inst/row_275_add_4_1/CI undriven or does not drive anything -
      clipped.
+Signal vga_inst/add_2368_8/CO undriven or does not drive anything - clipped.
 Signal vga_inst/row_275_add_4_11/S1 undriven or does not drive anything -
      clipped.
 Signal vga_inst/row_275_add_4_11/CO undriven or does not drive anything -
@@ -249,8 +250,6 @@ Signal vga_inst/sub_52_add_2_1/S0 undriven or does not drive anything - clipped.
      
 Signal vga_inst/sub_52_add_2_1/CI undriven or does not drive anything - clipped.
      
-Signal vga_inst/add_174_11/S1 undriven or does not drive anything - clipped.
-Signal vga_inst/add_174_11/CO undriven or does not drive anything - clipped.
 Signal vga_inst/sub_52_add_2_11/S1 undriven or does not drive anything -
      clipped.
 Signal vga_inst/sub_52_add_2_11/CO undriven or does not drive anything -
@@ -258,25 +257,25 @@ Signal vga_inst/sub_52_add_2_11/CO undriven or does not drive anything -
 Signal vga_inst/sub_59_add_2_1/S0 undriven or does not drive anything - clipped.
      
 Signal vga_inst/sub_59_add_2_1/CI undriven or does not drive anything - clipped.
+     
 
                                     Page 4
 
 
 
 
-Design:  Fipsy_Top                                     Date:  02/25/25  16:23:53
+Design:  Fipsy_Top                                     Date:  03/14/25  16:21:42
 
 Removed logic (cont)
 --------------------
-     
-Signal vga_inst/unary_minus_148_add_3_1/S0 undriven or does not drive anything -
-     clipped.
-Signal vga_inst/unary_minus_148_add_3_1/CI undriven or does not drive anything -
-     clipped.
-Signal vga_inst/add_145_1/S0 undriven or does not drive anything - clipped.
-Signal vga_inst/add_145_1/CI undriven or does not drive anything - clipped.
-Signal vga_inst/add_174_1/S0 undriven or does not drive anything - clipped.
-Signal vga_inst/add_174_1/CI undriven or does not drive anything - clipped.
+Signal vga_inst/add_174_11/S1 undriven or does not drive anything - clipped.
+Signal vga_inst/add_174_11/CO undriven or does not drive anything - clipped.
+Signal vga_inst/add_2368_2/S1 undriven or does not drive anything - clipped.
+Signal vga_inst/add_2368_2/S0 undriven or does not drive anything - clipped.
+Signal vga_inst/add_2368_2/CI undriven or does not drive anything - clipped.
+Signal vga_inst/add_2366_1/S1 undriven or does not drive anything - clipped.
+Signal vga_inst/add_2366_1/S0 undriven or does not drive anything - clipped.
+Signal vga_inst/add_2366_1/CI undriven or does not drive anything - clipped.
 Signal vga_inst/sub_59_add_2_11/S1 undriven or does not drive anything -
      clipped.
 Signal vga_inst/sub_59_add_2_11/CO undriven or does not drive anything -
@@ -293,79 +292,84 @@ Signal vga_inst/sub_156_add_2_1/S0 undriven or does not drive anything -
      clipped.
 Signal vga_inst/sub_156_add_2_1/CI undriven or does not drive anything -
      clipped.
-Signal vga_inst/fipsy_rom_data_mem_7__I_0_8/S0 undriven or does not drive
-     anything - clipped.
-Signal vga_inst/fipsy_rom_data_mem_7__I_0_8/CO undriven or does not drive
-     anything - clipped.
-Signal vga_inst/add_170_11/S1 undriven or does not drive anything - clipped.
-Signal vga_inst/add_170_11/CO undriven or does not drive anything - clipped.
-Signal vga_inst/add_158_11/CO undriven or does not drive anything - clipped.
 Signal vga_inst/sub_156_add_2_11/S1 undriven or does not drive anything -
      clipped.
 Signal vga_inst/sub_156_add_2_11/CO undriven or does not drive anything -
      clipped.
-Signal vga_inst/add_2375_1/S0 undriven or does not drive anything - clipped.
-Signal vga_inst/add_2375_1/CI undriven or does not drive anything - clipped.
-Signal vga_inst/add_166_1/S0 undriven or does not drive anything - clipped.
-Signal vga_inst/add_166_1/CI undriven or does not drive anything - clipped.
-Signal vga_inst/add_2373_1/S0 undriven or does not drive anything - clipped.
-Signal vga_inst/add_2373_1/CI undriven or does not drive anything - clipped.
-Signal vga_inst/unary_minus_147_add_3_11/S1 undriven or does not drive anything
-     - clipped.
-Signal vga_inst/unary_minus_147_add_3_11/CO undriven or does not drive anything
-     - clipped.
-Signal vga_inst/add_2375_9/CO undriven or does not drive anything - clipped.
-Signal vga_inst/add_2374_1/S0 undriven or does not drive anything - clipped.
-Signal vga_inst/add_2374_1/CI undriven or does not drive anything - clipped.
+Signal vga_inst/add_2364_1/S0 undriven or does not drive anything - clipped.
+Signal vga_inst/add_2364_1/CI undriven or does not drive anything - clipped.
+Signal vga_inst/add_2366_11/S1 undriven or does not drive anything - clipped.
+Signal vga_inst/add_2366_11/CO undriven or does not drive anything - clipped.
+Signal vga_inst/add_2364_9/CO undriven or does not drive anything - clipped.
 Signal vga_inst/add_252_2/S0 undriven or does not drive anything - clipped.
 Signal vga_inst/add_252_2/CI undriven or does not drive anything - clipped.
+Signal vga_inst/unary_minus_148_add_3_1/S0 undriven or does not drive anything -
+     clipped.
+Signal vga_inst/unary_minus_148_add_3_1/CI undriven or does not drive anything -
+     clipped.
+Signal vga_inst/add_252_8/CO undriven or does not drive anything - clipped.
+Signal vga_inst/add_145_11/S1 undriven or does not drive anything - clipped.
+Signal vga_inst/add_145_11/CO undriven or does not drive anything - clipped.
+Signal vga_inst/add_174_1/S0 undriven or does not drive anything - clipped.
+Signal vga_inst/add_174_1/CI undriven or does not drive anything - clipped.
+Signal vga_inst/add_2365_1/S1 undriven or does not drive anything - clipped.
+Signal vga_inst/add_2365_1/S0 undriven or does not drive anything - clipped.
+Signal vga_inst/add_2365_1/CI undriven or does not drive anything - clipped.
+Signal vga_inst/add_166_11/S1 undriven or does not drive anything - clipped.
+Signal vga_inst/add_166_11/CO undriven or does not drive anything - clipped.
 Signal vga_inst/unary_minus_148_add_3_11/S1 undriven or does not drive anything
      - clipped.
 Signal vga_inst/unary_minus_148_add_3_11/CO undriven or does not drive anything
      - clipped.
-Signal vga_inst/add_2377_2/S1 undriven or does not drive anything - clipped.
+Signal vga_inst/add_170_1/S0 undriven or does not drive anything - clipped.
+Signal vga_inst/add_170_1/CI undriven or does not drive anything - clipped.
+Signal vga_inst/add_162_1/S1 undriven or does not drive anything - clipped.
 
                                     Page 5
 
 
 
 
-Design:  Fipsy_Top                                     Date:  02/25/25  16:23:53
+Design:  Fipsy_Top                                     Date:  03/14/25  16:21:42
 
 Removed logic (cont)
 --------------------
-Signal vga_inst/add_2377_2/S0 undriven or does not drive anything - clipped.
-Signal vga_inst/add_2377_2/CI undriven or does not drive anything - clipped.
-Signal vga_inst/add_2374_9/CO undriven or does not drive anything - clipped.
-Signal vga_inst/add_145_11/S1 undriven or does not drive anything - clipped.
-Signal vga_inst/add_145_11/CO undriven or does not drive anything - clipped.
-Signal vga_inst/add_166_11/S1 undriven or does not drive anything - clipped.
-Signal vga_inst/add_166_11/CO undriven or does not drive anything - clipped.
-Signal vga_inst/add_2373_9/CO undriven or does not drive anything - clipped.
+Signal vga_inst/add_162_1/S0 undriven or does not drive anything - clipped.
+Signal vga_inst/add_162_1/CI undriven or does not drive anything - clipped.
+Signal vga_inst/fipsy_rom_data_mem_7__I_0_7/S1 undriven or does not drive
+     anything - clipped.
+Signal vga_inst/fipsy_rom_data_mem_7__I_0_7/S0 undriven or does not drive
+     anything - clipped.
+Signal vga_inst/add_158_1/S1 undriven or does not drive anything - clipped.
+Signal vga_inst/add_158_1/S0 undriven or does not drive anything - clipped.
+Signal vga_inst/add_158_1/CI undriven or does not drive anything - clipped.
+Signal vga_inst/add_2367_11/S1 undriven or does not drive anything - clipped.
+Signal vga_inst/add_2367_11/CO undriven or does not drive anything - clipped.
+Signal vga_inst/add_145_1/S0 undriven or does not drive anything - clipped.
+Signal vga_inst/add_145_1/CI undriven or does not drive anything - clipped.
+Signal vga_inst/add_2365_11/S1 undriven or does not drive anything - clipped.
+Signal vga_inst/add_2365_11/CO undriven or does not drive anything - clipped.
 Signal vga_inst/unary_minus_147_add_3_1/S0 undriven or does not drive anything -
      clipped.
 Signal vga_inst/unary_minus_147_add_3_1/CI undriven or does not drive anything -
      clipped.
-Signal vga_inst/add_162_1/S1 undriven or does not drive anything - clipped.
-Signal vga_inst/add_162_1/S0 undriven or does not drive anything - clipped.
-Signal vga_inst/add_162_1/CI undriven or does not drive anything - clipped.
-Signal vga_inst/add_252_8/CO undriven or does not drive anything - clipped.
-Signal vga_inst/add_170_1/S0 undriven or does not drive anything - clipped.
-Signal vga_inst/add_170_1/CI undriven or does not drive anything - clipped.
-Signal vga_inst/add_2377_8/CO undriven or does not drive anything - clipped.
-Signal vga_inst/column_273_add_4_1/S0 undriven or does not drive anything -
-     clipped.
-Signal vga_inst/column_273_add_4_1/CI undriven or does not drive anything -
-     clipped.
-Signal vga_inst/add_158_1/S1 undriven or does not drive anything - clipped.
-Signal vga_inst/add_158_1/S0 undriven or does not drive anything - clipped.
-Signal vga_inst/add_158_1/CI undriven or does not drive anything - clipped.
-Block vga_inst/i3132 was optimized away.
-Block vga_inst/i3131 was optimized away.
-Block vga_inst/i3130 was optimized away.
+Signal vga_inst/add_162_11/CO undriven or does not drive anything - clipped.
+Signal vga_inst/add_170_11/S1 undriven or does not drive anything - clipped.
+Signal vga_inst/add_170_11/CO undriven or does not drive anything - clipped.
+Signal vga_inst/fipsy_rom_data_mem_7__I_0_8/S0 undriven or does not drive
+     anything - clipped.
+Signal vga_inst/fipsy_rom_data_mem_7__I_0_8/CO undriven or does not drive
+     anything - clipped.
+Signal vga_inst/add_158_11/CO undriven or does not drive anything - clipped.
+Signal vga_inst/add_2367_1/S1 undriven or does not drive anything - clipped.
+Signal vga_inst/add_2367_1/S0 undriven or does not drive anything - clipped.
+Signal vga_inst/add_2367_1/CI undriven or does not drive anything - clipped.
+Block vga_inst/i3053 was optimized away.
+Block vga_inst/i3052 was optimized away.
+Block vga_inst/i3051 was optimized away.
 Block vga_inst/fipsy_logo_inst/clk_I_0_1_lut was optimized away.
 Block i1 was optimized away.
-Block i5 was optimized away.
+Block i9 was optimized away.
 
 Memory Usage
 ------------
@@ -387,16 +391,17 @@ Memory Usage
          REGMODE= NOREG,  RESETMODE= ASYNC,  ASYNC_RESET_RELEASE= SYNC,
          WRITEMODE= NORMAL,  GSR= DISABLED
 
-     
-
-
-
                                     Page 6
 
 
 
 
-Design:  Fipsy_Top                                     Date:  02/25/25  16:23:53
+Design:  Fipsy_Top                                     Date:  03/14/25  16:21:42
+
+Memory Usage (cont)
+-------------------
+
+     
 
 PLL/DLL Summary
 ---------------
@@ -451,21 +456,21 @@ PLL 1:                                     Pin/Node Value
   CLKOS Post Divider B Input:                       DIVB
   CLKOS2 Post Divider C Input:                      DIVC
   CLKOS3 Post Divider D Input:                      DIVD
-  Pre Divider A Input:                              VCO_PHASE
-  Pre Divider B Input:                              VCO_PHASE
-  Pre Divider C Input:                              VCO_PHASE
-  Pre Divider D Input:                              VCO_PHASE
-  VCO Bypass A Input:                               VCO_PHASE
 
                                     Page 7
 
 
 
 
-Design:  Fipsy_Top                                     Date:  02/25/25  16:23:53
+Design:  Fipsy_Top                                     Date:  03/14/25  16:21:42
 
 PLL/DLL Summary (cont)
 ----------------------
+  Pre Divider A Input:                              VCO_PHASE
+  Pre Divider B Input:                              VCO_PHASE
+  Pre Divider C Input:                              VCO_PHASE
+  Pre Divider D Input:                              VCO_PHASE
+  VCO Bypass A Input:                               VCO_PHASE
   VCO Bypass B Input:                               VCO_PHASE
   VCO Bypass C Input:                               VCO_PHASE
   VCO Bypass D Input:                               VCO_PHASE
@@ -515,11 +520,6 @@ Run Time and Memory Usage
    Total REAL Time: 0 secs  
    Peak Memory Usage: 44 MB
         
-
-
-
-
-
 
 
 

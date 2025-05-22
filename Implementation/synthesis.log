@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Feb 25 16:23:51 2025
+Fri Mar 14 16:21:39 2025
 
 
 Command Line:  synthesis -f FipsyBaseline_Implementation_lattice.synproj -gui -msgset C:/Users/enact/OneDrive/Documents/VGA_Pong_FipsyV2_campaign_20250215/ColorPong/promote.xml 
@@ -128,7 +128,7 @@ Writing NGD file FipsyBaseline_Implementation.ngd.
 
 ################### Begin Area Report (Fipsy_Top)######################
 Number of register bits => 138 of 1346 (10 % )
-CCU2D => 141
+CCU2D => 143
 EHXPLLJ => 1
 FD1P3AX => 35
 FD1P3AY => 2
@@ -141,10 +141,10 @@ GSR => 1
 IB => 4
 INV => 3
 L6MUX21 => 2
-LUT4 => 207
+LUT4 => 203
 OB => 9
 OSCH => 1
-PFUMX => 9
+PFUMX => 10
 SP8KC => 2
 ################### End Area Report ##################
 
@@ -156,33 +156,33 @@ TSALL => 1
 Clock Nets
 Number of Clocks: 6
   Net : Clk_25MHz_inst/clk, loads : 35
-  Net : vga_inst/line_cycle, loads : 14
+  Net : vga_inst/line_cycle, loads : 13
   Net : vga_inst/led_count_6, loads : 3
   Net : vga_inst/led_count_5, loads : 3
   Net : INTERNAL_OSC, loads : 1
-  Net : vga_inst/fipsy_logo_inst/clk_N_410, loads : 1
+  Net : vga_inst/fipsy_logo_inst/clk_N_418, loads : 1
 Clock Enable Nets
 Number of Clock Enables: 7
 Top 7 highest fanout Clock Enables:
-  Net : vga_inst/led_count_6__N_32_enable_14, loads : 13
-  Net : vga_inst/led_count_6__N_32_enable_23, loads : 10
-  Net : vga_inst/line_cycle_N_16_enable_8, loads : 8
-  Net : vga_inst/fipsy_rom_data_mem_7__N_232, loads : 8
-  Net : vga_inst/led_count_6__N_32_enable_29, loads : 4
-  Net : vga_inst/led_count_6__N_32_enable_28, loads : 4
-  Net : vga_inst/led_count_6__N_32_enable_5, loads : 1
+  Net : vga_inst/led_count_6__N_40_enable_14, loads : 13
+  Net : vga_inst/led_count_6__N_40_enable_23, loads : 10
+  Net : vga_inst/line_cycle_derived_37_enable_8, loads : 8
+  Net : vga_inst/fipsy_rom_data_mem_7__N_240, loads : 8
+  Net : vga_inst/led_count_6__N_40_enable_29, loads : 4
+  Net : vga_inst/led_count_6__N_40_enable_28, loads : 4
+  Net : led_count_6__N_40_enable_5, loads : 1
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : vga_inst/led_count_6__N_32, loads : 49
-  Net : vga_inst/line_cycle_N_16, loads : 37
-  Net : vga_inst/game_state_0, loads : 24
-  Net : vga_inst/led_count_5__N_157, loads : 20
+  Net : vga_inst/led_count_6__N_40, loads : 49
+  Net : vga_inst/line_cycle__inv, loads : 37
+  Net : vga_inst/game_state_0, loads : 23
+  Net : vga_inst/led_count_5__N_165, loads : 20
   Net : vga_inst/row_3, loads : 19
-  Net : vga_inst/row_9, loads : 16
-  Net : vga_inst/paddle_right_y_9, loads : 15
   Net : vga_inst/paddle_left_y_9, loads : 15
-  Net : vga_inst/column_0, loads : 13
-  Net : vga_inst/row_4, loads : 13
+  Net : vga_inst/paddle_right_y_9, loads : 15
+  Net : vga_inst/led_count_6__N_40_enable_14, loads : 13
+  Net : vga_inst/column_6, loads : 12
+  Net : vga_inst/column_0, loads : 12
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -195,10 +195,10 @@ create_clock -period 5.000000 -name     |             |             |
 clk3 [get_nets \vga_inst/led_count[5]]  |  200.000 MHz|   97.248 MHz|     9 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk2 [get_nets \vga_inst/line_cycle]    |  200.000 MHz|  152.509 MHz|     3 *
+clk2 [get_nets \vga_inst/line_cycle]    |  200.000 MHz|  156.617 MHz|     3 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets clk]                     |  200.000 MHz|   90.522 MHz|     5 *
+clk1 [get_nets clk]                     |  200.000 MHz|   80.122 MHz|     6 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
 clk0 [get_nets \vga_inst/led_count[6]]  |  200.000 MHz|   58.624 MHz|    12 *
@@ -209,8 +209,8 @@ clk0 [get_nets \vga_inst/led_count[6]]  |  200.000 MHz|   58.624 MHz|    12 *
 4 constraints not met.
 
 
-Peak Memory Usage: 69.094  MB
+Peak Memory Usage: 69.488  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.609  secs
+Elapsed CPU time for LSE flow : 1.578  secs
 --------------------------------------------------------------

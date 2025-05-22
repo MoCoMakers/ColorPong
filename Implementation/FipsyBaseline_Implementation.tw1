@@ -13,7 +13,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2
-Tue Feb 25 16:23:54 2025
+Fri Mar 14 16:21:43 2025
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -70,26 +70,26 @@ Error: The following path exceeds requirements by 2.528ns (weighted slack = -75.
 
  Constraint Details:
 
-      3.680ns physical path delay vga_inst/SLICE_107 to vga_inst/SLICE_9 exceeds
+      3.680ns physical path delay vga_inst/SLICE_112 to vga_inst/SLICE_47 exceeds
       (delay constraint based on source clock period of 50.000ns and destination clock period of 39.474ns)
       1.318ns delay constraint less
       0.166ns DIN_SET requirement (totaling 1.152ns) by 2.528ns
 
  Physical Path Details:
 
-      Data path vga_inst/SLICE_107 to vga_inst/SLICE_9:
+      Data path vga_inst/SLICE_112 to vga_inst/SLICE_47:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452 *SLICE_107.CLK to */SLICE_107.Q1 vga_inst/SLICE_107 (from vga_inst/line_cycle)
-ROUTE         3   e 1.234 */SLICE_107.Q1 to *t/SLICE_31.B0 vga_inst/fipsy_offset_0
-C0TOFCO_DE  ---     1.023 *t/SLICE_31.B0 to */SLICE_31.FCO vga_inst/SLICE_31
-ROUTE         1   e 0.001 */SLICE_31.FCO to */SLICE_29.FCI vga_inst/n2768
-FCITOFCO_D  ---     0.162 */SLICE_29.FCI to */SLICE_29.FCO vga_inst/SLICE_29
-ROUTE         1   e 0.001 */SLICE_29.FCO to */SLICE_12.FCI vga_inst/n2769
-FCITOFCO_D  ---     0.162 */SLICE_12.FCI to */SLICE_12.FCO vga_inst/SLICE_12
-ROUTE         1   e 0.001 */SLICE_12.FCO to *t/SLICE_9.FCI vga_inst/n2770
-FCITOF1_DE  ---     0.643 *t/SLICE_9.FCI to *st/SLICE_9.F1 vga_inst/SLICE_9
-ROUTE         1   e 0.001 *st/SLICE_9.F1 to *t/SLICE_9.DI1 vga_inst/fipsy_rom_addr_3_N_176_7 (to clk)
+REG_DEL     ---     0.452 *SLICE_112.CLK to */SLICE_112.Q1 vga_inst/SLICE_112 (from vga_inst/line_cycle)
+ROUTE         3   e 1.234 */SLICE_112.Q1 to *t/SLICE_56.B0 vga_inst/fipsy_offset_0
+C0TOFCO_DE  ---     1.023 *t/SLICE_56.B0 to */SLICE_56.FCO vga_inst/SLICE_56
+ROUTE         1   e 0.001 */SLICE_56.FCO to */SLICE_52.FCI vga_inst/n2770
+FCITOFCO_D  ---     0.162 */SLICE_52.FCI to */SLICE_52.FCO vga_inst/SLICE_52
+ROUTE         1   e 0.001 */SLICE_52.FCO to */SLICE_48.FCI vga_inst/n2771
+FCITOFCO_D  ---     0.162 */SLICE_48.FCI to */SLICE_48.FCO vga_inst/SLICE_48
+ROUTE         1   e 0.001 */SLICE_48.FCO to */SLICE_47.FCI vga_inst/n2772
+FCITOF1_DE  ---     0.643 */SLICE_47.FCI to *t/SLICE_47.F1 vga_inst/SLICE_47
+ROUTE         1   e 0.001 *t/SLICE_47.F1 to */SLICE_47.DI1 vga_inst/fipsy_rom_addr_3_N_184_7 (to clk)
                   --------
                     3.680   (66.4% logic, 33.6% route), 5 logic levels.
 
@@ -102,52 +102,56 @@ Preference: FREQUENCY 20.000000 MHz ;
 --------------------------------------------------------------------------------
 
 
-Passed: The following path meets requirements by 32.777ns
+Passed: The following path meets requirements by 33.321ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              vga_inst/ball_y_i0  (from vga_inst/led_count_6 -)
+   Source:         FF         Q              vga_inst/paddle_left_y_i0  (from vga_inst/led_count_5 -)
    Destination:    FF         Data in        vga_inst/game_state__i1  (to vga_inst/led_count_6 -)
 
-   Delay:              16.916ns  (38.8% logic, 61.2% route), 11 logic levels.
+   Delay:              16.372ns  (39.7% logic, 60.3% route), 13 logic levels.
 
  Constraint Details:
 
-     16.916ns physical path delay vga_inst/SLICE_8 to vga_inst/SLICE_157 meets
+     16.372ns physical path delay vga_inst/SLICE_19 to vga_inst/SLICE_143 meets
      50.000ns delay constraint less
-      0.307ns CE_SET requirement (totaling 49.693ns) by 32.777ns
+      0.307ns CE_SET requirement (totaling 49.693ns) by 33.321ns
 
  Physical Path Details:
 
-      Data path vga_inst/SLICE_8 to vga_inst/SLICE_157:
+      Data path vga_inst/SLICE_19 to vga_inst/SLICE_143:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452 *t/SLICE_8.CLK to *st/SLICE_8.Q1 vga_inst/SLICE_8 (from vga_inst/led_count_6)
-ROUTE         6   e 1.234 *st/SLICE_8.Q1 to *t/SLICE_58.A1 vga_inst/ball_y_0
-C1TOFCO_DE  ---     0.889 *t/SLICE_58.A1 to */SLICE_58.FCO vga_inst/SLICE_58
-ROUTE         1   e 0.001 */SLICE_58.FCO to */SLICE_57.FCI vga_inst/n2873
-FCITOF1_DE  ---     0.643 */SLICE_57.FCI to *t/SLICE_57.F1 vga_inst/SLICE_57
-ROUTE         2   e 1.234 *t/SLICE_57.F1 to *t/SLICE_34.A0 vga_inst/n728
-C0TOFCO_DE  ---     1.023 *t/SLICE_34.A0 to */SLICE_34.FCO vga_inst/SLICE_34
-ROUTE         1   e 0.001 */SLICE_34.FCO to */SLICE_24.FCI vga_inst/n2884
-FCITOF0_DE  ---     0.585 */SLICE_24.FCI to *t/SLICE_24.F0 vga_inst/SLICE_24
-ROUTE         1   e 1.234 *t/SLICE_24.F0 to */SLICE_223.B1 vga_inst/n294
-CTOF_DEL    ---     0.495 */SLICE_223.B1 to */SLICE_223.F1 vga_inst/SLICE_223
-ROUTE         1   e 0.480 */SLICE_223.F1 to */SLICE_223.C0 vga_inst/n6_adj_466
-CTOF_DEL    ---     0.495 */SLICE_223.C0 to */SLICE_223.F0 vga_inst/SLICE_223
-ROUTE         1   e 1.234 */SLICE_223.F0 to */SLICE_221.B0 vga_inst/n7_adj_464
-CTOF_DEL    ---     0.495 */SLICE_221.B0 to */SLICE_221.F0 vga_inst/SLICE_221
-ROUTE         1   e 1.234 */SLICE_221.F0 to */SLICE_179.B1 vga_inst/n2959
-CTOF_DEL    ---     0.495 */SLICE_179.B1 to */SLICE_179.F1 vga_inst/SLICE_179
-ROUTE         6   e 1.234 */SLICE_179.F1 to */SLICE_214.D0 vga_inst/n2464
-CTOF_DEL    ---     0.495 */SLICE_214.D0 to */SLICE_214.F0 vga_inst/SLICE_214
-ROUTE         1   e 1.234 */SLICE_214.F0 to */SLICE_213.B0 vga_inst/n3590
-CTOF_DEL    ---     0.495 */SLICE_213.B0 to */SLICE_213.F0 vga_inst/SLICE_213
-ROUTE         1   e 1.234 */SLICE_213.F0 to */SLICE_157.CE vga_inst/led_count_6__N_32_enable_5 (to vga_inst/led_count_6)
+REG_DEL     ---     0.452 */SLICE_19.CLK to *t/SLICE_19.Q0 vga_inst/SLICE_19 (from vga_inst/led_count_5)
+ROUTE         4   e 1.234 *t/SLICE_19.Q0 to *t/SLICE_69.B1 vga_inst/paddle_left_y_0
+C1TOFCO_DE  ---     0.889 *t/SLICE_69.B1 to */SLICE_69.FCO vga_inst/SLICE_69
+ROUTE         1   e 0.001 */SLICE_69.FCO to */SLICE_68.FCI vga_inst/n2874
+FCITOFCO_D  ---     0.162 */SLICE_68.FCI to */SLICE_68.FCO vga_inst/SLICE_68
+ROUTE         1   e 0.001 */SLICE_68.FCO to */SLICE_67.FCI vga_inst/n2875
+FCITOF0_DE  ---     0.585 */SLICE_67.FCI to *t/SLICE_67.F0 vga_inst/SLICE_67
+ROUTE         2   e 1.234 *t/SLICE_67.F0 to *t/SLICE_29.A0 vga_inst/n727
+C0TOFCO_DE  ---     1.023 *t/SLICE_29.A0 to */SLICE_29.FCO vga_inst/SLICE_29
+ROUTE         1   e 0.001 */SLICE_29.FCO to */SLICE_22.FCI vga_inst/n2820
+FCITOFCO_D  ---     0.162 */SLICE_22.FCI to */SLICE_22.FCO vga_inst/SLICE_22
+ROUTE         1   e 0.001 */SLICE_22.FCO to */SLICE_18.FCI vga_inst/n2821
+FCITOFCO_D  ---     0.162 */SLICE_18.FCI to */SLICE_18.FCO vga_inst/SLICE_18
+ROUTE         1   e 0.001 */SLICE_18.FCO to */SLICE_17.FCI vga_inst/n2822
+FCITOF0_DE  ---     0.585 */SLICE_17.FCI to *t/SLICE_17.F0 vga_inst/SLICE_17
+ROUTE         1   e 1.234 *t/SLICE_17.F0 to */SLICE_237.A0 vga_inst/n19
+CTOF_DEL    ---     0.495 */SLICE_237.A0 to */SLICE_237.F0 vga_inst/SLICE_237
+ROUTE         1   e 1.234 */SLICE_237.F0 to */SLICE_189.A1 vga_inst/n9
+CTOF_DEL    ---     0.495 */SLICE_189.A1 to */SLICE_189.F1 vga_inst/SLICE_189
+ROUTE         1   e 1.234 */SLICE_189.F1 to */SLICE_197.B1 vga_inst/n2920
+CTOF_DEL    ---     0.495 */SLICE_197.B1 to */SLICE_197.F1 vga_inst/SLICE_197
+ROUTE         6   e 1.234 */SLICE_197.F1 to */SLICE_222.D0 vga_inst/n2374
+CTOF_DEL    ---     0.495 */SLICE_222.D0 to */SLICE_222.F0 vga_inst/SLICE_222
+ROUTE         1   e 1.234 */SLICE_222.F0 to   SLICE_206.A1 n3511
+CTOF_DEL    ---     0.495   SLICE_206.A1 to   SLICE_206.F1 SLICE_206
+ROUTE         1   e 1.234   SLICE_206.F1 to */SLICE_143.CE led_count_6__N_40_enable_5 (to vga_inst/led_count_6)
                   --------
-                   16.916   (38.8% logic, 61.2% route), 11 logic levels.
+                   16.372   (39.7% logic, 60.3% route), 13 logic levels.
 
-Report:   58.062MHz is the maximum frequency for this preference.
+Report:   59.956MHz is the maximum frequency for this preference.
 
 Report Summary
 --------------
@@ -160,7 +164,7 @@ MHz ;                                   |            -|            -|   0
                                         |             |             |
 FREQUENCY NET "clk" 25.333333 MHz ;     |   25.333 MHz|    8.682 MHz|   5 *
                                         |             |             |
-FREQUENCY 20.000000 MHz ;               |   20.000 MHz|   58.062 MHz|  11  
+FREQUENCY 20.000000 MHz ;               |   20.000 MHz|   59.956 MHz|  13  
                                         |             |             |
 ----------------------------------------------------------------------------
 
@@ -170,27 +174,27 @@ FREQUENCY 20.000000 MHz ;               |   20.000 MHz|   58.062 MHz|  11
 ----------------------------------------------------------------------------
 Critical Nets                           |   Loads|  Errors| % of total
 ----------------------------------------------------------------------------
-vga_inst/n2769                          |       1|      16|     33.33%
-                                        |        |        |
-vga_inst/n2768                          |       1|      12|     25.00%
+vga_inst/n2771                          |       1|      16|     33.33%
                                         |        |        |
 vga_inst/n2770                          |       1|      12|     25.00%
                                         |        |        |
+vga_inst/n2772                          |       1|      12|     25.00%
+                                        |        |        |
+vga_inst/fipsy_rom_addr_3_N_184_7       |       1|       8|     16.67%
+                                        |        |        |
 vga_inst/fipsy_offset_0                 |       3|       8|     16.67%
                                         |        |        |
-vga_inst/fipsy_rom_addr_3_N_176_7       |       1|       8|     16.67%
+vga_inst/fipsy_rom_addr_3_N_184_6       |       1|       7|     14.58%
                                         |        |        |
 vga_inst/fipsy_offset_1                 |       2|       7|     14.58%
                                         |        |        |
-vga_inst/fipsy_rom_addr_3_N_176_6       |       1|       7|     14.58%
+vga_inst/fipsy_rom_addr_3_N_184_5       |       1|       6|     12.50%
                                         |        |        |
 vga_inst/fipsy_offset_2                 |       2|       6|     12.50%
                                         |        |        |
-vga_inst/fipsy_rom_addr_3_N_176_5       |       1|       6|     12.50%
+vga_inst/fipsy_rom_addr_3_N_184_4       |       1|       5|     10.42%
                                         |        |        |
 vga_inst/fipsy_offset_3                 |       2|       5|     10.42%
-                                        |        |        |
-vga_inst/fipsy_rom_addr_3_N_176_4       |       1|       5|     10.42%
                                         |        |        |
 ----------------------------------------------------------------------------
 
@@ -200,27 +204,27 @@ Clock Domains Analysis
 
 Found 5 clocks:
 
-Clock Domain: vga_inst/line_cycle   Source: vga_inst/SLICE_133.Q0   Loads: 35
+Clock Domain: vga_inst/line_cycle   Source: vga_inst/SLICE_128.Q0   Loads: 34
    Covered under: FREQUENCY 20.000000 MHz ;
 
-Clock Domain: vga_inst/led_count_6   Source: vga_inst/SLICE_112.Q1   Loads: 32
+Clock Domain: vga_inst/led_count_6   Source: vga_inst/SLICE_117.Q1   Loads: 32
    Covered under: FREQUENCY 20.000000 MHz ;
 
    Data transfers from:
-   Clock Domain: vga_inst/led_count_5   Source: vga_inst/SLICE_112.Q0
+   Clock Domain: vga_inst/led_count_5   Source: vga_inst/SLICE_117.Q0
       Covered under: FREQUENCY 20.000000 MHz ;   Transfers: 20
 
-Clock Domain: vga_inst/led_count_5   Source: vga_inst/SLICE_112.Q0   Loads: 12
+Clock Domain: vga_inst/led_count_5   Source: vga_inst/SLICE_117.Q0   Loads: 12
    Covered under: FREQUENCY 20.000000 MHz ;
 
 Clock Domain: clk   Source: Clk_25MHz_inst/PLLInst_0.CLKOP   Loads: 21
    Covered under: FREQUENCY NET "clk" 25.333333 MHz ;
 
    Data transfers from:
-   Clock Domain: vga_inst/line_cycle   Source: vga_inst/SLICE_133.Q0
+   Clock Domain: vga_inst/line_cycle   Source: vga_inst/SLICE_128.Q0
       Covered under: FREQUENCY NET "clk" 25.333333 MHz ;   Transfers: 17
 
-   Clock Domain: vga_inst/led_count_6   Source: vga_inst/SLICE_112.Q1
+   Clock Domain: vga_inst/led_count_6   Source: vga_inst/SLICE_117.Q1
       Covered under: FREQUENCY NET "clk" 25.333333 MHz ;   Transfers: 8
 
 Clock Domain: INTERNAL_OSC   Source: OSCH_inst.OSC   Loads: 1
@@ -233,11 +237,11 @@ Timing summary (Setup):
 Timing errors: 48  Score: 2546456
 Cumulative negative slack: 2546456
 
-Constraints cover 24683 paths, 5 nets, and 994 connections (63.76% coverage)
+Constraints cover 24683 paths, 5 nets, and 998 connections (64.68% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.13.0.56.2
-Tue Feb 25 16:23:55 2025
+Fri Mar 14 16:21:43 2025
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -294,19 +298,19 @@ Passed: The following path meets requirements by 0.447ns
 
  Constraint Details:
 
-      0.434ns physical path delay vga_inst/SLICE_134 to vga_inst/SLICE_134 meets
+      0.434ns physical path delay vga_inst/SLICE_129 to vga_inst/SLICE_129 meets
      -0.013ns DIN_HLD and
       0.000ns delay constraint requirement (totaling -0.013ns) by 0.447ns
 
  Physical Path Details:
 
-      Data path vga_inst/SLICE_134 to vga_inst/SLICE_134:
+      Data path vga_inst/SLICE_129 to vga_inst/SLICE_129:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133 *SLICE_134.CLK to */SLICE_134.Q1 vga_inst/SLICE_134 (from clk)
-ROUTE        10   e 0.199 */SLICE_134.Q1 to */SLICE_134.A1 vga_inst/column_8
-CTOF_DEL    ---     0.101 */SLICE_134.A1 to */SLICE_134.F1 vga_inst/SLICE_134
-ROUTE         1   e 0.001 */SLICE_134.F1 to *SLICE_134.DI1 vga_inst/n47_adj_421 (to clk)
+REG_DEL     ---     0.133 *SLICE_129.CLK to */SLICE_129.Q1 vga_inst/SLICE_129 (from clk)
+ROUTE        10   e 0.199 */SLICE_129.Q1 to */SLICE_129.A1 vga_inst/column_8
+CTOF_DEL    ---     0.101 */SLICE_129.A1 to */SLICE_129.F1 vga_inst/SLICE_129
+ROUTE         1   e 0.001 */SLICE_129.F1 to *SLICE_129.DI1 vga_inst/n47_adj_428 (to clk)
                   --------
                     0.434   (53.9% logic, 46.1% route), 2 logic levels.
 
@@ -328,19 +332,19 @@ Passed: The following path meets requirements by 0.447ns
 
  Constraint Details:
 
-      0.434ns physical path delay vga_inst/SLICE_109 to vga_inst/SLICE_109 meets
+      0.434ns physical path delay vga_inst/SLICE_114 to vga_inst/SLICE_114 meets
      -0.013ns DIN_HLD and
       0.000ns delay constraint requirement (totaling -0.013ns) by 0.447ns
 
  Physical Path Details:
 
-      Data path vga_inst/SLICE_109 to vga_inst/SLICE_109:
+      Data path vga_inst/SLICE_114 to vga_inst/SLICE_114:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133 *SLICE_109.CLK to */SLICE_109.Q0 vga_inst/SLICE_109 (from vga_inst/line_cycle)
-ROUTE         1   e 0.199 */SLICE_109.Q0 to */SLICE_109.A0 vga_inst/n3
-CTOF_DEL    ---     0.101 */SLICE_109.A0 to */SLICE_109.F0 vga_inst/SLICE_109
-ROUTE         1   e 0.001 */SLICE_109.F0 to *SLICE_109.DI0 vga_inst/n64 (to vga_inst/line_cycle)
+REG_DEL     ---     0.133 *SLICE_114.CLK to */SLICE_114.Q0 vga_inst/SLICE_114 (from vga_inst/line_cycle)
+ROUTE         1   e 0.199 */SLICE_114.Q0 to */SLICE_114.A0 vga_inst/n3
+CTOF_DEL    ---     0.101 */SLICE_114.A0 to */SLICE_114.F0 vga_inst/SLICE_114
+ROUTE         1   e 0.001 */SLICE_114.F0 to *SLICE_114.DI0 vga_inst/n64 (to vga_inst/line_cycle)
                   --------
                     0.434   (53.9% logic, 46.1% route), 2 logic levels.
 
@@ -368,27 +372,27 @@ Clock Domains Analysis
 
 Found 5 clocks:
 
-Clock Domain: vga_inst/line_cycle   Source: vga_inst/SLICE_133.Q0   Loads: 35
+Clock Domain: vga_inst/line_cycle   Source: vga_inst/SLICE_128.Q0   Loads: 34
    Covered under: FREQUENCY 20.000000 MHz ;
 
-Clock Domain: vga_inst/led_count_6   Source: vga_inst/SLICE_112.Q1   Loads: 32
+Clock Domain: vga_inst/led_count_6   Source: vga_inst/SLICE_117.Q1   Loads: 32
    Covered under: FREQUENCY 20.000000 MHz ;
 
    Data transfers from:
-   Clock Domain: vga_inst/led_count_5   Source: vga_inst/SLICE_112.Q0
+   Clock Domain: vga_inst/led_count_5   Source: vga_inst/SLICE_117.Q0
       Covered under: FREQUENCY 20.000000 MHz ;   Transfers: 20
 
-Clock Domain: vga_inst/led_count_5   Source: vga_inst/SLICE_112.Q0   Loads: 12
+Clock Domain: vga_inst/led_count_5   Source: vga_inst/SLICE_117.Q0   Loads: 12
    Covered under: FREQUENCY 20.000000 MHz ;
 
 Clock Domain: clk   Source: Clk_25MHz_inst/PLLInst_0.CLKOP   Loads: 21
    Covered under: FREQUENCY NET "clk" 25.333333 MHz ;
 
    Data transfers from:
-   Clock Domain: vga_inst/line_cycle   Source: vga_inst/SLICE_133.Q0
+   Clock Domain: vga_inst/line_cycle   Source: vga_inst/SLICE_128.Q0
       Covered under: FREQUENCY NET "clk" 25.333333 MHz ;   Transfers: 17
 
-   Clock Domain: vga_inst/led_count_6   Source: vga_inst/SLICE_112.Q1
+   Clock Domain: vga_inst/led_count_6   Source: vga_inst/SLICE_117.Q1
       Covered under: FREQUENCY NET "clk" 25.333333 MHz ;   Transfers: 8
 
 Clock Domain: INTERNAL_OSC   Source: OSCH_inst.OSC   Loads: 1
@@ -401,7 +405,7 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 24683 paths, 5 nets, and 1012 connections (64.91% coverage)
+Constraints cover 24683 paths, 5 nets, and 1015 connections (65.78% coverage)
 
 
 

@@ -4,24 +4,24 @@ Report for cell Fipsy_Top
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                   SLIC	     245.00        100.0
-                                  LUT4	     206.00        100.0
+                                  LUT4	     202.00        100.0
                                  IOBUF	         13        100.0
                                 PFUREG	        138        100.0
-                                RIPPLE	        141        100.0
+                                RIPPLE	        143        100.0
                                    EBR	          2        100.0
 SUB MODULES
                                   cell	      count    SLC Usage(%)
                                  pllv2	          1         0.0
-                                   VGA	          1        100.0
+                                   VGA	          1        99.8
 ---------------------------------------------------
 Report for cell VGA
    Instance path: Fipsy_Top/vga_inst
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	     245.00        100.0
-                                  LUT4	     206.00        100.0
+                                  SLIC	     244.50        99.8
+                                  LUT4	     201.00        99.5
                                 PFUREG	        138        100.0
-                                RIPPLE	        141        100.0
+                                RIPPLE	        143        100.0
                                    EBR	          2        100.0
 SUB MODULES
                                   cell	      count    SLC Usage(%)
